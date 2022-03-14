@@ -1,0 +1,103 @@
+{
+  "books": [
+    {
+      "id": 0,
+      "imageUrl": "./Судьба по книге перемен.jpg",
+      "bookName": "Судьба по книге перемен",
+      "authorName": "Татьяна Устинова",
+      "bookRating": "4,6",
+      "price": 379,
+      "category": "detectives"
+    },
+    {
+      "id": 1,
+      "imageUrl": "./На краю.jpg",
+      "bookName": "На краю",
+      "authorName": "Николай Свечин",
+      "bookRating": "4,5",
+      "price": 350,
+      "category": "detectives"
+    },
+    {
+      "id": 2,
+      "imageUrl": "./Леди из Фроингема.jpg",
+      "bookName": "Леди из Фроингема",
+      "authorName": "Шарлотта Брандиш",
+      "bookRating": "4,8",
+      "price": 279,
+      "category": "detectives"
+    },
+    {
+      "id": 3,
+      "imageUrl": "./Стамбул. Подслушанное убийство.jpg",
+      "bookName": "Стамбул. Подслушанное убийство",
+      "authorName": "Анна Орехова",
+      "bookRating": "4,9",
+      "price": 430,
+      "category": "detectives"
+    },
+    {
+      "id": 4,
+      "imageUrl": "./Я – бездна.jpg",
+      "bookName": "Я – бездна",
+      "authorName": "Донато Карризи",
+      "bookRating": "4,1",
+      "price": 199,
+      "category": "detectives"
+    },
+    {
+      "id": 5,
+      "imageUrl": "./Ловушка сбывшихся кошмаров.jpg",
+      "bookName": "Ловушка сбывшихся кошмаров",
+      "authorName": "Лена Обухова",
+      "bookRating": "5,0",
+      "price": 189,
+      "category": "detectives"
+    },
+    {
+      "id": 6,
+      "imageUrl": "./Мы начинаем в конце.jpg",
+      "bookName": "Мы начинаем в конце",
+      "authorName": "Крис Уитакер",
+      "bookRating": "4,8",
+      "price": 425,
+      "category": "detectives"
+    },
+    {
+      "id": 7,
+      "imageUrl": "./Лягушачий король.jpg",
+      "bookName": "Лягушачий король",
+      "authorName": "Елена Михалкова",
+      "bookRating": "4,8",
+      "price": 299,
+      "category": "detectives"
+    },
+    {
+      "id": 8,
+      "imageUrl": "./Забытая легенда Ольхона.jpg",
+      "bookName": "Забытая легенда Ольхона",
+      "authorName": "Юлия Ефимова",
+      "bookRating": "5,0",
+      "price": 249,
+      "category": "detectives"
+    },
+    {
+      "id": 9,
+      "imageUrl": "./Мамаша Бармалей.jpg",
+      "bookName": "Мамаша Бармалей",
+      "authorName": "Дарья Донцова",
+      "bookRating": "4,0",
+      "price": 239,
+      "category": "detectives"
+    },
+    {
+      "id": 10,
+      "imageUrl": "./Просто Маса.jpg",
+      "bookName": "Просто Маса",
+      "authorName": "Борис Акунин",
+      "bookRating": "4,6",
+      "price": 499,
+      "category": "detectives"
+    }
+  ]
+}

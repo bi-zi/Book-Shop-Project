@@ -1,0 +1,103 @@
+{
+  "comics manga": [
+    {
+      "id": 0,
+      "imageUrl": "./Дочь реки.jpg",
+      "bookName": "Дочь реки",
+      "authorName": "Дэниел Кларк",
+      "bookRating": "4,5",
+      "price": 479,
+      "category": "comics manga"
+    },
+    {
+      "id": 1,
+      "imageUrl": "./Мы дали слово.jpg",
+      "bookName": "Мы дали слово",
+      "authorName": "Райан Эндрюс",
+      "bookRating": "4,6",
+      "price": 550,
+      "category": "comics manga"
+    },
+    {
+      "id": 2,
+      "imageUrl": "./Эли и Гастон. Дух осени.jpg",
+      "bookName": "Эли и Гастон. Дух осени",
+      "authorName": "Людовик Виллен",
+      "bookRating": "5,0",
+      "price": 449,
+      "category": "comics manga"
+    },
+    {
+      "id": 3,
+      "imageUrl": "./Принц и швея.jpg",
+      "bookName": "Принц и швея",
+      "authorName": "Джен Ванг",
+      "bookRating": "4,7",
+      "price": 369,
+      "category": "comics manga"
+    },
+    {
+      "id": 4,
+      "imageUrl": "./Элрик. Рубиновый трон.jpg",
+      "bookName": "Элрик. Рубиновый трон",
+      "authorName": "Майкл Муркок",
+      "bookRating": "4,0",
+      "price": 149,
+      "category": "comics manga"
+    },
+    {
+      "id": 5,
+      "imageUrl": "./Чумной Доктор. Часть 1.jpg",
+      "bookName": "Чумной Доктор. Часть 1",
+      "authorName": "Евгений Федотов",
+      "bookRating": "4,7",
+      "price": 539,
+      "category": "comics manga"
+    },
+    {
+      "id": 6,
+      "imageUrl": "./Звёзды.jpg",
+      "bookName": "Звёзды",
+      "authorName": "Крис Уитакер",
+      "bookRating": "0",
+      "price": 195,
+      "category": "comics manga"
+    },
+    {
+      "id": 7,
+      "imageUrl": "./Дорога к Океану.jpg",
+      "bookName": "Дорога к Океану",
+      "authorName": "Варвара Леднёва",
+      "bookRating": "4,8",
+      "price": 599,
+      "category": "comics manga"
+    },
+    {
+      "id": 8,
+      "imageUrl": "./Лучшие друзья.jpg",
+      "bookName": "Лучшие друзья",
+      "authorName": "Шеннон Хейл",
+      "bookRating": "4,2",
+      "price": 249,
+      "category": "comics manga"
+    },
+    {
+      "id": 9,
+      "imageUrl": "./Негалиод.jpg",
+      "bookName": "Негалиод",
+      "authorName": "Венсан Перрио",
+      "bookRating": "4,2",
+      "price": 379,
+      "category": "comics manga"
+    },
+    {
+      "id": 10,
+      "imageUrl": "./Четвертая Сила.jpg",
+      "bookName": "Четвертая Сила",
+      "authorName": "Хуан Хименес",
+      "bookRating": "5,0",
+      "price": 299,
+      "category": "comics manga"
+    }
+  ]
+}

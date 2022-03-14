@@ -1,0 +1,103 @@
+{
+  "books": [
+    {
+      "id": 0,
+      "imageUrl": "./Три дня Индиго.jpg",
+      "bookName": "Три дня Индиго",
+      "authorName": "Сергей Лукьяненко",
+      "bookRating": "4,8",
+      "price": 349,
+      "category": "fantasy"
+    },
+    {
+      "id": 1,
+      "imageUrl": "./Одиночка. Горные тропы.jpg",
+      "bookName": "Одиночка. Горные тропы",
+      "authorName": "Ерофей Трофимов",
+      "bookRating": "4,5",
+      "price": 229,
+      "category": "fantasy"
+    },
+    {
+      "id": 2,
+      "imageUrl": "./Пост.jpg",
+      "bookName": "Пост",
+      "authorName": "Дмитрий Глуховский",
+      "bookRating": "4,1",
+      "price": 339,
+      "category": "fantasy"
+    },
+    {
+      "id": 3,
+      "imageUrl": "./Семь дней до Мегиддо.jpg",
+      "bookName": "Семь дней до Мегиддо",
+      "authorName": "Сергей Лукьяненко",
+      "bookRating": "4,8",
+      "price": 439,
+      "category": "fantasy"
+    },
+    {
+      "id": 4,
+      "imageUrl": "./Времени нет.jpg",
+      "bookName": "Времени нет",
+      "authorName": "Алексей Брусницын",
+      "bookRating": "4,8",
+      "price": 299,
+      "category": "fantasy"
+    },
+    {
+      "id": 5,
+      "imageUrl": "./Проект «Аве Мария».jpg",
+      "bookName": "Проект «Аве Мария»",
+      "authorName": "Энди Вейер",
+      "bookRating": "4,7",
+      "price": 599,
+      "category": "fantasy"
+    },
+    {
+      "id": 6,
+      "imageUrl": "./Дюна. Первая трилогия.jpg",
+      "bookName": "Дюна. Первая трилогия",
+      "authorName": "Фрэнк Герберт",
+      "bookRating": "4,4",
+      "price": 749,
+      "category": "fantasy"
+    },
+    {
+      "id": 7,
+      "imageUrl": "./Сотник из будущего. Тёмное время.jpg",
+      "bookName": "Сотник из будущего. Тёмное время",
+      "authorName": "Андрей Булычев",
+      "bookRating": "4,8",
+      "price": 229,
+      "category": "fantasy"
+    },
+    {
+      "id": 8,
+      "imageUrl": "./Невольная невеста мага смерти.jpg",
+      "bookName": "Невольная невеста мага смерти",
+      "authorName": "Алекс Найт",
+      "bookRating": "4,7",
+      "price": 149,
+      "category": "fantasy"
+    },
+    {
+      "id": 9,
+      "imageUrl": "./Метро Трилогия под одной обложкой.jpg",
+      "bookName": "Метро. Трилогия под одной обложкой",
+      "authorName": "Дмитрий Глуховский",
+      "bookRating": "4,5",
+      "price": 789,
+      "category": "fantasy"
+    },
+    {
+      "id": 10,
+      "imageUrl": "./Орден Лино. Эра исполнения желаний.jpg",
+      "bookName": "Орден Лино. Эра исполнения желаний",
+      "authorName": "Марина Суржевская",
+      "bookRating": "4,8",
+      "price": 499,
+      "category": "fantasy"
+    }
+  ]
+}

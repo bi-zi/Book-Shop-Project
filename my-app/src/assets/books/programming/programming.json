@@ -1,0 +1,103 @@
+{
+  "programming": [
+    {
+      "id": 0,
+      "imageUrl": "./Простой Python.jpg",
+      "bookName": "Простой Python",
+      "authorName": "Билл Любанович",
+      "bookRating": "4,8",
+      "price": 699,
+      "category": "programming"
+    },
+    {
+      "id": 1,
+      "imageUrl": "./Грокаем алгоритмы.jpg",
+      "bookName": "Грокаем алгоритмы",
+      "authorName": "Адитья Бхаргава",
+      "bookRating": "4,3",
+      "price": 569,
+      "category": "programming"
+    },
+    {
+      "id": 2,
+      "imageUrl": "./Чистая архитектура.jpg",
+      "bookName": "Чистая архитектура",
+      "authorName": "Роберт Мартин",
+      "bookRating": "4,4",
+      "price": 599,
+      "category": "programming"
+    },
+    {
+      "id": 3,
+      "imageUrl": "./Высоконагруженные приложения.jpg",
+      "bookName": "Высоконагруженные приложения",
+      "authorName": "Мартин Клеппман",
+      "bookRating": "3,7",
+      "price": 779,
+      "category": "programming"
+    },
+    {
+      "id": 4,
+      "imageUrl": "./Чистый код.jpg",
+      "bookName": "Чистый код",
+      "authorName": "Роберт Мартин",
+      "bookRating": "4,2",
+      "price": 699,
+      "category": "programming"
+    },
+    {
+      "id": 5,
+      "imageUrl": "./HTML и CSS.jpg",
+      "bookName": "HTML и CSS",
+      "authorName": "Джон Дакетт",
+      "bookRating": "4,1",
+      "price": 590,
+      "category": "programming"
+    },
+    {
+      "id": 6,
+      "imageUrl": "./Выразительный JavaScript.jpg",
+      "bookName": "Выразительный JavaScript",
+      "authorName": "Марейн Хавербеке",
+      "bookRating": "4,3",
+      "price": 829,
+      "category": "programming"
+    },
+    {
+      "id": 7,
+      "imageUrl": "./Идеальный программист.jpg",
+      "bookName": "Идеальный программист",
+      "authorName": "Роберт Мартин",
+      "bookRating": "4,6",
+      "price": 449,
+      "category": "programming"
+    },
+    {
+      "id": 8,
+      "imageUrl": "./Говорят, в IT много платят.jpg",
+      "bookName": "Говорят, в IT много платят",
+      "authorName": "Елена Правдина",
+      "bookRating": "4,4",
+      "price": 319,
+      "category": "programming"
+    },
+    {
+      "id": 9,
+      "imageUrl": "./Java для всех",
+      "bookName": "Java для всех",
+      "authorName": "Алексей Васильев",
+      "bookRating": "4,6",
+      "price": 549,
+      "category": "programming"
+    },
+    {
+      "id": 10,
+      "imageUrl": "./React и Redux.jpg",
+      "bookName": "React и Redux",
+      "authorName": "Алекс Бэнкс",
+      "bookRating": "3,9",
+      "price": 667,
+      "category": "programming"
+    }
+  ]
+}

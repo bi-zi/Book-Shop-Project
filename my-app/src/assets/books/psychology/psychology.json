@@ -1,0 +1,103 @@
+{
+  "books": [
+    {
+      "id": 0,
+      "imageUrl": "./Брать, давать и наслаждаться.jpg",
+      "bookName": "Брать, давать и наслаждаться",
+      "authorName": "Татьяна Мужицкая",
+      "bookRating": "4,7",
+      "price": 499,
+      "category": "psychology"
+    },
+    {
+      "id": 1,
+      "imageUrl": "./Сказать жизни «Да!».jpg",
+      "bookName": "Сказать жизни «Да!»",
+      "authorName": "Виктор Франкл",
+      "bookRating": "4,6",
+      "price": 299,
+      "category": "psychology"
+    },
+    {
+      "id": 2,
+      "imageUrl": "./Эмоциональный интеллект.jpg",
+      "bookName": "Эмоциональный интеллект",
+      "authorName": "Дэниел Гоулман",
+      "bookRating": "4,1",
+      "price": 499,
+      "category": "psychology"
+    },
+    {
+      "id": 3,
+      "imageUrl": "./Сила подсознания.jpg",
+      "bookName": "Сила подсознания",
+      "authorName": "Джо Диспенза",
+      "bookRating": "4,3",
+      "price": 449,
+      "category": "psychology"
+    },
+    {
+      "id": 4,
+      "imageUrl": "./Синдром самозванца.jpg",
+      "bookName": "Синдром самозванца",
+      "authorName": "Джессами Хибберд",
+      "bookRating": "4,0",
+      "price": 1999,
+      "category": "psychology"
+    },
+    {
+      "id": 5,
+      "imageUrl": "./Тонкое искусство пофигизма.jpg",
+      "bookName": "Тонкое искусство пофигизма",
+      "authorName": "Марк Мэнсон",
+      "bookRating": "4,3",
+      "price": 339,
+      "category": "psychology"
+    },
+    {
+      "id": 6,
+      "imageUrl": "./Атомные привычки.jpg",
+      "bookName": "Атомные привычки",
+      "authorName": "Джеймс Клир",
+      "bookRating": "4,7",
+      "price": 449,
+      "category": "psychology"
+    },
+    {
+      "id": 7,
+      "imageUrl": "./Джедайские техники.jpg",
+      "bookName": "Джедайские техники",
+      "authorName": "Максим Дорофеев",
+      "bookRating": "4,5",
+      "price": 499,
+      "category": "psychology"
+    },
+    {
+      "id": 8,
+      "imageUrl": "./Иди туда, где страшно.jpg",
+      "bookName": "Иди туда, где страшно",
+      "authorName": "Джим Лоулесс",
+      "bookRating": "4,1",
+      "price": 399,
+      "category": "psychology"
+    },
+    {
+      "id": 9,
+      "imageUrl": "./Практический интеллект",
+      "bookName": "Практический интеллект",
+      "authorName": "Патрик Кинг",
+      "bookRating": "4,7",
+      "price": 1549,
+      "category": "psychology"
+    },
+    {
+      "id": 10,
+      "imageUrl": "./Сила воли.jpg",
+      "bookName": "Сила воли",
+      "authorName": "Келли Макгонигал",
+      "bookRating": "4,4",
+      "price": 1100,
+      "category": "psychology"
+    }
+  ]
+}
