@@ -1,8 +1,8 @@
 {
-  "comics manga": [
+  "comicsmanga": [
     {
-      "id": 0,
-      "imageUrl": "./Дочь реки.jpg",
+      "id": 16,
+      "imageUrl": "https://cv7.litres.ru/pub/c/pdf-kniga/cover_250/66618176-dzheyms-klark-doch-reki-66618176.jpg",
       "bookName": "Дочь реки",
       "authorName": "Дэниел Кларк",
       "bookRating": "4,5",
@@ -10,8 +10,8 @@
       "category": "comics manga"
     },
     {
-      "id": 1,
-      "imageUrl": "./Мы дали слово.jpg",
+      "id": 17,
+      "imageUrl": "https://cv8.litres.ru/pub/c/pdf-kniga/cover_250/48693187-ryan-andrews-my-dali-slovo-48693187.jpg",
       "bookName": "Мы дали слово",
       "authorName": "Райан Эндрюс",
       "bookRating": "4,6",
@@ -19,8 +19,8 @@
       "category": "comics manga"
     },
     {
-      "id": 2,
-      "imageUrl": "./Эли и Гастон. Дух осени.jpg",
+      "id": 18,
+      "imageUrl": "https://cv8.litres.ru/pub/c/pdf-kniga/cover_250/66596386-ludovik-villen-eli-i-gaston-duh-oseni-66596386.jpg",
       "bookName": "Эли и Гастон. Дух осени",
       "authorName": "Людовик Виллен",
       "bookRating": "5,0",
@@ -28,8 +28,8 @@
       "category": "comics manga"
     },
     {
-      "id": 3,
-      "imageUrl": "./Принц и швея.jpg",
+      "id": 19,
+      "imageUrl": "https://cv9.litres.ru/pub/c/pdf-kniga/cover_415/67037796-dzhen-vang-princ-i-shveya-67037796.jpg",
       "bookName": "Принц и швея",
       "authorName": "Джен Ванг",
       "bookRating": "4,7",
@@ -37,8 +37,8 @@
       "category": "comics manga"
     },
     {
-      "id": 4,
-      "imageUrl": "./Элрик. Рубиновый трон.jpg",
+      "id": 20,
+      "imageUrl": "https://cv9.litres.ru/pub/c/pdf-kniga/cover_200/39848290-maykl-murkok-elrik-rubinovyy-tron-39848290.jpg",
       "bookName": "Элрик. Рубиновый трон",
       "authorName": "Майкл Муркок",
       "bookRating": "4,0",
@@ -46,8 +46,8 @@
       "category": "comics manga"
     },
     {
-      "id": 5,
-      "imageUrl": "./Чумной Доктор. Часть 1.jpg",
+      "id": 21,
+      "imageUrl": "https://cv8.litres.ru/pub/c/pdf-kniga/cover_200/31734583-artem-gabrelyanov-chumnoy-doktor-chast-1-31734583.jpg",
       "bookName": "Чумной Доктор. Часть 1",
       "authorName": "Евгений Федотов",
       "bookRating": "4,7",
@@ -55,8 +55,8 @@
       "category": "comics manga"
     },
     {
-      "id": 6,
-      "imageUrl": "./Звёзды.jpg",
+      "id": 22,
+      "imageUrl": "https://cv3.litres.ru/pub/c/pdf-kniga/cover_250/67108134-azat-nurgaleev-zvezdy-67108134.jpg",
       "bookName": "Звёзды",
       "authorName": "Крис Уитакер",
       "bookRating": "0",
@@ -64,8 +64,8 @@
       "category": "comics manga"
     },
     {
-      "id": 7,
-      "imageUrl": "./Дорога к Океану.jpg",
+      "id": 23,
+      "imageUrl": "https://cv3.litres.ru/pub/c/pdf-kniga/cover_250/66713438-varvara-ledneva-doroga-k-okeanu-66713438.jpg",
       "bookName": "Дорога к Океану",
       "authorName": "Варвара Леднёва",
       "bookRating": "4,8",
@@ -73,8 +73,8 @@
       "category": "comics manga"
     },
     {
-      "id": 8,
-      "imageUrl": "./Лучшие друзья.jpg",
+      "id": 24,
+      "imageUrl": "https://cv6.litres.ru/pub/c/pdf-kniga/cover_250/66441462-shannon-hale-luchshie-druzya-66441462.jpg",
       "bookName": "Лучшие друзья",
       "authorName": "Шеннон Хейл",
       "bookRating": "4,2",
@@ -82,8 +82,8 @@
       "category": "comics manga"
     },
     {
-      "id": 9,
-      "imageUrl": "./Негалиод.jpg",
+      "id": 25,
+      "imageUrl": "https://cv5.litres.ru/pub/c/pdf-kniga/cover_250/66485254-vensan-perrio-negaliod-66485254.jpg",
       "bookName": "Негалиод",
       "authorName": "Венсан Перрио",
       "bookRating": "4,2",
@@ -91,12 +91,57 @@
       "category": "comics manga"
     },
     {
-      "id": 10,
-      "imageUrl": "./Четвертая Сила.jpg",
+      "id": 26,
+      "imageUrl": "https://cv0.litres.ru/pub/c/pdf-kniga/cover_250/66329500-huan-himenes-chetvertaya-sila-66329500.jpg",
       "bookName": "Четвертая Сила",
       "authorName": "Хуан Хименес",
       "bookRating": "5,0",
       "price": 299,
+      "category": "comics manga"
+    },
+    {
+      "id": 27,
+      "imageUrl": "https://cv4.litres.ru/pub/c/pdf-kniga/cover_250/66367742-elli-brosh-otvety-i-drugie-voprosy-66367742.jpg",
+      "bookName": "Ответы и другие вопросы",
+      "authorName": "Элли Брош",
+      "bookRating": "5,0",
+      "price": 429,
+      "category": "comics manga"
+    },
+    {
+      "id": 28,
+      "imageUrl": "https://cv9.litres.ru/pub/c/pdf-kniga/cover_250/66217298-drayk-tatyana-larina-kosmicheskie-kity-66217298.jpg",
+      "bookName": "Космические киты",
+      "authorName": "Татьяна Ларина",
+      "bookRating": "3,7",
+      "price": 159,
+      "category": "comics manga"
+    },
+    {
+      "id": 29,
+      "imageUrl": "https://cv1.litres.ru/pub/c/pdf-kniga/cover_200/66174612-dzhordzh-oruell-1984-graficheskiy-roman-66174612.jpg",
+      "bookName": "1984",
+      "authorName": "Джордж Оруэлл",
+      "bookRating": "5,0",
+      "price": 449,
+      "category": "comics manga"
+    },
+    {
+      "id": 30,
+      "imageUrl": "https://cv4.litres.ru/pub/c/elektronnaya-kniga/cover_185/66043046-denni-fingerot-sten-li-epoha-marvel.jpg",
+      "bookName": "Стэн Ли. Эпоха Marvel",
+      "authorName": "Дэнни Фингерот",
+      "bookRating": "4,8",
+      "price": 699,
+      "category": "comics manga"
+    },
+    {
+      "id": 31,
+      "imageUrl": "https://cv3.litres.ru/pub/c/pdf-kniga/cover_250/65630932-gabriel-ba-dva-brata-65630932.jpg",
+      "bookName": "Два брата",
+      "authorName": "Габриэль Ба",
+      "bookRating": "4,3",
+      "price": 199,
       "category": "comics manga"
     }
   ]

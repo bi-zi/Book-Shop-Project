@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(133, 133, 133);
+  background-color: rgb(255, 255, 255);
   scrollbar-width: thin;
 }
 
@@ -35,12 +35,83 @@ hr {
 }
 
 .menu {
-  padding-top: 5px;
-  font-size: 20px;
+  height: 70px;
+  margin-bottom: 20px;
+
+  font-weight: bolder;
 
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 
-  color: white;
+  background-color: rgb(85, 170, 219);
+}
+
+.webName {
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+}
+
+.choice {
+  font-size: 20px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.categories {
+  position: relative;
+}
+.categories li:hover
+
+.submenu {display: block;}
+
+.submenu {
+  position: absolute;
+  opacity: 0;
+}
+
+.booksContainer {
+  max-width: 100%;
+  min-width: 100%;
+  margin: auto;
+  padding: 0 30px;
+}
+
+.line {
+  margin-bottom: 0 !important;
+  margin: 0 30px;
+}
+
+.book0 {
+  display: inline-block;
+  width: 200px;
+  margin: 0 10px 50px 10px;
+}
+
+.imageSettings {
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 20%), 0 5px 10px rgb(0 0 0 / 10%);
+  margin-bottom: 5px;
+  height: 340px;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+
+  font-size: 16px;
+  color: rgb(255, 73, 1);
+  font-weight: bolder;
+}
+
+.author {
+  font-size: 14px;
+}
+
+.bookName {
+  display: flex;
+  font-size: 16px;
+  font-weight: bolder;
+  word-wrap: break-word;
 }

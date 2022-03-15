@@ -1,8 +1,8 @@
 {
   "books": [
     {
-      "id": 0,
-      "imageUrl": "./Брать, давать и наслаждаться.jpg",
+      "id": 80,
+      "imageUrl": "https://cv6.litres.ru/pub/c/elektronnaya-kniga/cover_250/66181962-tatyana-muzhickaya-brat-davat-i-naslazhdatsya-kak-ostavatsya-v-resurse-cht.jpg",
       "bookName": "Брать, давать и наслаждаться",
       "authorName": "Татьяна Мужицкая",
       "bookRating": "4,7",
@@ -10,8 +10,8 @@
       "category": "psychology"
     },
     {
-      "id": 1,
-      "imageUrl": "./Сказать жизни «Да!».jpg",
+      "id": 81,
+      "imageUrl": "https://cv1.litres.ru/pub/c/elektronnaya-kniga/cover_200/147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere.jpg",
       "bookName": "Сказать жизни «Да!»",
       "authorName": "Виктор Франкл",
       "bookRating": "4,6",
@@ -19,8 +19,8 @@
       "category": "psychology"
     },
     {
-      "id": 2,
-      "imageUrl": "./Эмоциональный интеллект.jpg",
+      "id": 82,
+      "imageUrl": "https://cv7.litres.ru/pub/c/elektronnaya-kniga/cover_250/5024477-deniel-goulman-emocionalnyy-intellekt-pochemu-on-mozhet-znachit-bolshe-che.jpg",
       "bookName": "Эмоциональный интеллект",
       "authorName": "Дэниел Гоулман",
       "bookRating": "4,1",
@@ -28,8 +28,8 @@
       "category": "psychology"
     },
     {
-      "id": 3,
-      "imageUrl": "./Сила подсознания.jpg",
+      "id": 83,
+      "imageUrl": "https://cv4.litres.ru/pub/c/elektronnaya-kniga/cover_250/6301646-dzho-dispenza-sila-podsoznaniya-ili-kak-izmenit-zhizn-za-4-nedeli.jpg",
       "bookName": "Сила подсознания",
       "authorName": "Джо Диспенза",
       "bookRating": "4,3",
@@ -37,8 +37,8 @@
       "category": "psychology"
     },
     {
-      "id": 4,
-      "imageUrl": "./Синдром самозванца.jpg",
+      "id": 84,
+      "imageUrl": "https://cv9.litres.ru/pub/c/elektronnaya-kniga/cover_250/65876893-dzhessami-hibberd-sindrom-samozvanca-kak-vyrvatsya-iz-lovushki-toksichnogo.jpg",
       "bookName": "Синдром самозванца",
       "authorName": "Джессами Хибберд",
       "bookRating": "4,0",
@@ -46,8 +46,8 @@
       "category": "psychology"
     },
     {
-      "id": 5,
-      "imageUrl": "./Тонкое искусство пофигизма.jpg",
+      "id": 85,
+      "imageUrl": "https://cv1.litres.ru/pub/c/elektronnaya-kniga/cover_250/25440816-mark-menson-tonkoe-iskusstvo-pofigizma.jpg",
       "bookName": "Тонкое искусство пофигизма",
       "authorName": "Марк Мэнсон",
       "bookRating": "4,3",
@@ -55,8 +55,8 @@
       "category": "psychology"
     },
     {
-      "id": 6,
-      "imageUrl": "./Атомные привычки.jpg",
+      "id": 86,
+      "imageUrl": "https://cv7.litres.ru/pub/c/elektronnaya-kniga/cover_250/48514275-dzheyms-klir-atomnye-privychki-kak-priobresti-horoshie-privychki-i-izbavit.jpg",
       "bookName": "Атомные привычки",
       "authorName": "Джеймс Клир",
       "bookRating": "4,7",
@@ -64,8 +64,8 @@
       "category": "psychology"
     },
     {
-      "id": 7,
-      "imageUrl": "./Джедайские техники.jpg",
+      "id": 87,
+      "imageUrl": "https://cv6.litres.ru/pub/c/elektronnaya-kniga/cover_250/23590168-maksim-dorofeev-dzhedayskie-tehniki.jpg",
       "bookName": "Джедайские техники",
       "authorName": "Максим Дорофеев",
       "bookRating": "4,5",
@@ -73,8 +73,8 @@
       "category": "psychology"
     },
     {
-      "id": 8,
-      "imageUrl": "./Иди туда, где страшно.jpg",
+      "id": 88,
+      "imageUrl": "https://cv8.litres.ru/pub/c/elektronnaya-kniga/cover_250/36301085-jim-lawless-idi-tuda-gde-strashno-imenno-tam-ty-obretesh-silu.jpg",
       "bookName": "Иди туда, где страшно",
       "authorName": "Джим Лоулесс",
       "bookRating": "4,1",
@@ -82,8 +82,8 @@
       "category": "psychology"
     },
     {
-      "id": 9,
-      "imageUrl": "./Практический интеллект",
+      "id": 89,
+      "imageUrl": "https://cv4.litres.ru/pub/c/elektronnaya-kniga/cover_250/66077544-patrik-king-prakticheskiy-intellekt-kak-kriticheski-myslit-modelirovat-sit.jpg",
       "bookName": "Практический интеллект",
       "authorName": "Патрик Кинг",
       "bookRating": "4,7",
@@ -91,12 +91,57 @@
       "category": "psychology"
     },
     {
-      "id": 10,
-      "imageUrl": "./Сила воли.jpg",
+      "id": 90,
+      "imageUrl": "https://cv2.litres.ru/pub/c/elektronnaya-kniga/cover_200/6298220-kelli-makgonigal-sila-voli.jpg",
       "bookName": "Сила воли",
       "authorName": "Келли Макгонигал",
       "bookRating": "4,4",
       "price": 1100,
+      "category": "psychology"
+    },
+    {
+      "id": 91,
+      "imageUrl": "https://cv0.litres.ru/pub/c/elektronnaya-kniga/cover_185/67121805-andrey-kurpatov-mashina-myshleniya.jpg",
+      "bookName": "Машина мышления",
+      "authorName": "Андрей Курпатов",
+      "bookRating": "4,1",
+      "price": 779,
+      "category": "psychology"
+    },
+    {
+      "id": 92,
+      "imageUrl": "https://cv3.litres.ru/pub/c/elektronnaya-kniga/cover_415/51388931-bessel-van-der-kolk-telo-pomnit-vse-kakuu-rol-psihologicheskaya-travma-ig.jpg",
+      "bookName": "Тело помнит все",
+      "authorName": "Бессел ван дер Колк",
+      "bookRating": "4,5",
+      "price": 449,
+      "category": "psychology"
+    },
+    {
+      "id": 93,
+      "imageUrl": "https://cv3.litres.ru/pub/c/elektronnaya-kniga/cover_415/25280333-mihail-labkovskiy-hochu-i-budu-prinyat-sebya-polubit-zhizn-i-stat-schastlivym.jpg",
+      "bookName": "Хочу и буду",
+      "authorName": "Михаил Лабковский",
+      "bookRating": "4,4",
+      "price": 1100,
+      "category": "psychology"
+    },
+    {
+      "id": 94,
+      "imageUrl": "https://cv1.litres.ru/pub/c/elektronnaya-kniga/cover_250/66749313-mark-menson-will-chemu-mozhet-nauchit-nas-prostoy-paren-stavshiy-samym-vys.jpg",
+      "bookName": "Will",
+      "authorName": "Уилл Смит",
+      "bookRating": "4,8",
+      "price": 599,
+      "category": "psychology"
+    },
+    {
+      "id": 95,
+      "imageUrl": "https://cv2.litres.ru/pub/c/elektronnaya-kniga/cover_415/4236425-robert-chaldini-psihologiya-vliyaniya-ubezhday-vozdeystvuy-zaschischaysya.jpg",
+      "bookName": "Психология влияния",
+      "authorName": "Роберт Чалдини",
+      "bookRating": "4,4",
+      "price": 299,
       "category": "psychology"
     }
   ]
