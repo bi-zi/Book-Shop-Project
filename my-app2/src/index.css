@@ -59,17 +59,66 @@ hr {
   color: rgb(255, 255, 255);
 }
 
-.categories {
+.dropdown {
   position: relative;
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
 }
-.categories li:hover
 
-.submenu {display: block;}
-
-.submenu {
+.sorting {
+  display: none;
   position: absolute;
-  opacity: 0;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
+
+.categories {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.sorting a {
+  color: black;
+  padding: 12px 16px;
+  font-size: 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.categories a {
+  color: black;
+  padding: 12px 16px;
+  font-size: 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.categories a:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.dropdown:hover .categories {
+  display: block;
+}
+
+.sorting a:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.dropdown:hover .sorting {
+  display: block;
+}
+
 
 .booksContainer {
   max-width: 100%;
