@@ -1,16 +1,25 @@
-import React from 'react';
-import UserList from './components/UserList';
+import React, { useState } from 'react';
+import BookList from './components/BookList';
 import Header from './components/header';
-import Books from './components/books';
+import { Context } from './components/context';
+
+//import TodoList from './components/TodoList';
 
 function App() {
+  const [counter, setCount] = useState(1)
+  const [sort, setSort] = useState(0)
+  const value = {
+    counter,
+    setCount,
+    sort,
+    setSort
+  };
+
   return (
-    <div>
+    <Context.Provider value={value}>
       <Header />
-      <UserList />
-      <Books />
-    
-    </div>
+      <BookList />
+    </Context.Provider>
   );
 }
 
