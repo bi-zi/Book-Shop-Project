@@ -1,21 +1,16 @@
 import React, { useEffect, useContext } from 'react';
 import { useTypedSelector } from '../hooks/useTypedSelector';
 import { useActions } from '../hooks/useActions';
-import { Context } from './context';
+import { Context } from '../components/context';
 
-const BookList: React.FC = () => {
+const Category: React.FC = () => {
   const { books, error, loading } = useTypedSelector((state) => state.book);
-  const value = useContext(Context);
-  let counterValue = value.counter;
-  let sortValue = value.sort;
-
   const { fetchBooks } = useActions();
-
-  let stackOfBooks = books;
+  const value = useContext(Context);
+  let sortValue = value.sort;
+  let counterValue = value.counter;
+  let stackOfBooks = books.sort(() => Math.random() - 0.5);
   let categoryСheck = '';
-  console.log(value.sort);
-
-  console.log(value.counter);
 
   counterValue === 2
     ? (categoryСheck = 'business literature')
@@ -29,24 +24,18 @@ const BookList: React.FC = () => {
     ? (categoryСheck = 'programming')
     : (categoryСheck = 'psychology');
 
-  if (counterValue === 1 || (sortValue === 1 && counterValue === 1)) {
-    stackOfBooks = books.sort(() => Math.random() - 0.5);
-    if (sortValue === 1) {
-      stackOfBooks.sort((a, b) => (a.bookRating < b.bookRating ? 1 : -1));
-    }
-  }
   if (counterValue > 1 || (sortValue === 1 && counterValue > 1)) {
     stackOfBooks = books.filter((book) => Object.values(book)[6] === categoryСheck);
     if (sortValue === 1) {
       stackOfBooks.sort((a, b) => (a.bookRating < b.bookRating ? 1 : -1));
     }
   }
-  if (counterValue && (sortValue === 2 || sortValue === 3 )) {
+
+  if (counterValue && (sortValue === 2 || sortValue === 3)) {
     sortValue === 2
       ? stackOfBooks.sort((a, b) => (a.price < b.price ? 1 : -1))
       : stackOfBooks.sort((a, b) => (a.price > b.price ? 1 : -1));
   }
-
 
 
   useEffect(() => {
@@ -62,6 +51,7 @@ const BookList: React.FC = () => {
 
   return (
     <div id="20" className="booksContainer">
+      <div className="categoryName">{counterValue > 1 ? Object.values(stackOfBooks)[1].categoryRu : ''}</div>
       <div className="line">
         {stackOfBooks.map((book) => {
           return (
@@ -83,4 +73,4 @@ const BookList: React.FC = () => {
   );
 };
 
-export default BookList;
+export default Category;

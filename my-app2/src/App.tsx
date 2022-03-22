@@ -1,25 +1,19 @@
-import React, { useState } from 'react';
-import BookList from './components/BookList';
-import Header from './components/header';
-import { Context } from './components/context';
-
-//import TodoList from './components/TodoList';
+import React from 'react';
+import { Routes, Route} from 'react-router-dom';
+import Layout from './components/Layout';
+import Homepage from './pages/Homepage';
+import Category from './pages/Category';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
-  const [counter, setCount] = useState(1)
-  const [sort, setSort] = useState(0)
-  const value = {
-    counter,
-    setCount,
-    sort,
-    setSort
-  };
-
   return (
-    <Context.Provider value={value}>
-      <Header />
-      <BookList />
-    </Context.Provider>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Homepage />} />,
+        <Route path="Category" element={<Category />} />,
+        <Route path="*" element={<NotFoundPage />} />,
+      </Route>
+    </Routes>
   );
 }
 

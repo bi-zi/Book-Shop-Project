@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { Context } from './context';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const value = useContext(Context);
+
   let swapSort = value.sort;
   let swapCounter = value.counter;
 
@@ -12,9 +14,10 @@ function Header() {
         <div className="webName" onClick={() => value.setCount((swapCounter = 1))}>
           Book Shop
         </div>
-        <div className="choice" onClick={() => value.setCount((swapCounter = 1))}>
+        <Link to="/" className="choice" onClick={() => value.setCount((swapCounter = 1))}>
           Все книги
-        </div>
+        </Link>
+        <Link to="/1">Все книги</Link>
         <div className="dropdown">
           Сортировка
           <div className="sorting">
@@ -38,14 +41,14 @@ function Header() {
         </div>
         <div className="dropdown">
           Категории
-          <div className="categories">
+          <Link to="/Category" className="categories">
             <div onClick={() => value.setCount((swapCounter = 2))}>Бизнес Литература</div>
             <div onClick={() => value.setCount((swapCounter = 3))}>Комиксы и Макгонига</div>
             <div onClick={() => value.setCount((swapCounter = 4))}>Детективы</div>
             <div onClick={() => value.setCount((swapCounter = 5))}>Фантастика</div>
             <div onClick={() => value.setCount((swapCounter = 6))}>Программирование</div>
             <div onClick={() => value.setCount((swapCounter = 7))}>Психология</div>
-          </div>
+          </Link>
         </div>
         <div className="choice">Корзина</div>
       </div>

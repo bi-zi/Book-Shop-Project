@@ -48,6 +48,11 @@ hr {
   background-color: rgb(85, 170, 219);
 }
 
+.active {
+  color: blue;
+  cursor: default;
+}
+
 .webName {
   font-size: 25px;
   color: rgb(0, 0, 0);
@@ -125,6 +130,10 @@ hr {
   text-align: center;
   max-width: 100%;
   min-width: 100%;
+}
+.categoryName{
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
 .book0 {
