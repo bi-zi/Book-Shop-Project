@@ -11,7 +11,7 @@ const Category: React.FC = () => {
   let counterValue = value.counter;
   let stackOfBooks = books.sort(() => Math.random() - 0.5);
   let categoryСheck = '';
-
+ 
   counterValue === 2
     ? (categoryСheck = 'business literature')
     : counterValue === 3

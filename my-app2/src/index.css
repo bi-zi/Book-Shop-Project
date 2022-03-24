@@ -45,7 +45,7 @@ hr {
   justify-content: space-around;
   align-items: center;
 
-  background-color: rgb(85, 170, 219);
+  background-color: rgb(120, 240, 204);
 }
 
 .active {
@@ -125,13 +125,13 @@ hr {
   display: block;
 }
 
-
 .booksContainer {
   text-align: center;
   max-width: 100%;
   min-width: 100%;
 }
-.categoryName{
+
+.categoryName {
   font-size: 24px;
   margin-bottom: 15px;
 }
@@ -141,7 +141,6 @@ hr {
   width: 200px;
   margin: 0 10px 50px 10px;
   text-align: left;
-
 }
 
 .imageSettings {
@@ -158,10 +157,9 @@ hr {
   align-items: center;
 
   font-size: 16px;
-  color: rgb(255, 73, 1);
+  color: #ffd700;
   font-weight: bolder;
 }
-
 
 .author {
   font-size: 14px;
@@ -172,4 +170,176 @@ hr {
   font-size: 16px;
   font-weight: bolder;
   word-wrap: break-word;
+}
+
+.BookPageContainer {
+  border: 5px solid;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 1280px;
+  height: 100%;
+}
+
+.mainImage {
+  height: 600px;
+
+  image-rendering: auto  ;
+  margin: 20px;
+}
+
+.bookDescription {
+  position: relative;
+  left: 443px;
+  bottom: 625px;
+
+  width: 723px;
+  height: 120px;
+}
+
+.nameBook {
+  left: 20px;
+  position: absolute;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.bookAuthor {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.Bookrating {
+  position: absolute;
+  color: #000000;
+  font-size: 20px;
+  display: flex;
+  top: 90px;
+  left: 47px;
+}
+
+.ratingContainer {
+  position: absolute;
+  top: 90px;
+}
+.star {
+  bottom: 50px;
+  font-size: 33px;
+  color: #ffd700;
+  position: absolute;
+  top: 73px;
+  left: 17px;
+}
+
+.numberOfReviews {
+  position: absolute;
+  font-size: 14px;
+  width: 120px;
+  top: 95px;
+  left: 110px;
+}
+
+.rating-area {
+  overflow: hidden;
+  width: 265px;
+  position: absolute;
+  top: 80px;
+  left: 140px;
+  margin: 0 auto;
+}
+
+.rating-area:not(:checked) > input {
+  display: none;
+}
+
+.rating-area:not(:checked) > label {
+  float: right;
+  width: 35px;
+  padding: 0;
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 32px;
+  color: lightgrey;
+  text-shadow: 1px 1px #bbb;
+}
+
+.rating-area:not(:checked) > label:before {
+  content: '★';
+}
+
+.rating-area > input:checked ~ label {
+  color: #ffd700;
+  text-shadow: 1px 1px #c60;
+}
+
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+  color: gold;
+}
+
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px goldenrod;
+}
+
+.rate-area > label:active {
+  position: relative;
+}
+
+.tradeContainer {
+  text-align: center;
+  background-color: rgb(120, 240, 204, 0.3);
+
+  position: relative;
+  left: 940px;
+  bottom: 745px;
+  border-radius: 15px;
+  width: 300px;
+  height: 200px;
+}
+
+.bookPrice {
+  margin: 0 0 0 20px;
+  display: flex;
+  padding-top: 45px;
+  padding-left: 10px;
+
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.availability {
+  padding-top: 12px;
+  padding-left: 95px;
+
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.buyBook button {
+  background-color: rgb(120, 240, 204);
+  width: 250px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.bookmarks button {
+  background-color: rgb(255, 255, 255);
+  width: 250px;
+  height: 40px;
+  margin: 5px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.annotation {
+  position: relative;
+  bottom: 300px;
+  width: 1100px;
+  padding-left: 20px;
 }
