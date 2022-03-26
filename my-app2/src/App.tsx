@@ -6,13 +6,14 @@ import BookPage from './pages/BookPage';
 import Category from './pages/Category';
 import NotFoundPage from './pages/NotFoundPage';
 
+
 function App() {
   return (
-
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<BookPage />} />,
+        <Route index element={<Homepage />} />,
         <Route path="Category" element={<Category />} />,
+        <Route path=":id" element={<BookPage />} />,
         <Route path="*" element={<NotFoundPage />} />,
       </Route>
     </Routes>

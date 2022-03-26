@@ -11,7 +11,7 @@ const Category: React.FC = () => {
   let counterValue = value.counter;
   let stackOfBooks = books.sort(() => Math.random() - 0.5);
   let categoryСheck = '';
- 
+
   counterValue === 2
     ? (categoryСheck = 'business literature')
     : counterValue === 3
@@ -25,7 +25,7 @@ const Category: React.FC = () => {
     : (categoryСheck = 'psychology');
 
   if (counterValue > 1 || (sortValue === 1 && counterValue > 1)) {
-    stackOfBooks = books.filter((book) => Object.values(book)[6] === categoryСheck);
+    stackOfBooks = books.filter((book) => Object.values(book)[7] === categoryСheck);
     if (sortValue === 1) {
       stackOfBooks.sort((a, b) => (a.bookRating < b.bookRating ? 1 : -1));
     }

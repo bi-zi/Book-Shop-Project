@@ -17,7 +17,6 @@ function Header() {
         <Link to="/" className="choice" onClick={() => value.setCount((swapCounter = 1))}>
           Все книги
         </Link>
-        <Link to="/1">Все книги</Link>
         <div className="dropdown">
           Сортировка
           <div className="sorting">
