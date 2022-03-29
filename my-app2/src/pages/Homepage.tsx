@@ -8,9 +8,10 @@ const BookList: React.FC = () => {
   const { books, error, loading } = useTypedSelector((state) => state.book);
   const { fetchBooks } = useActions();
   const value = useContext(Context);
-
   let counterValue = value.counter;
   let sortValue = value.sort;
+  let suka = value.bookId
+
   let stackOfBooks = books.sort(() => Math.random() - 0.5);
 
   if (sortValue === 1) {
@@ -22,7 +23,6 @@ const BookList: React.FC = () => {
       ? stackOfBooks.sort((a, b) => (a.price < b.price ? 1 : -1))
       : stackOfBooks.sort((a, b) => (a.price > b.price ? 1 : -1));
   }
-
   useEffect(() => {
     fetchBooks();
   }, []);
@@ -39,11 +39,10 @@ const BookList: React.FC = () => {
       <div className="line">
         {stackOfBooks.map((book) => {
           return (
-            <Link to={`/Book_${book.id}`}>
+            <Link key={book.id} to={`/Book/${book.id}`}>
               <div
                 className="book0"
-                key={book.id}
-                onClick={() => value.setBookId((value.booId = book.id))}>
+                key={book.id}>
                 <div className="imageSettings">
                   <img height="310px" width="200px" src={book.imageUrl} alt="" />
                   <div className="info">

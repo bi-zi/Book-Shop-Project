@@ -1,25 +1,24 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect } from 'react';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { fainstagram } from '@fortawesome/free-solid-svg-icons';
 
 import { useTypedSelector } from '../hooks/useTypedSelector';
 import { useActions } from '../hooks/useActions';
-import { Context } from '../components/context';
 import Slider from 'react-slick';
+import { Link, useParams } from 'react-router-dom';
 
 function BookPage() {
   const { books, error, loading } = useTypedSelector((state) => state.book);
   const { fetchBooks } = useActions();
-  const value = useContext(Context);
-  let a = books[value.bookId];
-  let fsd = []
-  for (let i in a) {
-    fsd.push(a[i])
-  }
-  console.log(fsd[7])
+  const { id } = useParams();
 
-  let book = books[value.bookId];
-  let superCheck = books.filter((book) => Object.values(book)[7] === fsd[7]);
+  let book = books[id];
+  let ObjectValues = [];
+
+  for (let i in book) {
+    ObjectValues.push(book[i]);
+  }
+  let bookRecommended = books.filter((book) => Object.values(book)[7] === ObjectValues[7]);
 
   const settings = {
     className: 'center',
@@ -41,7 +40,7 @@ function BookPage() {
   }
   return (
     <div className="BookPageContainer">
-      <div className="bookImage">
+      <div className="bookImage" name="top">
         <img className="mainImage" src={book?.imageUrl} alt="" />
       </div>
 
@@ -65,15 +64,15 @@ function BookPage() {
 
           <div className="rating-area">
             <input type="radio" id="star-5" name="rating" value="5" />
-            <label for="star-5" title="Оценка «5»"></label>
+            <label htmlFor="star-5" title="Оценка «5»"></label>
             <input type="radio" id="star-4" name="rating" value="4" />
-            <label for="star-4" title="Оценка «4»"></label>
+            <label htmlFor="star-4" title="Оценка «4»"></label>
             <input type="radio" id="star-3" name="rating" value="3" />
-            <label for="star-3" title="Оценка «3»"></label>
+            <label htmlFor="star-3" title="Оценка «3»"></label>
             <input type="radio" id="star-2" name="rating" value="2" />
-            <label for="star-2" title="Оценка «2»"></label>
+            <label htmlFor="star-2" title="Оценка «2»"></label>
             <input type="radio" id="star-1" name="rating" value="1" />
-            <label for="star-1" title="Оценка «1»"></label>
+            <label htmlFor="star-1" title="Оценка «1»"></label>
           </div>
         </div>
         <div className="numberOfPurchases"></div>
@@ -128,49 +127,27 @@ function BookPage() {
 
       <div className="recommendations">
         <div className="thisSectionBooks">
-          <h2 className="sliderName">{fsd[8]}</h2>
-          <Slider {...settings}>
-            {superCheck.map((book) => {
-              let i = 0;
-              if (i < 16) {
-                i++;
-                return (
-                  <div className={`miniBook ${i}`} key={book?.id}>
-                    <div className="miniImageSettings">
-                      <img height="250px" width="150px" src={book?.imageUrl} alt="" />
-                      <div className="miniInfo">
-                        <div className="rating">★{book?.bookRating}★</div>
-                        <div className="price">{book?.price} ₽</div>
-                      </div>
-                    </div>
-                    <div className="miniAuthor">{book?.authorName}</div>
-                    <div className="miniBookName">{book?.bookName}</div>
-                  </div>
-                );
-              }
-            })}
-          </Slider>
-        </div>
+          <h2 className="sliderName">{ObjectValues[8]}</h2>
 
-        <div className="viewedBooks">
-          <h2 className="sliderName">Недавно просмотренные</h2>
           <Slider {...settings}>
-            {superCheck.map((book) => {
+            {bookRecommended.map((book) => {
               let i = 0;
               if (i < 16) {
                 i++;
                 return (
-                  <div className={`miniBook ${i}`} key={book?.id}>
-                    <div className="miniImageSettings">
-                      <img height="250px" width="150px" src={book?.imageUrl} alt="" />
-                      <div className="miniInfo">
-                        <div className="rating">★{book?.bookRating}★</div>
-                        <div className="price">{book?.price} ₽</div>
+                  <Link key={book.id} to={`/Book/${book.id}`}>
+                    <div className={`miniBook ${i}`} key={book?.id}>
+                      <div className="miniImageSettings">
+                        <img height="250px" width="150px" src={book?.imageUrl} alt="" />
+                        <div className="miniInfo">
+                          <div className="rating">★{book?.bookRating}★</div>
+                          <div className="price">{book?.price} ₽</div>
+                        </div>
                       </div>
+                      <div className="miniAuthor">{book?.authorName}</div>
+                      <div className="miniBookName">{book?.bookName}</div>
                     </div>
-                    <div className="miniAuthor">{book?.authorName}</div>
-                    <div className="miniBookName">{book?.bookName}</div>
-                  </div>
+                  </Link>
                 );
               }
             })}

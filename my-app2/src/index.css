@@ -34,6 +34,15 @@ hr {
   background-color: #ffffff;
 }
 
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+a:hover {
+   color: rgb(0, 0, 0)
+}
+
 .menu {
   height: 70px;
   margin-bottom: 20px;
@@ -148,6 +157,7 @@ hr {
   box-shadow: 0 1px 3px rgb(0 0 0 / 20%), 0 5px 10px rgb(0 0 0 / 10%);
   margin-bottom: 5px;
   height: 340px;
+
 }
 
 .info {
@@ -183,6 +193,7 @@ hr {
 
 .mainImage {
   height: 600px;
+  width: 400px;
 
   image-rendering: auto;
   margin: 20px;
@@ -198,6 +209,7 @@ hr {
 }
 
 .nameBook {
+  width: 430px;
   left: 20px;
   position: absolute;
   font-weight: bolder;
@@ -444,9 +456,12 @@ hr {
   background-color: #fff;
   box-shadow: 0 2px 13px rgb(0 0 0 / 30%), 0 5px 10px rgb(0 0 0 / 20%);
   margin-bottom: 5px;
+  pointer-events: none;
+}
+
+.miniImg {
   height: 270px;
   width: 150px;
-  pointer-events: none;
 }
 
 .miniInfo {

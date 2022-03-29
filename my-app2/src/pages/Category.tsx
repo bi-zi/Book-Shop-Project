@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from 'react';
 import { useTypedSelector } from '../hooks/useTypedSelector';
 import { useActions } from '../hooks/useActions';
 import { Context } from '../components/context';
+import { Link } from 'react-router-dom';
 
 const Category: React.FC = () => {
   const { books, error, loading } = useTypedSelector((state) => state.book);
@@ -55,17 +56,19 @@ const Category: React.FC = () => {
       <div className="line">
         {stackOfBooks.map((book) => {
           return (
-            <div className="book0" key={book.id}>
-              <div className="imageSettings">
-                <img height="310px" width="200px" src={book.imageUrl} alt="" />
-                <div className="info">
-                  <div className="rating">★{book.bookRating}★</div>
-                  <div className="price">{book.price} ₽</div>
+            <Link key={book.id} to={`/Book/${book.id}`}>
+              <div className="book0" key={book.id}>
+                <div className="imageSettings">
+                  <img height="310px" width="200px" src={book.imageUrl} alt="" />
+                  <div className="info">
+                    <div className="rating">★{book.bookRating}★</div>
+                    <div className="price">{book.price} ₽</div>
+                  </div>
                 </div>
+                <div className="author">{book.authorName}</div>
+                <div className="bookName">{book.bookName}</div>
               </div>
-              <div className="author">{book.authorName}</div>
-              <div className="bookName">{book.bookName}</div>
-            </div>
+            </Link>
           );
         })}
       </div>

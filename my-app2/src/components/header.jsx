@@ -6,10 +6,11 @@ function Header() {
   const value = useContext(Context);
 
   let swapSort = value.sort;
+  // eslint-disable-next-line no-unused-vars
   let swapCounter = value.counter;
 
   return (
-    <div className="header">
+    <div className="header" id="part1">
       <div className="menu">
         <div className="webName" onClick={() => value.setCount((swapCounter = 1))}>
           Book Shop
