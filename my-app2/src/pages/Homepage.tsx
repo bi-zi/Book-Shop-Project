@@ -10,7 +10,6 @@ const BookList: React.FC = () => {
   const value = useContext(Context);
   let counterValue = value.counter;
   let sortValue = value.sort;
-  let suka = value.bookId
 
   let stackOfBooks = books.sort(() => Math.random() - 0.5);
 

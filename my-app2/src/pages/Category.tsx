@@ -50,9 +50,12 @@ const Category: React.FC = () => {
     return <h1>{error}</h1>;
   }
 
+
   return (
     <div id="20" className="booksContainer">
-      <div className="categoryName">{counterValue > 1 ? Object.values(stackOfBooks)[1].categoryRu : ''}</div>
+      <div className="categoryName">
+
+      </div>
       <div className="line">
         {stackOfBooks.map((book) => {
           return (
