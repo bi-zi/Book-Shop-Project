@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Context } from './context';
-import Header from './header';
+import Header from './header/header';
 
 const Layout = () => {
-  const [counter, setCount] = useState(1);
+  const [page, setPage] = useState(1);
   const [sort, setSort] = useState(0);
   const value = {
-    counter,
-    setCount,
+    page,
+    setPage,
     sort,
     setSort,
   };
@@ -16,7 +16,6 @@ const Layout = () => {
   return (
     <Context.Provider value={value}>
       <Header />
-      ,
       <Outlet>
         <footer>2022</footer>
       </Outlet>

@@ -1,0 +1,72 @@
+.header {
+  height: 70px;
+  margin-bottom: 20px;
+
+  font-weight: bolder;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: rgb(120, 240, 204);
+}
+
+.webName {
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.allBooks, .shoppingCart {
+  font-size: 20px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.dropDownList {
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.sorting {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.categories {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.sorting div , .categories div{
+  color: black;
+  padding: 12px 16px;
+  font-size: 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.sorting div:hover , .categories div:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.dropDownList:hover .sorting {
+  display: block;
+}
+
+.dropDownList:hover .categories {
+  display: block;
+}

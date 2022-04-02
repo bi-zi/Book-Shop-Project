@@ -1,10 +1,11 @@
 import React from 'react';
-import { Routes, Route} from 'react-router-dom';
 import Layout from './components/Layout';
-import Homepage from './pages/Homepage';
-import BookPage from './pages/BookPage';
-import Category from './pages/Category';
+import Homepage from './pages/MainPage';
+import Category from './pages/CategoryPage';
+import BookPage from './pages/ProductPage';
+import Basket from './pages/Basket';
 import NotFoundPage from './pages/NotFoundPage';
+import { Routes, Route } from 'react-router-dom';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route index element={<Homepage />} />,
         <Route path="Category" element={<Category />} />,
         <Route path="Book/:id" element={<BookPage />} />,
+        <Route path="Basket" element={<Basket />} />,
         <Route path="*" element={<NotFoundPage />} />,
       </Route>
     </Routes>
