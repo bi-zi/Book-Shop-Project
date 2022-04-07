@@ -4,14 +4,14 @@
   min-width: 100%;
 }
 
-.book_card {
+.book_list_card {
   display: inline-block;
   width: 200px;
   margin: 0 10px 50px 10px;
   text-align: left;
 }
 
-.card_settings {
+.card_list_settings {
   background-color: #fff;
   box-shadow: 0 1px 3px rgb(0 0 0 / 20%), 0 5px 10px rgb(0 0 0 / 10%);
   margin-bottom: 5px;
@@ -19,10 +19,10 @@
 
 }
 
-.card_info {
+.card_list_info {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+   justify-content: space-around;
   align-items: center;
 
   font-size: 16px;
@@ -30,11 +30,11 @@
   font-weight: bolder;
 }
 
-.card_author {
+.card_list_author {
   font-size: 14px !important;
 }
 
-.card_name {
+.card_list_name {
   display: flex;
   font-size: 16px !important;
   font-weight: bolder;

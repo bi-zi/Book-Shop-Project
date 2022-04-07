@@ -28,7 +28,7 @@ function Category() {
 
 
   if (pageNumber > 1 || (sortNumber === 1 && pageNumber > 0)) {
-    stackOfBooks = books.filter((book) => Object.values(book)[7] === categoryСheck);
+    stackOfBooks = books.filter((book) => Object.values(book)[8] === categoryСheck);
     if (sortNumber === 1) {
       stackOfBooks.sort((a, b) => (a.bookRating < b.bookRating ? 1 : -1));
     }
@@ -58,15 +58,15 @@ function Category() {
         return (
           <Link key={book.id} to={`/Book/${book.id}`}>
             <div className="category_card" key={book.id}>
-              <div className="card_settings">
+              <div className="category_card_settings">
                 <img height="310px" width="200px" src={book.imageUrl} alt="" />
-                <div className="card_info">
+                <div className="category_card_info">
                   <div className="rating">★{book.bookRating}★</div>
                   <div className="price">{book.price} ₽</div>
                 </div>
               </div>
-              <div className="card_author">{book.authorName}</div>
-              <div className="card_name">{book.bookName}</div>
+              <div className="category_card_author">{book.authorName}</div>
+              <div className="category_card_name">{book.bookName}</div>
             </div>
           </Link>
         );

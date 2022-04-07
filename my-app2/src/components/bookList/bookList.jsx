@@ -23,7 +23,7 @@ function BookList() {
       ? stackOfBooks.sort((a, b) => (a.price < b.price ? 1 : -1))
       : stackOfBooks.sort((a, b) => (a.price > b.price ? 1 : -1));
   }
-  
+
   useEffect(() => {
     fetchBooks();
   }, []);
@@ -40,16 +40,16 @@ function BookList() {
       {stackOfBooks.map((book) => {
         return (
           <Link key={book.id} to={`/Book/${book.id}`}>
-            <div className="book_card" key={book.id}>
-              <div className="card_settings">
+            <div className="book_list_card" key={book.id}>
+              <div className="card_list_settings">
                 <img height="310px" width="200px" src={book.imageUrl} alt="" />
-                <div className="card_info">
+                <div className="card_list_info">
                   <div className="rating">★{book.bookRating}★</div>
                   <div className="price">{book.price} ₽</div>
                 </div>
               </div>
-              <div className="card_author">{book.authorName}</div>
-              <div className="card_name">{book.bookName}</div>
+              <div className="card_list_author">{book.authorName}</div>
+              <div className="card_list_name">{book.bookName}</div>
             </div>
           </Link>
         );

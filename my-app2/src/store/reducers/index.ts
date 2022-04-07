@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
 import { bookReducer } from './bookReducer';
-import cartReducer from './reducer'
+import cartReducer from './cart.reducers'
 
 export const rootReducer = combineReducers({
   book: bookReducer,

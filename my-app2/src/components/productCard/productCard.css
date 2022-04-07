@@ -157,8 +157,17 @@
   background-color: rgb(120, 240, 204);
   width: 250px;
   height: 50px;
+
   border-radius: 5px;
   font-size: 20px;
+  cursor: pointer;
+}
+
+.book_buy:active button {
+color: white;
+border: 3px solid rgb(0, 0, 0);
+background: linear-gradient(top, rgb(255, 255, 255), rgb(122, 240, 205) 90%);
+background: -webkit-linear-gradient(top, rgb(44, 247, 186), rgb(61, 129, 109) 90%);
 }
 
 .book_marks button {
@@ -168,6 +177,14 @@
   margin: 5px 20px;
   border-radius: 5px;
   font-size: 14px;
+  cursor: pointer;
+}
+
+.book_marks:active button {
+color: rgb(255, 255, 255);
+border: 3px solid rgb(0, 0, 0);
+background: linear-gradient(top, rgb(255, 255, 255), rgb(255, 255, 255) 90%);
+background: -webkit-linear-gradient(top, rgb(131, 130, 130), rgb(71, 71, 71) 90%);
 }
 
 /* ------------- delivery ------------- */

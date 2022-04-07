@@ -16,7 +16,7 @@
   text-align: left;
 }
 
-.card_settings {
+.category_card_settings {
   background-color: #fff;
   box-shadow: 0 1px 3px rgb(0 0 0 / 20%), 0 5px 10px rgb(0 0 0 / 10%);
   margin-bottom: 5px;
@@ -24,7 +24,7 @@
 
 }
 
-.card_info {
+.category_card_info {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -35,11 +35,11 @@
   font-weight: bolder;
 }
 
-.card_author {
+.category_card_author {
   font-size: 14px !important;
 }
 
-.card_name {
+.category_card_name {
   display: flex;
   font-size: 16px !important;
   font-weight: bolder;

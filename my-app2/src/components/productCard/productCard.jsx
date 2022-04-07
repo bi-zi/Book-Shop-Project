@@ -1,22 +1,50 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
-import { useDispatch } from 'react-redux';
-import { setItemInCart } from '../../store/reducers/reducer';
+//import { useDispatch } from 'react-redux';
+
+import { connect } from 'react-redux'
+import { addItem } from '../../store/reducers/cart.actions'
+
+//import { setItemInCart } from '../../store/reducers/reducer';
 import { Link, useParams } from 'react-router-dom';
 import Slider from 'react-slick';
 import './productCard.css';
 
-function ProductCard() {
+let aboba = [];
+function ProductCard({ addItem }) {
   const { books, error, loading } = useTypedSelector((state) => state.book);
   const { fetchBooks } = useActions();
-  const dispatch = useDispatch();
   const { id } = useParams();
 
+  let book = books[id];
+
+
+ const [shopCart, setShopCart] = useState(book);
+ const handle = (e) => {
+   let updatedValue = {};
+   updatedValue = { item1: e.target.value };
+   setShopCart((shopCart) => ({
+     ...shopCart,
+     ...updatedValue,
+   }));
+ };
+console.log(shopCart);
+
+  const [changeTHISName, setchangeTHISName] = useState(id)
+  let check = id + id
+
   const handleClick = (e) => {
-    e.stopPropagation();
-    dispatch(setItemInCart(books[id]));
+    e.preventDefault();
+    if (changeTHISName === id) {
+      addItem(book);
+      aboba.push(id)
+    }
+    setchangeTHISName(changeTHISName + id);
+
   };
+
+  let bos = aboba.filter((a) => a === id);
 
   const settings = {
     className: 'center',
@@ -26,9 +54,8 @@ function ProductCard() {
     swipeToSlide: true,
   };
 
-  let book = books[id];
-  let bookRecommended = books.filter((x) => Object.values(x)[7] === Object.values(book)[7]);
 
+  let bookRecommended = books.filter((x) => Object.values(x)[8] === Object.values(book)[8]);
   useEffect(() => {
     fetchBooks();
   }, []);
@@ -81,9 +108,15 @@ function ProductCard() {
         <div className="book_price">
           {book?.price} ₽ <div className="availability">В наличии</div>
         </div>
-        <div className="book_buy">
-          <button onClick={handleClick}>В корзину</button>
-        </div>
+        {bos + id !== check ? (
+          <div className="book_buy">
+            <button onClick={handleClick}>Купить</button>
+          </div>
+        ) : (
+          <Link to="/Basket" className="book_buy">
+            <button>Перейти в корзину</button>
+          </Link>
+        )}
         <div className="book_marks">
           <button>В закладки</button>
         </div>
@@ -135,7 +168,7 @@ function ProductCard() {
               i++;
               return (
                 <Link key={book.id} to={`/Book/${book.id}`}>
-                  <div className={`slider_book ${i}`} key={book?.id}>
+                  <div onClick={() => handle(book.id)} className={`slider_book ${i}`} key={book?.id}>
                     <div className="slider_card_settings">
                       <img height="250px" width="150px" src={book?.imageUrl} alt="" />
                       <div className="slider_card_info">
@@ -161,4 +194,8 @@ function ProductCard() {
   );
 }
 
-export default ProductCard;
+const mapDispatchToProps = dispatch => ({
+ addItem: item=> dispatch(addItem(item))
+})
+
+export default connect(null,mapDispatchToProps)(ProductCard);
