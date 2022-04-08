@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { removeItemById } from '../../store/reducers/cart.actions';
 import './shoppingCart.css';
-//import { useDispatch } from 'react-redux';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
 
 const ShoppingCart = ({ items, total, itemsCount, removeItem }) => {
   const [cardConnect, setCardConnect] = useState(items);
 
-  let newPosts=[];
+  let newPosts = [];
   newPosts = items;
 
   const countPlus = (id) => {
@@ -33,19 +35,23 @@ const ShoppingCart = ({ items, total, itemsCount, removeItem }) => {
     <div className="cart">
       <div className="menu">
         <div className="goods_quantity">Корзина: {itemsCount}</div>
+        {itemsCount > 0 ? <div className="total_price">{total}</div> : null}
         <div className="remove_all_products">Удалить все товары</div>
       </div>
 
       <div className="cart_container">
-        {itemsCount > 0 ? (
-          <div className="total_price">{total}</div>
-        ) : (
-          <div className="empty_basket">Ваша корзина пуста</div>
-        )}
-
+        {itemsCount === 0 ? <div className="empty_basket">Ваша корзина пуста</div> : null}
         {newPosts.map((book) => {
           return (
             <div className="product" key={book.id}>
+              <Link to={`/Book/${book.id}`}>
+                <div className="product_cart_book">
+                  <div className="product_cart_settings">
+                    <img height="250px" width="150px" src={book.imageUrl} alt="" />
+                  </div>
+                </div>
+              </Link>
+
               <div className="product_info">
                 <div className="product_cart_name">{book.bookName}</div>
                 <div className="product_cart_author">{book.authorName}</div>
@@ -72,17 +78,10 @@ const ShoppingCart = ({ items, total, itemsCount, removeItem }) => {
                 </div>
               </div>
 
-              <div className="removeProduct">
-                <button onClick={() => removeItem(book.id)}>X</button>
+              <div className="removeProduct" onClick={() => removeItem(book.id)}>
+                <FontAwesomeIcon className="trash_icon" icon={faTrashCan} />
+                <div>Удалить</div>
               </div>
-
-              <Link to={`/Book/${book.id}`}>
-                <div className="product_cart_book">
-                  <div className="product_cart_settings">
-                    <img height="250px" width="150px" src={book.imageUrl} alt="" />
-                  </div>
-                </div>
-              </Link>
             </div>
           );
         })}
@@ -102,4 +101,3 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCart);
-
