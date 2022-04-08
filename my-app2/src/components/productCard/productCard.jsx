@@ -3,8 +3,8 @@ import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
 //import { useDispatch } from 'react-redux';
 
-import { connect } from 'react-redux'
-import { addItem } from '../../store/reducers/cart.actions'
+import { connect } from 'react-redux';
+import { addItem } from '../../store/reducers/cart.actions';
 
 //import { setItemInCart } from '../../store/reducers/reducer';
 import { Link, useParams } from 'react-router-dom';
@@ -12,39 +12,19 @@ import Slider from 'react-slick';
 import './productCard.css';
 
 let aboba = [];
-function ProductCard({ addItem }) {
+function ProductCard({ addItem, items }) {
   const { books, error, loading } = useTypedSelector((state) => state.book);
   const { fetchBooks } = useActions();
   const { id } = useParams();
 
   let book = books[id];
 
-
- const [shopCart, setShopCart] = useState(book);
- const handle = (e) => {
-   let updatedValue = {};
-   updatedValue = { item1: e.target.value };
-   setShopCart((shopCart) => ({
-     ...shopCart,
-     ...updatedValue,
-   }));
- };
-console.log(shopCart);
-
-  const [changeTHISName, setchangeTHISName] = useState(id)
-  let check = id + id
-
   const handleClick = (e) => {
     e.preventDefault();
-    if (changeTHISName === id) {
-      addItem(book);
-      aboba.push(id)
-    }
-    setchangeTHISName(changeTHISName + id);
-
+    addItem(book);
   };
 
-  let bos = aboba.filter((a) => a === id);
+  let arr = items.find((x) => x.id === +id);
 
   const settings = {
     className: 'center',
@@ -53,7 +33,6 @@ console.log(shopCart);
     slidesToShow: 5,
     swipeToSlide: true,
   };
-
 
   let bookRecommended = books.filter((x) => Object.values(x)[8] === Object.values(book)[8]);
   useEffect(() => {
@@ -108,15 +87,16 @@ console.log(shopCart);
         <div className="book_price">
           {book?.price} ₽ <div className="availability">В наличии</div>
         </div>
-        {bos + id !== check ? (
-          <div className="book_buy">
-            <button onClick={handleClick}>Купить</button>
-          </div>
-        ) : (
+        {arr?.id === +id ? (
           <Link to="/Basket" className="book_buy">
             <button>Перейти в корзину</button>
           </Link>
+        ) : (
+          <div className="book_buy">
+            <button onClick={handleClick}>Купить</button>
+          </div>
         )}
+
         <div className="book_marks">
           <button>В закладки</button>
         </div>
@@ -168,7 +148,7 @@ console.log(shopCart);
               i++;
               return (
                 <Link key={book.id} to={`/Book/${book.id}`}>
-                  <div onClick={() => handle(book.id)} className={`slider_book ${i}`} key={book?.id}>
+                  <div className={`slider_book ${i}`} key={book?.id}>
                     <div className="slider_card_settings">
                       <img height="250px" width="150px" src={book?.imageUrl} alt="" />
                       <div className="slider_card_info">
@@ -194,8 +174,12 @@ console.log(shopCart);
   );
 }
 
-const mapDispatchToProps = dispatch => ({
- addItem: item=> dispatch(addItem(item))
-})
+const mapStateToProps = ({ cart: { cartItems } }) => ({
+  items: cartItems,
+});
 
-export default connect(null,mapDispatchToProps)(ProductCard);
+const mapDispatchToProps = (dispatch) => ({
+  addItem: (item) => dispatch(addItem(item)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductCard);

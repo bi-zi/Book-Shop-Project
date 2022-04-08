@@ -6,27 +6,27 @@ import './shoppingCart.css';
 //import { useDispatch } from 'react-redux';
 
 const ShoppingCart = ({ items, total, itemsCount, removeItem }) => {
-  const [fast, setFast] = useState(items);
+  const [cardConnect, setCardConnect] = useState(items);
 
   let newPosts=[];
   newPosts = items;
 
-  const likeFunc = (id) => {
+  const countPlus = (id) => {
     newPosts.map((post) => {
       if (post.id === id) {
         post.counter++;
       }
     });
-    setFast(newPosts.concat([]));
+    setCardConnect(newPosts.concat([]));
   };
 
-  const minus = (id) => {
+  const countMinus = (id) => {
     newPosts.map((post) => {
       if (post.id === id) {
         post.counter--;
       }
     });
-    setFast(newPosts.concat([]));
+    setCardConnect(newPosts.concat([]));
   };
 
   return (
@@ -53,14 +53,14 @@ const ShoppingCart = ({ items, total, itemsCount, removeItem }) => {
 
               <div key={book?.id} className="product_counter">
                 {book.counter > 1 ? (
-                  <button className="counter_minus" onClick={() => minus(book.id)}>
+                  <button className="counter_minus" onClick={() => countMinus(book.id)}>
                     —
                   </button>
                 ) : (
                   <button className="counter_minus">—</button>
                 )}
                 <div className="counter_number">{book.counter}</div>
-                <button className="counter_plus" onClick={() => likeFunc(book.id)}>
+                <button className="counter_plus" onClick={() => countPlus(book.id)}>
                   +
                 </button>
               </div>
@@ -103,78 +103,3 @@ const mapDispatchToProps = (dispatch) => ({
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCart);
 
-// Ну там просто ты можешь нормальные условия задать более понятные, чем вложенные тернарники
-
-// if (cond1) {
-//     return <Component1 />
-// }
-
-// if (cond2) {
-//     return <Comp2 />
-// }
-// return null;
-// есть два варианта, как сделать с массивом
-
-// 1) хранить счетчики в массиве (?) Этот вариант был первый, о котором я подумал из твоего сообщения, но это плохой вариант, потому что бесполезно генерируется массив размера = размеру самого списка. Если в 10000 элементе поменять счетчик, то массив заполнится empty значениями и займет память
-
-// 2) хранить счетчики в массиве объектов айтемов. Т.е. есть объекты, в которых есть поле каунтер. Тогда если ты меняешь тот самый 10000 элемент, то ты делаешь 10000 итераций для его изменений
-
-// логичнее для такого изменяемого стейта сделать мапу айди-счетчик и тогда можно O(1) его менять и доставать
-// Стейт это просто данные. Если у тебя компонент принимает пропсы isShow и text, и таких компонентов 100.
-// Берём тогда создаём массив с объектами вида { isShow: false, text: “” }
-// И рендерим массив
-
-// По изменению какого-то индекса массива берём находим конкретный айтем меняем его и делаем setState() со всем массивом целиком
-
-// Для 96 товаров тебе не надо делать отдельные 96 стейтов
-
-// 1 - сделай стейт массивом и меняй его в зависимости от кол-ва товаров, 1000 товаров = массив на 1000 элементов. Их и трогай по индексу
-
-// 2 - каждый товар отдельным компонентом у которого внутри свой личный стейт
-
-// Вот и все, выбирай
-
-// import React, { useState } from "react";
-// import "./styles.css";
-
-// const someItemsList = [
-//   { id: 1, name: "item 1" },
-//   { id: 2, name: "item 2" },
-//   { id: 3, name: "item 3" },
-//   { id: 4, name: "item 4" },
-//   { id: 5, name: "item 5" }
-// ];
-
-// function Item({ item }) {
-//   const [product, setProduct] = useState(0);
-//   return (
-//     <div className="item-container">
-//       <div>{item.name}</div>
-//       <div>
-//         <span
-//           className="counter-button"
-//           onClick={() => setProduct(product - 1)}
-//         >
-//           -
-//         </span>
-//         <span className="counter">{product}</span>
-//         <span
-//           className="counter-button"
-//           onClick={() => setProduct(product + 1)}
-//         >
-//           +
-//         </span>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default function App() {
-//   return (
-//     <div>
-//       {someItemsList.map((item) => {
-//         return <Item key={item.id} item={item} />;
-//       })}
-//     </div>
-//   );
-// }
