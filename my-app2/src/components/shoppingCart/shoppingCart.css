@@ -1,5 +1,19 @@
+hr {
+  border: none; /* Убираем границу */
+  background-color: red; /* Цвет линии */
+  color: red; /* Цвет линии для IE6-7 */
+  height: 2px; /* Толщина линии */
+}
+
 .cart {
   text-align: center;
+  min-height: calc(100vh - 60px);
+}
+
+.cart_container {
+  margin: 0 auto;
+  width: 1200px;
+  height: 100%;
 }
 
 .menu {
@@ -10,19 +24,25 @@
   justify-content: space-between;
 }
 
+.remove_all_product {
+  display: flex;
+  flex-direction: row;
+  padding-left: 120px;
+  cursor: pointer;
+}
+
 .goods_quantity {
+  font-weight: bolder;
   font-size: 18px;
 }
 
-.remove_all_products {
-  cursor: pointer;
-  opacity: 0.4;
+.total_price {
+  font-weight: bolder;
 }
 
-.cart_container {
-  margin: 0 auto;
-  width: 1200px;
-  height: 100%;
+.products_delete {
+  cursor: pointer;
+  opacity: 0.4;
 }
 
 .empty_basket {
@@ -33,32 +53,15 @@
 
 .product {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   flex-direction: row;
-}
-
-.product_cart_book {
-  display: inline-block;
-  width: 150px;
-  height: 250px;
-  text-align: left;
-}
-
-.product_cart_settings {
-  pointer-events: none;
-}
-
-.product_cart_info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  font-size: 13px;
-  color: #ffd900;
-  font-weight: bolder;
+  height: 270px;
+  border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 .product_info {
-  padding-left: 50px;
+  position: relative ;
+  left: 80px;
   text-align: left;
 }
 
@@ -74,6 +77,9 @@
 }
 
 .product_counter {
+  position: relative ;
+  left: 395px;
+  bottom: 40px;
   padding-left: 50px;
   display: flex;
   flex-direction: row;
@@ -89,14 +95,14 @@
 }
 .counter_minus:hover,
 .counter_plus:hover {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(155, 153, 153);
 }
 
 .counter_minus,
 .counter_plus {
   background-color: rgb(255, 255, 255);
   font-size: 16px;
-  border: solid 1px;
+  border: solid 2px;
   cursor: pointer;
 }
 
@@ -113,13 +119,14 @@
 
 .counter_number {
   text-align: center;
-  border-top: solid 1px;
-  border-bottom: solid 1px;
+  border-top: solid 2px;
+  border-bottom: solid 2px;
   padding-top: 14px;
 }
-
 .product_cost {
-  padding-left: 150px;
+  position: relative ;
+  left: 620px;
+  bottom: 85px;
 }
 
 .product_price {
@@ -132,7 +139,10 @@
   font-size: 15px;
 }
 
-.removeProduct {
+.remove_product {
+  position: relative ;
+  left: 840px;
+  bottom: 120px;
   display: flex;
   flex-direction: row;
   padding-left: 120px;

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Context } from './context';
 import Header from './header/header';
+import Footer from './footer/footer';
 
 const Layout = () => {
   const [page, setPage] = useState(1);
@@ -16,10 +17,9 @@ const Layout = () => {
   return (
     <Context.Provider value={value}>
       <Header />
-      <Outlet>
-        <footer>2022</footer>
-      </Outlet>
+      <Outlet></Outlet>
 
+      <Footer />
     </Context.Provider>
   );
 };

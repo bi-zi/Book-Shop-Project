@@ -2,7 +2,7 @@
   "books": [
     {
       "id": 0,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv5.litres.ru/pub/c/elektronnaya-kniga/cover_415/9361857-ha-dzhun-chang-kak-ustroena-ekonomika.jpg",
       "bookName": "Как устроена экономика",
       "authorName": "Ха-Джун Чанг",
@@ -14,7 +14,7 @@
     },
     {
       "id": 1,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv9.litres.ru/pub/c/elektronnaya-kniga/cover_185/43472693-german-simon-prays-menedzhment.jpg",
       "bookName": "Прайс-менеджмент",
       "authorName": "Герман Симон",
@@ -26,7 +26,7 @@
     },
     {
       "id": 2,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv0.litres.ru/pub/c/elektronnaya-kniga/cover_185/39335807-erin-meyer-17553327-karta-kulturnyh-razlichiy-kak-ludi-dumaut-rukovodyat-i.jpg",
       "bookName": "Карта культурных различий",
       "authorName": "Эрин Мейер",
@@ -38,7 +38,7 @@
     },
     {
       "id": 3,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv6.litres.ru/pub/c/elektronnaya-kniga/cover_200/8647268-bendzhamin-grem-razumnyy-investor-polnoe-rukovodstvo-po-stoimostnomu-inves.jpg",
       "bookName": "Разумный инвестор",
       "authorName": "Бенджамин Грэм",
@@ -50,7 +50,7 @@
     },
     {
       "id": 4,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv5.litres.ru/pub/c/elektronnaya-kniga/cover_185/119256-robert-kiyosaki-bogatyy-papa-bednyy-papa.jpg",
       "bookName": "Богатый папа, бедный папа",
       "authorName": "Роберт Кийосаки",
@@ -62,7 +62,7 @@
     },
     {
       "id": 5,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv5.litres.ru/pub/c/elektronnaya-kniga/cover_200/67141751-filip-kotler-marketing-5-0-tehnologii-sleduuschego-pokoleniya.jpg",
       "bookName": "Маркетинг 5.0",
       "authorName": "Филип Котлер",
@@ -74,7 +74,7 @@
     },
     {
       "id": 6,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv6.litres.ru/pub/c/elektronnaya-kniga/cover_185/36628165-ray-dalio-principy-zhizn-i-rabota.jpg",
       "bookName": "Принципы. Жизнь и работа",
       "authorName": "Рэй Далио",
@@ -86,7 +86,7 @@
     },
     {
       "id": 7,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv1.litres.ru/pub/c/elektronnaya-kniga/cover_200/22101218-fil-nayt-prodavec-obuvi-istoriya-kompanii-nike-rasskazannaya-ee-osnovatele.jpg",
       "bookName": "Продавец обуви",
       "authorName": "Фил Найт",
@@ -98,7 +98,7 @@
     },
     {
       "id": 8,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv3.litres.ru/pub/c/elektronnaya-kniga/cover_250/66963038-michael-wong-james-iskusstvo-malenkih-shagov-zabotlivoe-rukovodstvo-po-obr.jpg",
       "bookName": "Искусство маленьких шагов",
       "authorName": "Майкл Джеймс Вонг",
@@ -110,7 +110,7 @@
     },
     {
       "id": 9,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv0.litres.ru/pub/c/elektronnaya-kniga/cover_185/21130203-oliver-gassman-biznes-modeli-55-luchshih-shablonov.jpg",
       "bookName": "Бизнес-модели",
       "authorName": "Оливер Гассман",
@@ -122,7 +122,7 @@
     },
     {
       "id": 10,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv9.litres.ru/pub/c/elektronnaya-kniga/cover_200/43339691-kris-beyli-giperfokus.jpg",
       "bookName": "Гиперфокус",
       "authorName": "Крис Бэйли",
@@ -134,7 +134,7 @@
     },
     {
       "id": 11,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv9.litres.ru/pub/c/elektronnaya-kniga/cover_200/620095-patrik-lensioni-pyat-porokov-komandy.jpg",
       "bookName": "Пять пороков команды",
       "authorName": "Патрик Ленсиони",
@@ -146,7 +146,7 @@
     },
     {
       "id": 12,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv7.litres.ru/pub/c/elektronnaya-kniga/cover_200/32832678-bertil-torekul-est-ideya-istoriya-ikea.jpg",
       "bookName": "Есть идея! История ИКЕА",
       "authorName": "Бертил Торекуль",
@@ -158,7 +158,7 @@
     },
     {
       "id": 13,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv7.litres.ru/pub/c/elektronnaya-kniga/cover_185/31735879-dzhordan-belfort-metod-volka-s-uoll-strit-otkroveniya-luchshego-prodavca-v.jpg",
       "bookName": "Метод волка с Уолл-стрит",
       "authorName": "Крис Бэйли",
@@ -170,7 +170,7 @@
     },
     {
       "id": 14,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv3.litres.ru/pub/c/elektronnaya-kniga/cover_185/5019930-deniel-pink-drayv-chto-na-samom-dele-nas-motiviruet.jpg",
       "bookName": "Драйв",
       "authorName": "Дэниел Пинк",
@@ -182,7 +182,7 @@
     },
     {
       "id": 15,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv1.litres.ru/pub/c/elektronnaya-kniga/cover_185/432112-dzheyson-frayd-rework-biznes-bez-predrassudkov-432112.jpg",
       "bookName": "Rework",
       "authorName": "Джейсон Фрайд",
@@ -194,7 +194,7 @@
     },
     {
       "id": 16,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv7.litres.ru/pub/c/pdf-kniga/cover_250/66618176-dzheyms-klark-doch-reki-66618176.jpg",
       "bookName": "Дочь реки",
       "authorName": "Дэниел Кларк",
@@ -206,7 +206,7 @@
     },
     {
       "id": 17,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv8.litres.ru/pub/c/pdf-kniga/cover_250/48693187-ryan-andrews-my-dali-slovo-48693187.jpg",
       "bookName": "Мы дали слово",
       "authorName": "Райан Эндрюс",
@@ -218,7 +218,7 @@
     },
     {
       "id": 18,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv8.litres.ru/pub/c/pdf-kniga/cover_250/66596386-ludovik-villen-eli-i-gaston-duh-oseni-66596386.jpg",
       "bookName": "Эли и Гастон. Дух осени",
       "authorName": "Людовик Виллен",
@@ -230,7 +230,7 @@
     },
     {
       "id": 19,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv9.litres.ru/pub/c/pdf-kniga/cover_415/67037796-dzhen-vang-princ-i-shveya-67037796.jpg",
       "bookName": "Принц и швея",
       "authorName": "Джен Ванг",
@@ -242,7 +242,7 @@
     },
     {
       "id": 20,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv9.litres.ru/pub/c/pdf-kniga/cover_200/39848290-maykl-murkok-elrik-rubinovyy-tron-39848290.jpg",
       "bookName": "Элрик. Рубиновый трон",
       "authorName": "Майкл Муркок",
@@ -254,7 +254,7 @@
     },
     {
       "id": 21,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv8.litres.ru/pub/c/pdf-kniga/cover_200/31734583-artem-gabrelyanov-chumnoy-doktor-chast-1-31734583.jpg",
       "bookName": "Чумной Доктор. Часть 1",
       "authorName": "Евгений Федотов",
@@ -266,7 +266,7 @@
     },
     {
       "id": 22,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv3.litres.ru/pub/c/pdf-kniga/cover_250/67108134-azat-nurgaleev-zvezdy-67108134.jpg",
       "bookName": "Звёзды",
       "authorName": "Крис Уитакер",
@@ -278,7 +278,7 @@
     },
     {
       "id": 23,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv3.litres.ru/pub/c/pdf-kniga/cover_250/66713438-varvara-ledneva-doroga-k-okeanu-66713438.jpg",
       "bookName": "Дорога к Океану",
       "authorName": "Варвара Леднёва",
@@ -290,7 +290,7 @@
     },
     {
       "id": 24,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv6.litres.ru/pub/c/pdf-kniga/cover_250/66441462-shannon-hale-luchshie-druzya-66441462.jpg",
       "bookName": "Лучшие друзья",
       "authorName": "Шеннон Хейл",
@@ -302,7 +302,7 @@
     },
     {
       "id": 25,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv5.litres.ru/pub/c/pdf-kniga/cover_250/66485254-vensan-perrio-negaliod-66485254.jpg",
       "bookName": "Негалиод",
       "authorName": "Венсан Перрио",
@@ -314,7 +314,7 @@
     },
     {
       "id": 26,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv0.litres.ru/pub/c/pdf-kniga/cover_250/66329500-huan-himenes-chetvertaya-sila-66329500.jpg",
       "bookName": "Четвертая Сила",
       "authorName": "Хуан Хименес",
@@ -326,7 +326,7 @@
     },
     {
       "id": 27,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv4.litres.ru/pub/c/pdf-kniga/cover_250/66367742-elli-brosh-otvety-i-drugie-voprosy-66367742.jpg",
       "bookName": "Ответы и другие вопросы",
       "authorName": "Элли Брош",
@@ -338,7 +338,7 @@
     },
     {
       "id": 28,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv9.litres.ru/pub/c/pdf-kniga/cover_250/66217298-drayk-tatyana-larina-kosmicheskie-kity-66217298.jpg",
       "bookName": "Космические киты",
       "authorName": "Татьяна Ларина",
@@ -350,7 +350,7 @@
     },
     {
       "id": 29,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv1.litres.ru/pub/c/pdf-kniga/cover_200/66174612-dzhordzh-oruell-1984-graficheskiy-roman-66174612.jpg",
       "bookName": "1984",
       "authorName": "Джордж Оруэлл",
@@ -362,7 +362,7 @@
     },
     {
       "id": 30,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv4.litres.ru/pub/c/elektronnaya-kniga/cover_185/66043046-denni-fingerot-sten-li-epoha-marvel.jpg",
       "bookName": "Стэн Ли. Эпоха Marvel",
       "authorName": "Дэнни Фингерот",
@@ -374,7 +374,7 @@
     },
     {
       "id": 31,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv3.litres.ru/pub/c/pdf-kniga/cover_250/65630932-gabriel-ba-dva-brata-65630932.jpg",
       "bookName": "Два брата",
       "authorName": "Габриэль Ба",
@@ -386,7 +386,7 @@
     },
     {
       "id": 32,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv2.litres.ru/pub/c/elektronnaya-kniga/cover_415/66260724-kristian-vind-introvert.jpg",
       "bookName": "Интроверт",
       "authorName": "Кристиан Роберт Винд",
@@ -398,7 +398,7 @@
     },
     {
       "id": 33,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv0.litres.ru/pub/c/elektronnaya-kniga/cover_250/67143202-nikolay-svechin-na-krau.jpg",
       "bookName": "На краю",
       "authorName": "Николай Свечин",
@@ -410,7 +410,7 @@
     },
     {
       "id": 34,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv2.litres.ru/pub/c/elektronnaya-kniga/cover_250/66846728-sharlotta-brandish-ledi-iz-froingema.jpg",
       "bookName": "Леди из Фроингема",
       "authorName": "Шарлотта Брандиш",
@@ -422,7 +422,7 @@
     },
     {
       "id": 35,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv6.litres.ru/pub/c/elektronnaya-kniga/cover_250/67025660-anna-orehova-stambul-podslushannoe-ubiistvo.jpg",
       "bookName": "Стамбул. Подслушанное убийство",
       "authorName": "Анна Орехова",
@@ -434,7 +434,7 @@
     },
     {
       "id": 36,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv5.litres.ru/pub/c/elektronnaya-kniga/cover_200/67257753-donato-karrizi-ya-bezdna.jpg",
       "bookName": "Я – бездна",
       "authorName": "Донато Карризи",
@@ -446,7 +446,7 @@
     },
     {
       "id": 37,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv5.litres.ru/pub/c/elektronnaya-kniga/cover_250/67149557-lena-obuhova-lovushka-sbyvshihsya-koshmarov.jpg",
       "bookName": "Ловушка сбывшихся кошмаров",
       "authorName": "Лена Обухова",
@@ -458,7 +458,7 @@
     },
     {
       "id": 38,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv5.litres.ru/pub/c/elektronnaya-kniga/cover_200/66483456-kris-uitaker-my-nachinaem-v-konce.jpg",
       "bookName": "Мы начинаем в конце",
       "authorName": "Крис Уитакер",
@@ -470,7 +470,7 @@
     },
     {
       "id": 39,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv2.litres.ru/pub/c/audiokniga/cover_330/67252325-elena-mihalkova-lyagushachiy-korol-67252325.jpg",
       "bookName": "Лягушачий король",
       "authorName": "Елена Михалкова",
@@ -482,7 +482,7 @@
     },
     {
       "id": 40,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv2.litres.ru/pub/c/elektronnaya-kniga/cover_250/67247025-uliya-efimova-17531856-zabytaya-legenda-olhona.jpg",
       "bookName": "Забытая легенда Ольхона",
       "authorName": "Юлия Ефимова",
@@ -494,7 +494,7 @@
     },
     {
       "id": 41,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv3.litres.ru/pub/c/elektronnaya-kniga/cover_200/67215039-darya-doncova-mamasha-barmaley.jpg",
       "bookName": "Мамаша Бармалей",
       "authorName": "Дарья Донцова",
@@ -506,7 +506,7 @@
     },
     {
       "id": 42,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv0.litres.ru/pub/c/elektronnaya-kniga/cover_250/65476402-boris-akunin-prosto-masa.jpg",
       "bookName": "Просто Маса",
       "authorName": "Борис Акунин",
@@ -518,7 +518,7 @@
     },
     {
       "id": 43,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv8.litres.ru/pub/c/elektronnaya-kniga/cover_200/67132084-dzhon-marrs-code-nositeli.jpg",
       "bookName": "Code. Носители",
       "authorName": "Джон Маррс",
@@ -530,7 +530,7 @@
     },
     {
       "id": 44,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv4.litres.ru/pub/c/elektronnaya-kniga/cover_185/67261641-richard-osman-chelovek-kotoryy-umer-dvazhdy.jpg",
       "bookName": "Человек, который умер дважды",
       "authorName": "Ричард Осман",
@@ -542,7 +542,7 @@
     },
     {
       "id": 45,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv5.litres.ru/pub/c/elektronnaya-kniga/cover_250/67254356-camilla-lackberg-pismo-ot-rusalki.jpg",
       "bookName": "Письмо от русалки",
       "authorName": "Камилла Лэкберг",
@@ -554,7 +554,7 @@
     },
     {
       "id": 46,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv1.litres.ru/pub/c/elektronnaya-kniga/cover_200/67283517-kati-beyaz-arkan-dyavola.jpg",
       "bookName": "Аркан Дьявола",
       "authorName": "Кати Беяз",
@@ -566,7 +566,7 @@
     },
     {
       "id": 47,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv8.litres.ru/pub/c/elektronnaya-kniga/cover_200/67281288-olga-kotorova-22467404-chuzhaya-zhena.jpg",
       "bookName": "Чужая жена",
       "authorName": "Ольга Которова",
@@ -578,7 +578,7 @@
     },
     {
       "id": 48,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv9.litres.ru/pub/c/elektronnaya-kniga/cover_200/66081894-sergey-lukyanenko-tri-dnya-indigo.jpg",
       "bookName": "Три дня Индиго",
       "authorName": "Сергей Лукьяненко",
@@ -590,7 +590,7 @@
     },
     {
       "id": 49,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv3.litres.ru/pub/c/elektronnaya-kniga/cover_200/67231138-erofey-trofimov-odinochka-gornye-tropy.jpg",
       "bookName": "Одиночка. Горные тропы",
       "authorName": "Ерофей Трофимов",
@@ -602,7 +602,7 @@
     },
     {
       "id": 50,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv5.litres.ru/pub/c/elektronnaya-kniga/cover_250/63510758-dmitriy-gluhovskiy-post.jpg",
       "bookName": "Пост",
       "authorName": "Дмитрий Глуховский",
@@ -614,7 +614,7 @@
     },
     {
       "id": 51,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv7.litres.ru/pub/c/elektronnaya-kniga/cover_250/64008473-sergey-lukyanenko-sem-dney-do-megiddo.jpg",
       "bookName": "Семь дней до Мегиддо",
       "authorName": "Сергей Лукьяненко",
@@ -626,7 +626,7 @@
     },
     {
       "id": 52,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv6.litres.ru/pub/c/elektronnaya-kniga/cover_250/62727161-aleksey-brusnicyn-26207658-bpemehu-het.jpg",
       "bookName": "Времени нет",
       "authorName": "Алексей Брусницын",
@@ -638,7 +638,7 @@
     },
     {
       "id": 53,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv3.litres.ru/pub/c/elektronnaya-kniga/cover_200/66986536-endi-veyer-proekt-ave-mariya.jpg",
       "bookName": "Проект «Аве Мария»",
       "authorName": "Энди Вейер",
@@ -650,7 +650,7 @@
     },
     {
       "id": 54,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv9.litres.ru/pub/c/elektronnaya-kniga/cover_200/55339991-frenk-gerbert-duna.jpg",
       "bookName": "Дюна. Первая трилогия",
       "authorName": "Фрэнк Герберт",
@@ -662,7 +662,7 @@
     },
     {
       "id": 55,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv2.litres.ru/pub/c/elektronnaya-kniga/cover_415/67166423-andrey-bulychev-sotnik-iz-buduschego-temnoe-vremya.jpg",
       "bookName": "Сотник из будущего. Тёмное время",
       "authorName": "Андрей Булычев",
@@ -674,7 +674,7 @@
     },
     {
       "id": 56,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv0.litres.ru/pub/c/elektronnaya-kniga/cover_415/67163307-aleks-nayt-26809918-nevolnaya-nevesta-maga-smerti.jpg",
       "bookName": "Невольная невеста мага смерти",
       "authorName": "Алекс Найт",
@@ -686,7 +686,7 @@
     },
     {
       "id": 57,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv5.litres.ru/pub/c/elektronnaya-kniga/cover_250/22764358-dmitriy-gluhovskiy-metro-trilogiya-pod-odnoy-oblozhkoy.jpg",
       "bookName": "Метро. Трилогия под одной обложкой",
       "authorName": "Дмитрий Глуховский",
@@ -698,7 +698,7 @@
     },
     {
       "id": 58,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv1.litres.ru/pub/c/elektronnaya-kniga/cover_415/65550216-marina-surzhevskaya-22364624-orden-lino-era-ispolneniya-zhelaniy.jpg",
       "bookName": "Орден Лино. Эра исполнения желаний",
       "authorName": "Марина Суржевская",
@@ -710,7 +710,7 @@
     },
     {
       "id": 59,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv9.litres.ru/pub/c/elektronnaya-kniga/cover_200/66732098-sergey-lukyanenko-mesyac-za-rubikonom.jpg",
       "bookName": "Месяц за Рубиконом",
       "authorName": "Сергей Лукьяненко",
@@ -722,7 +722,7 @@
     },
     {
       "id": 60,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv3.litres.ru/pub/c/elektronnaya-kniga/cover_250/67077536-maks-alekseevich-glebov-chernyy-staratel.jpg",
       "bookName": "Черный старатель",
       "authorName": "Макс Глебов",
@@ -734,7 +734,7 @@
     },
     {
       "id": 61,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv0.litres.ru/pub/c/elektronnaya-kniga/cover_250/67100409-vadim-panov-trio-neizvestnosti.jpg",
       "bookName": "Трио неизвестности",
       "authorName": "Вадим Панов",
@@ -746,7 +746,7 @@
     },
     {
       "id": 62,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv5.litres.ru/pub/c/elektronnaya-kniga/cover_250/38279456-anna-orehova-effekt-vrat-38279456.jpg",
       "bookName": "Эффект Врат",
       "authorName": "Анна Орехова",
@@ -758,7 +758,7 @@
     },
     {
       "id": 63,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv9.litres.ru/pub/c/elektronnaya-kniga/cover_200/64854997-vladimir-sorokin-doktor-garin.jpg",
       "bookName": "Доктор Гарин",
       "authorName": "Владимир Сорокин",
@@ -770,7 +770,7 @@
     },
     {
       "id": 64,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv2.litres.ru/pub/c/pdf-kniga/cover_250/64073626-b-lubanovich-prostoy-python-sovremennyy-stil-programmirovaniya-64073626.jpg",
       "bookName": "Простой Python",
       "authorName": "Билл Любанович",
@@ -782,7 +782,7 @@
     },
     {
       "id": 65,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv8.litres.ru/pub/c/pdf-kniga/cover_250/39158380-aditya-bhargava-grokaem-algoritmy-illustrirovannoe-posobie-dlya-p-39158380.jpg",
       "bookName": "Грокаем алгоритмы",
       "authorName": "Адитья Бхаргава",
@@ -794,7 +794,7 @@
     },
     {
       "id": 66,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv9.litres.ru/pub/c/elektronnaya-kniga/cover_250/39113892-robert-s-martin-chistaya-arhitektura-iskusstvo-razrabotki-program-39113892.jpg",
       "bookName": "Чистая архитектура",
       "authorName": "Роберт Мартин",
@@ -806,7 +806,7 @@
     },
     {
       "id": 67,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv9.litres.ru/pub/c/pdf-kniga/cover_250/39100996-martin-kleppman-1733-vysokonagruzhennye-prilozheniya-programmirov-39100996.jpg",
       "bookName": "Высоконагруженные приложения",
       "authorName": "Мартин Клеппман",
@@ -818,7 +818,7 @@
     },
     {
       "id": 68,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv7.litres.ru/pub/c/pdf-kniga/cover_250/6444478-robert-s-martin-chistyy-kod-sozdanie-analiz-i-refaktoring-6444478.jpg",
       "bookName": "Чистый код",
       "authorName": "Роберт Мартин",
@@ -830,7 +830,7 @@
     },
     {
       "id": 69,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv9.litres.ru/pub/c/pdf-kniga/cover_200/38272898-dzhon-dakett-html-i-css-razrabotka-i-dizayn-veb-saytov-38272898.jpg",
       "bookName": "HTML и CSS",
       "authorName": "Джон Дакетт",
@@ -842,7 +842,7 @@
     },
     {
       "id": 70,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv6.litres.ru/pub/c/pdf-kniga/cover_250/50447564-mareyn-haverbeke-vyrazitelnyy-javascript-sovremennoe-veb-programm-50447564.jpg",
       "bookName": "Выразительный JavaScript",
       "authorName": "Марейн Хавербеке",
@@ -854,7 +854,7 @@
     },
     {
       "id": 71,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv9.litres.ru/pub/c/elektronnaya-kniga/cover_250/11961798-robert-s-martin-idealnyy-programmist-kak-stat-professionalom-razrabotki-po.jpg",
       "bookName": "Идеальный программист",
       "authorName": "Роберт Мартин",
@@ -866,7 +866,7 @@
     },
     {
       "id": 72,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv9.litres.ru/pub/c/elektronnaya-kniga/cover_200/65191792-elena-pravdina-25436-govoryat-v-it-mnogo-platyat-kak-postroit-uspeshnuu-ka.jpg",
       "bookName": "Говорят, в IT много платят",
       "authorName": "Елена Правдина",
@@ -878,7 +878,7 @@
     },
     {
       "id": 73,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv4.litres.ru/pub/c/pdf-kniga/cover_415/48613341-aleksey-nikolaevich-vasilev-java-dlya-vseh-48613341.jpg",
       "bookName": "Java для всех",
       "authorName": "Алексей Васильев",
@@ -890,7 +890,7 @@
     },
     {
       "id": 74,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv9.litres.ru/pub/c/pdf-kniga/cover_415/29415793-a-benks-piter-react-i-redux-funkcionalnaya-veb-razrabotka-pdf-epu-29415793.jpg",
       "bookName": "React и Redux",
       "authorName": "Алекс Бэнкс",
@@ -902,7 +902,7 @@
     },
     {
       "id": 75,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv8.litres.ru/pub/c/elektronnaya-kniga/cover_250/56089480-taynan-silvestr-geymdizayn-recepty-uspeha-luchshih-komputernyh-igr-ot-supe.jpg",
       "bookName": "Геймдизайн",
       "authorName": "Тайнан Сильвестр",
@@ -914,7 +914,7 @@
     },
     {
       "id": 76,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv5.litres.ru/pub/c/pdf-kniga/cover_250/66338150-iyanu-adelekan-31375240-kotlin-programmirovanie-na-primerah-66338150.jpg",
       "bookName": "Kotlin",
       "authorName": "Ияну Аделекан",
@@ -926,7 +926,7 @@
     },
     {
       "id": 77,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv7.litres.ru/pub/c/pdf-kniga/cover_250/65486971-kirupa-chinnathambi-javascript-s-nulya-65486971.jpg",
       "bookName": "JavaScript с нуля",
       "authorName": "Кирупа Чиннатхамби",
@@ -938,7 +938,7 @@
     },
     {
       "id": 78,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv1.litres.ru/pub/c/pdf-kniga/cover_250/48613317-rafgarden-t-sovershennyy-algoritm-grafovye-algoritmy-i-struktury-48613317.jpg",
       "bookName": "Совершенный алгоритм",
       "authorName": "Тим Рафгарден",
@@ -950,7 +950,7 @@
     },
     {
       "id": 79,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv9.litres.ru/pub/c/pdf-kniga/cover_250/39459596-keti-o-nil-17624494-data-science-insayderskaya-informaciya-dlya-n-39459596.jpg",
       "bookName": "Data Science",
       "authorName": "Кэти О'Нил",
@@ -962,7 +962,7 @@
     },
     {
       "id": 80,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv6.litres.ru/pub/c/elektronnaya-kniga/cover_250/66181962-tatyana-muzhickaya-brat-davat-i-naslazhdatsya-kak-ostavatsya-v-resurse-cht.jpg",
       "bookName": "Брать, давать и наслаждаться",
       "authorName": "Татьяна Мужицкая",
@@ -974,7 +974,7 @@
     },
     {
       "id": 81,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv1.litres.ru/pub/c/elektronnaya-kniga/cover_200/147113-viktor-frankl-skazat-zhizni-da-psiholog-v-konclagere.jpg",
       "bookName": "Сказать жизни «Да!»",
       "authorName": "Виктор Франкл",
@@ -986,7 +986,7 @@
     },
     {
       "id": 82,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv7.litres.ru/pub/c/elektronnaya-kniga/cover_250/5024477-deniel-goulman-emocionalnyy-intellekt-pochemu-on-mozhet-znachit-bolshe-che.jpg",
       "bookName": "Эмоциональный интеллект",
       "authorName": "Дэниел Гоулман",
@@ -998,7 +998,7 @@
     },
     {
       "id": 83,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv4.litres.ru/pub/c/elektronnaya-kniga/cover_250/6301646-dzho-dispenza-sila-podsoznaniya-ili-kak-izmenit-zhizn-za-4-nedeli.jpg",
       "bookName": "Сила подсознания",
       "authorName": "Джо Диспенза",
@@ -1010,7 +1010,7 @@
     },
     {
       "id": 84,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv9.litres.ru/pub/c/elektronnaya-kniga/cover_250/65876893-dzhessami-hibberd-sindrom-samozvanca-kak-vyrvatsya-iz-lovushki-toksichnogo.jpg",
       "bookName": "Синдром самозванца",
       "authorName": "Джессами Хибберд",
@@ -1022,7 +1022,7 @@
     },
     {
       "id": 85,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv1.litres.ru/pub/c/elektronnaya-kniga/cover_250/25440816-mark-menson-tonkoe-iskusstvo-pofigizma.jpg",
       "bookName": "Тонкое искусство пофигизма",
       "authorName": "Марк Мэнсон",
@@ -1034,7 +1034,7 @@
     },
     {
       "id": 86,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv7.litres.ru/pub/c/elektronnaya-kniga/cover_250/48514275-dzheyms-klir-atomnye-privychki-kak-priobresti-horoshie-privychki-i-izbavit.jpg",
       "bookName": "Атомные привычки",
       "authorName": "Джеймс Клир",
@@ -1046,7 +1046,7 @@
     },
     {
       "id": 87,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv6.litres.ru/pub/c/elektronnaya-kniga/cover_250/23590168-maksim-dorofeev-dzhedayskie-tehniki.jpg",
       "bookName": "Джедайские техники",
       "authorName": "Максим Дорофеев",
@@ -1058,7 +1058,7 @@
     },
     {
       "id": 88,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv8.litres.ru/pub/c/elektronnaya-kniga/cover_250/36301085-jim-lawless-idi-tuda-gde-strashno-imenno-tam-ty-obretesh-silu.jpg",
       "bookName": "Иди туда, где страшно",
       "authorName": "Джим Лоулесс",
@@ -1070,7 +1070,7 @@
     },
     {
       "id": 89,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv4.litres.ru/pub/c/elektronnaya-kniga/cover_250/66077544-patrik-king-prakticheskiy-intellekt-kak-kriticheski-myslit-modelirovat-sit.jpg",
       "bookName": "Практический интеллект",
       "authorName": "Патрик Кинг",
@@ -1082,7 +1082,7 @@
     },
     {
       "id": 90,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv2.litres.ru/pub/c/elektronnaya-kniga/cover_200/6298220-kelli-makgonigal-sila-voli.jpg",
       "bookName": "Сила воли",
       "authorName": "Келли Макгонигал",
@@ -1094,7 +1094,7 @@
     },
     {
       "id": 91,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv0.litres.ru/pub/c/elektronnaya-kniga/cover_185/67121805-andrey-kurpatov-mashina-myshleniya.jpg",
       "bookName": "Машина мышления",
       "authorName": "Андрей Курпатов",
@@ -1106,7 +1106,7 @@
     },
     {
       "id": 92,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv3.litres.ru/pub/c/elektronnaya-kniga/cover_415/51388931-bessel-van-der-kolk-telo-pomnit-vse-kakuu-rol-psihologicheskaya-travma-ig.jpg",
       "bookName": "Тело помнит все",
       "authorName": "Бессел ван дер Колк",
@@ -1118,7 +1118,7 @@
     },
     {
       "id": 93,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv3.litres.ru/pub/c/elektronnaya-kniga/cover_415/25280333-mihail-labkovskiy-hochu-i-budu-prinyat-sebya-polubit-zhizn-i-stat-schastlivym.jpg",
       "bookName": "Хочу и буду",
       "authorName": "Михаил Лабковский",
@@ -1130,7 +1130,7 @@
     },
     {
       "id": 94,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv1.litres.ru/pub/c/elektronnaya-kniga/cover_250/66749313-mark-menson-will-chemu-mozhet-nauchit-nas-prostoy-paren-stavshiy-samym-vys.jpg",
       "bookName": "Will",
       "authorName": "Уилл Смит",
@@ -1142,7 +1142,7 @@
     },
     {
       "id": 95,
-      "counter": 0,
+      "counter": 1,
       "imageUrl": "https://cv2.litres.ru/pub/c/elektronnaya-kniga/cover_415/4236425-robert-chaldini-psihologiya-vliyaniya-ubezhday-vozdeystvuy-zaschischaysya.jpg",
       "bookName": "Психология влияния",
       "authorName": "Роберт Чалдини",

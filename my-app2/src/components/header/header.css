@@ -1,7 +1,6 @@
 .header {
   height: 70px;
   margin-bottom: 20px;
-
   font-weight: bolder;
 
   display: flex;
@@ -18,7 +17,8 @@
   cursor: pointer;
 }
 
-.allBooks, .shoppingCart {
+.allBooks,
+.shoppingCart {
   font-size: 20px;
   cursor: pointer;
   color: rgb(255, 255, 255);
@@ -50,7 +50,8 @@
   z-index: 1;
 }
 
-.sorting div , .categories div{
+.sorting div,
+.categories div {
   color: black;
   padding: 12px 16px;
   font-size: 15px;
@@ -58,7 +59,8 @@
   display: block;
 }
 
-.sorting div:hover , .categories div:hover {
+.sorting div:hover,
+.categories div:hover {
   background-color: rgb(0, 0, 0);
   color: white;
 }
