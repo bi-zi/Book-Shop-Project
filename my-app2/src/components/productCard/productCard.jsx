@@ -11,20 +11,19 @@ import { Link, useParams } from 'react-router-dom';
 import Slider from 'react-slick';
 import './productCard.css';
 
-let aboba = [];
+
 function ProductCard({ addItem, items }) {
   const { books, error, loading } = useTypedSelector((state) => state.book);
   const { fetchBooks } = useActions();
   const { id } = useParams();
-
   let book = books[id];
+  let arr = items.find((x) => x.id === +id);
 
   const handleClick = (e) => {
     e.preventDefault();
     addItem(book);
   };
 
-  let arr = items.find((x) => x.id === +id);
 
   const settings = {
     className: 'center',
