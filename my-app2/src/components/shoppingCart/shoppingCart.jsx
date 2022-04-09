@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { removeItemById } from '../../store/reducers/cart.actions';
+import { removeItemById } from '../../store2/reducers/cart.actions';
 import './shoppingCart.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
