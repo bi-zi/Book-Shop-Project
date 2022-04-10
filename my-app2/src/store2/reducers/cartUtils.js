@@ -5,8 +5,9 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
       cartItem.id === cartItemToAdd.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem,
     );
   }
+  console.log(cartItemToAdd);
 
-  return [...cartItems, {...cartItemToAdd, quantity: 1}]
+  return [...cartItems, { ...cartItemToAdd, quantity: 1 }];
 };
 
-export const removeItemFromCart = (cartItems, id) => cartItems.filter(item => item.id !== id);
+export const removeItemFromCart = (cartItems, id) => cartItems.filter((item) => item.id !== id);

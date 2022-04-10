@@ -4,7 +4,7 @@ import { useActions } from '../../hooks/useActions';
 //import { useDispatch } from 'react-redux';
 
 import { connect } from 'react-redux';
-import { addItem } from '../../store2/reducers/cart.actions';
+import { addItem } from '../../store2/actions/cart';
 
 //import { setItemInCart } from '../../store/reducers/reducer';
 import { Link, useParams } from 'react-router-dom';
