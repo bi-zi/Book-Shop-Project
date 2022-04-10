@@ -5,7 +5,7 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
       cartItem.id === cartItemToAdd.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem,
     );
   }
-  console.log(cartItemToAdd);
+  
 
   return [...cartItems, { ...cartItemToAdd, quantity: 1 }];
 };

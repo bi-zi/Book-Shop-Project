@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
-import { Context } from '../../components/context';
+import { Context } from '../context';
 import { Link } from 'react-router-dom';
 import './categorySelection.css';
 

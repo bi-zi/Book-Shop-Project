@@ -1,20 +1,22 @@
 export interface BookState {
-  books: {
-    [index: number]: {
-      id: number;
-      counter: number;
-      imgaeUrl: string;
-      bookName: string;
-      authorName: string;
-      bookRating: string;
-      price: number;
-      description: string;
-      category: string;
-      categoryRu: string;
-    };
-  };
+  books: Book[]
+
   loading: boolean;
   error: null | string;
+}
+
+interface Book {
+  id: number;
+  counter: number;
+  imgaeUrl: string;
+  imageUrl: string;
+  bookName: string;
+  authorName: string;
+  bookRating: string;
+  price: number;
+  description: string;
+  category: string;
+  categoryRu: string;
 }
 
 export enum BookActionTypes {
