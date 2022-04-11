@@ -1,5 +1,18 @@
 export interface CartState {
-  cartItems: [];
+  cartItems: Cart[];
+}
+interface Cart {
+  id: number;
+  counter: number;
+  imgaeUrl: string;
+  imageUrl: string;
+  bookName: string;
+  authorName: string;
+  bookRating: string;
+  price: number;
+  description: string;
+  category: string;
+  categoryRu: string;
 }
 
 export enum CartActionTypes {

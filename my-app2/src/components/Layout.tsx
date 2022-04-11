@@ -5,14 +5,13 @@ import Header from './header/header';
 import Footer from './footer/footer';
 
 const Layout = () => {
-  const [page, setPage] = useState(1);
   const [sort, setSort] = useState(0);
+
   const value = {
-    page,
-    setPage,
     sort,
     setSort,
   };
+
 
   return (
     <Context.Provider value={value}>
@@ -23,5 +22,11 @@ const Layout = () => {
     </Context.Provider>
   );
 };
+
+  export type GlobalContent = {
+    sort: number;
+    setSort: (c: number) => void;
+  };
+
 
 export default Layout;
