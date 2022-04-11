@@ -13,7 +13,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Homepage />} />,
-        <Route path="Category" element={<Category />} />,
+        <Route path="Category/:name" element={<Category />} />,
         <Route path="Book/:id" element={<BookPage />} />,
         <Route path="Basket" element={<Basket />} />,
         <Route path="*" element={<NotFoundPage />} />,

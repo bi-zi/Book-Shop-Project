@@ -9,16 +9,14 @@ function BookList() {
   const { books, error, loading } = useTypedSelector((state) => state.book);
   const { fetchBooks } = useActions();
   const value = useContext(Context);
-
   let stackOfBooks = books.sort(() => Math.random() - 0.5);
-  let pageNumber = value.page;
   let sortNumber = value.sort;
 
   if (sortNumber === 1) {
     stackOfBooks.sort((a, b) => (a.bookRating < b.bookRating ? 1 : -1));
   }
 
-  if (pageNumber && (sortNumber === 2 || sortNumber === 3)) {
+  if ((sortNumber === 2 || sortNumber === 3)) {
     sortNumber === 2
       ? stackOfBooks.sort((a, b) => (a.price < b.price ? 1 : -1))
       : stackOfBooks.sort((a, b) => (a.price > b.price ? 1 : -1));

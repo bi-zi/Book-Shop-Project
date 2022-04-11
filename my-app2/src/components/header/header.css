@@ -50,8 +50,8 @@
   z-index: 1;
 }
 
-.sorting div,
-.categories div {
+.sorting .link ,
+.categories .link {
   color: black;
   padding: 12px 16px;
   font-size: 15px;
@@ -59,8 +59,8 @@
   display: block;
 }
 
-.sorting div:hover,
-.categories div:hover {
+.sorting .link :hover,
+.categories .link :hover {
   background-color: rgb(0, 0, 0);
   color: white;
 }
