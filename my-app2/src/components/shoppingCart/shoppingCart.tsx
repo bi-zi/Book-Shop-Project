@@ -1,16 +1,25 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
 import { removeItemById } from '../../store2/actions/cart';
 import './shoppingCart.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
 
-const ShoppingCart = ({ items, itemsCount, removeItem }) => {
+export interface Foo {
+  items: any[];
+  itemsCount: number;
+  removeItem: any;
+  id: number;
+}
+
+const ShoppingCart = ({ items, itemsCount, removeItem }: Foo) => {
   const [cardConnect, setCardConnect] = useState(items);
 
-  const countPlus = (id) => {
+
+  const countPlus = (id: Foo) => {
     items.map((post) => {
       if (post.id === id) {
         post.counter++;
@@ -19,7 +28,7 @@ const ShoppingCart = ({ items, itemsCount, removeItem }) => {
     setCardConnect(items.concat([]));
   };
 
-  const countMinus = (id) => {
+  const countMinus = (id: Foo) => {
     items.map((post) => {
       if (post.id === id) {
         post.counter--;
@@ -28,7 +37,7 @@ const ShoppingCart = ({ items, itemsCount, removeItem }) => {
     setCardConnect(items.concat([]));
   };
 
-  const removeAllProducts = (id) => {
+  const removeAllProducts = (id: any) => {
     items.map((x) => removeItem(x.id));
   };
 
@@ -98,13 +107,19 @@ const ShoppingCart = ({ items, itemsCount, removeItem }) => {
   );
 };
 
-const mapStateToProps = ({ cart: { cartItems } }) => ({
+
+export interface Goa {
+  cartItems: [];
+  cart: any;
+}
+
+const mapStateToProps = ({ cart: { cartItems } }: Goa) => ({
   items: cartItems,
-  itemsCount: cartItems.reduce((acc, item) => (acc += item.quantity), 0),
+  itemsCount: cartItems.reduce((acc:[], item:any) => (acc += item.quantity), 0),
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  removeItem: (id) => dispatch(removeItemById(id)),
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+  removeItem: (id: number) => dispatch(removeItemById(id)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCart);
