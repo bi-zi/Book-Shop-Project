@@ -1,29 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
-//import { useDispatch } from 'react-redux';
-
+import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { addItem } from '../../store2/actions/cart';
-
-//import { setItemInCart } from '../../store/reducers/reducer';
 import { Link, useParams } from 'react-router-dom';
+
 import Slider from 'react-slick';
 import './productCard.css';
 
+export interface Foo {
+  items: any[];
+  addItem: any;
+}
 
-function ProductCard({ addItem, items }) {
+function ProductCard({ items, addItem }: Foo) {
   const { books, error, loading } = useTypedSelector((state) => state.book);
   const { fetchBooks } = useActions();
-  const { id } = useParams();
-  let book = books[id];
-  let arr = items.find((x) => x.id === +id);
 
-  const handleClick = (e) => {
+  const { id } = useParams<{ id: number | any }>();
+  let book = books[id];
+
+  let checkId = items?.find((x: any) => x.id === +id);
+
+  const handleClick = (e: any) => {
     e.preventDefault();
     addItem(book);
   };
-
 
   const settings = {
     className: 'center',
@@ -86,7 +89,7 @@ function ProductCard({ addItem, items }) {
         <div className="book_price">
           {book?.price} ₽ <div className="availability">В наличии</div>
         </div>
-        {arr?.id === +id ? (
+        {checkId?.id === +id ? (
           <Link to="/Basket" className="book_buy">
             <button>Перейти в корзину</button>
           </Link>
@@ -173,12 +176,12 @@ function ProductCard({ addItem, items }) {
   );
 }
 
-const mapStateToProps = ({ cart: { cartItems } }) => ({
+const mapStateToProps = ({ cart: { cartItems= [] } }) => ({
   items: cartItems,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  addItem: (item) => dispatch(addItem(item)),
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+  addItem: (item: any) => dispatch(addItem(item)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductCard);
