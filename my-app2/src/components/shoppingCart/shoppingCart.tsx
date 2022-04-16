@@ -18,7 +18,6 @@ export interface Foo {
 const ShoppingCart = ({ items, itemsCount, removeItem }: Foo) => {
   const [cardConnect, setCardConnect] = useState(items);
 
-
   const countPlus = (id: Foo) => {
     items.map((post) => {
       if (post.id === id) {
@@ -107,7 +106,6 @@ const ShoppingCart = ({ items, itemsCount, removeItem }: Foo) => {
   );
 };
 
-
 export interface Goa {
   cartItems: [];
   cart: any;
@@ -115,7 +113,7 @@ export interface Goa {
 
 const mapStateToProps = ({ cart: { cartItems } }: Goa) => ({
   items: cartItems,
-  itemsCount: cartItems.reduce((acc:[], item:any) => (acc += item.quantity), 0),
+  itemsCount: cartItems.reduce((acc: [], item: any) => (acc += item.quantity), 0),
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({

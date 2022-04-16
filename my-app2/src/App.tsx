@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Layout from './components/Layout';
 import Homepage from './pages/MainPage';
 import Category from './pages/CategoryPage';

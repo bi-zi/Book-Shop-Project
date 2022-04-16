@@ -1,5 +1,4 @@
 import { CartAction, CartActionTypes, CartState } from '../../types/cart';
-//import { addItemToCart, removeItemFromCart } from './utils';
 
 const initialState: CartState = {
   cartItems: [],
@@ -26,11 +25,11 @@ const addItemToCart = (cartItems: any[], cartItemToAdd: any = {}) => {
   const existingCartItem = cartItems.find((cartItem: any) => cartItem.id === cartItemToAdd.id);
   if (existingCartItem) {
     return cartItems.map((cartItem: any) =>
-      cartItem.id === cartItemToAdd.id ? { ...cartItem } : cartItem,
+      cartItem.id === cartItemToAdd.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem,
     );
   }
 
-  return [...cartItems, { ...cartItemToAdd }];
+  return [...cartItems, { ...cartItemToAdd, quantity: 1 }];
 };
 
 const removeItemFromCart = (cartItems: any, id: number) =>

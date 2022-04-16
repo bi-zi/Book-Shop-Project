@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
+import uniqid from 'uniqid';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { addItem } from '../../store2/actions/cart';
@@ -16,12 +17,35 @@ export interface Foo {
 
 function ProductCard({ items, addItem }: Foo) {
   const { books, error, loading } = useTypedSelector((state) => state.book);
-  const { fetchBooks } = useActions();
-
+  const comments = useTypedSelector((state) => state.comment.comments);
+  const { fetchBooks, addComment, updateComment } = useActions();
   const { id } = useParams<{ id: number | any }>();
-  let book = books[id];
 
+  let book = books[id];
   let checkId = items?.find((x: any) => x.id === +id);
+  let bookRecommended = books.filter((x) => Object.values(x)[8] === Object.values(book)[8]);
+
+  const [textComment, setTextComment] = useState('');
+  const [newComment, setNewComment] = useState('');
+
+  const handleInput = (e: any) => {
+    setTextComment(e.target.value);
+  };
+
+  const handleInput2 = (e: any) => {
+    setNewComment(e.target.value);
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    const id = uniqid();
+    addComment(textComment, id);
+  };
+
+  const handleUpdate = (e: any) => {
+    e.preventDefault();
+    updateComment(newComment, id);
+  };
 
   const handleClick = (e: any) => {
     e.preventDefault();
@@ -36,7 +60,14 @@ function ProductCard({ items, addItem }: Foo) {
     swipeToSlide: true,
   };
 
-  let bookRecommended = books.filter((x) => Object.values(x)[8] === Object.values(book)[8]);
+  const handlerScrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  };
+
   useEffect(() => {
     fetchBooks();
   }, []);
@@ -149,7 +180,7 @@ function ProductCard({ items, addItem }: Foo) {
             if (i < 16) {
               i++;
               return (
-                <Link key={book.id} to={`/Book/${book.id}`}>
+                <Link key={book.id} onClick={handlerScrollUp} to={`/Book/${book.id}`}>
                   <div className={`slider_book ${i}`} key={book?.id}>
                     <div className="slider_card_settings">
                       <img height="250px" width="150px" src={book?.imageUrl} alt="" />
@@ -168,15 +199,26 @@ function ProductCard({ items, addItem }: Foo) {
         </Slider>
       </div>
       <div className="reviews">
-        <div className="postReview"></div>
-        <div className="reviewsSort"></div>
-        <div className="userReviews"></div>
+        <form className="postReview" onSubmit={handleSubmit}>
+          <input type="text" value={textComment} onChange={handleInput} />
+          <input type="submit" hidden />
+        </form>
+        {!!comments.length &&
+          comments.map((res) => {
+            return (
+              <form className="comments" key={res.id} onSubmit={handleUpdate}>
+                <div className="comments_item_delete">{res.text}</div>
+                <input type="text" value={newComment} onChange={handleInput2} />
+                <input type="submit" hidden />
+              </form>
+            );
+          })}
       </div>
     </div>
   );
 }
 
-const mapStateToProps = ({ cart: { cartItems= [] } }) => ({
+const mapStateToProps = ({ cart: { cartItems = [] } }) => ({
   items: cartItems,
 });
 
