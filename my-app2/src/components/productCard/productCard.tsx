@@ -13,12 +13,14 @@ import './productCard.css';
 export interface Foo {
   items: any[];
   addItem: any;
+
 }
 
 function ProductCard({ items, addItem }: Foo) {
   const { books, error, loading } = useTypedSelector((state) => state.book);
   const comments = useTypedSelector((state) => state.comment.comments);
-  const { fetchBooks, addComment, updateComment } = useActions();
+  const payload = useTypedSelector((state) => state.comment);
+  const { fetchBooks, addComment, updateComment, deleteComment } = useActions();
   const { id } = useParams<{ id: number | any }>();
 
   let book = books[id];
@@ -27,6 +29,8 @@ function ProductCard({ items, addItem }: Foo) {
 
   const [textComment, setTextComment] = useState('');
   const [newComment, setNewComment] = useState('');
+
+  console.log(payload);
 
   const handleInput = (e: any) => {
     setTextComment(e.target.value);
@@ -45,6 +49,11 @@ function ProductCard({ items, addItem }: Foo) {
   const handleUpdate = (e: any) => {
     e.preventDefault();
     updateComment(newComment, id);
+  };
+
+  const handleDelete = (e: any) => {
+    e.preventDefault();
+    deleteComment(id);
   };
 
   const handleClick = (e: any) => {
@@ -207,9 +216,11 @@ function ProductCard({ items, addItem }: Foo) {
           comments.map((res) => {
             return (
               <form className="comments" key={res.id} onSubmit={handleUpdate}>
-                <div className="comments_item_delete">{res.text}</div>
+                <div onClick={handleDelete} className="comments_item_delete">
+                  {res.text}
+                </div>
                 <input type="text" value={newComment} onChange={handleInput2} />
-                <input type="submit" hidden />
+                <input type="submit" />
               </form>
             );
           })}

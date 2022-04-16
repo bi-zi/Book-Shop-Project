@@ -13,3 +13,10 @@ export const updateComment = (text: string, id: string) => {
     payload: { text, id },
   };
 };
+
+export const deleteComment = (id: string) => {
+  return {
+    type: CommentsActionTypes.COMMENT_DELETE,
+    id,
+  };
+};
