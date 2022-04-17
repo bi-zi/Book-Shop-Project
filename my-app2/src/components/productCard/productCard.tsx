@@ -6,54 +6,32 @@ import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { addItem } from '../../store2/actions/cart';
 import { Link, useParams } from 'react-router-dom';
-
 import Slider from 'react-slick';
 import './productCard.css';
-
+import SingleComment from './singleComment';
 export interface Foo {
   items: any[];
   addItem: any;
-
 }
 
 function ProductCard({ items, addItem }: Foo) {
   const { books, error, loading } = useTypedSelector((state) => state.book);
   const comments = useTypedSelector((state) => state.comment.comments);
-  const payload = useTypedSelector((state) => state.comment);
-  const { fetchBooks, addComment, updateComment, deleteComment } = useActions();
+  const { fetchBooks, addComment } = useActions();
   const { id } = useParams<{ id: number | any }>();
-
   let book = books[id];
   let checkId = items?.find((x: any) => x.id === +id);
   let bookRecommended = books.filter((x) => Object.values(x)[8] === Object.values(book)[8]);
 
   const [textComment, setTextComment] = useState('');
-  const [newComment, setNewComment] = useState('');
-
-  console.log(payload);
-
   const handleInput = (e: any) => {
     setTextComment(e.target.value);
-  };
-
-  const handleInput2 = (e: any) => {
-    setNewComment(e.target.value);
   };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
     const id = uniqid();
     addComment(textComment, id);
-  };
-
-  const handleUpdate = (e: any) => {
-    e.preventDefault();
-    updateComment(newComment, id);
-  };
-
-  const handleDelete = (e: any) => {
-    e.preventDefault();
-    deleteComment(id);
   };
 
   const handleClick = (e: any) => {
@@ -208,21 +186,13 @@ function ProductCard({ items, addItem }: Foo) {
         </Slider>
       </div>
       <div className="reviews">
-        <form className="postReview" onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="comments-item-create">
           <input type="text" value={textComment} onChange={handleInput} />
           <input type="submit" hidden />
         </form>
         {!!comments.length &&
           comments.map((res) => {
-            return (
-              <form className="comments" key={res.id} onSubmit={handleUpdate}>
-                <div onClick={handleDelete} className="comments_item_delete">
-                  {res.text}
-                </div>
-                <input type="text" value={newComment} onChange={handleInput2} />
-                <input type="submit" />
-              </form>
-            );
+            return <SingleComment key={res.id} data={res} />;
           })}
       </div>
     </div>

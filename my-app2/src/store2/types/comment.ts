@@ -36,4 +36,5 @@ interface DeleteCommentAction {
     id: string;
   };
 }
+
 export type CommentsAction = AddCommentAction | UpdateCommentAction | DeleteCommentAction;

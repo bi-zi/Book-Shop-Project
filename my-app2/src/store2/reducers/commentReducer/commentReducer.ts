@@ -5,7 +5,6 @@ const initialState: CommentState = {
 };
 
 export const commentsReducer = (state = initialState, action: CommentsAction): CommentState => {
-  console.log(action)
   switch (action.type) {
     case CommentsActionTypes.COMMENT_CREATE:
       return {
@@ -16,12 +15,14 @@ export const commentsReducer = (state = initialState, action: CommentsAction): C
       const { payload } = action;
       const { comments } = state;
       const itemIndex = comments.findIndex((res) => res.id === payload.id);
-
       const nextComments = [...comments.slice(0, itemIndex), payload, ...comments.slice(itemIndex + 1)];
+
       return {
         ...state,
         comments: nextComments,
       };
+
+    
     default:
       return state;
   }
