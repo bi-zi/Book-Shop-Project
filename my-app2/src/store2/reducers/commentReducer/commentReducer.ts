@@ -22,7 +22,19 @@ export const commentsReducer = (state = initialState, action: CommentsAction): C
         comments: nextComments,
       };
 
-    
+    case CommentsActionTypes.COMMENT_DELETE:
+      return (() => {
+        const { id } = action;
+        const { comments } = state;
+        const itemIndex = comments.findIndex((res) => res.id === id);
+
+        const nextComments = [...comments.slice(0, itemIndex), ...comments.slice(itemIndex + 1)];
+
+        return {
+          ...state,
+          comments: nextComments,
+        };
+      })();
     default:
       return state;
   }

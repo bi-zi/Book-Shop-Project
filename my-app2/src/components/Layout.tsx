@@ -6,10 +6,13 @@ import Footer from './footer/footer';
 
 const Layout = () => {
   const [sort, setSort] = useState(0);
+  const [check, setCheck] = useState(0);
 
   const value = {
     sort,
     setSort,
+    check,
+    setCheck,
   };
 
 

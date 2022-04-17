@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
 import uniqid from 'uniqid';
@@ -9,6 +9,8 @@ import { Link, useParams } from 'react-router-dom';
 import Slider from 'react-slick';
 import './productCard.css';
 import SingleComment from './singleComment';
+import { Context } from '../context';
+
 export interface Foo {
   items: any[];
   addItem: any;
@@ -23,15 +25,38 @@ function ProductCard({ items, addItem }: Foo) {
   let checkId = items?.find((x: any) => x.id === +id);
   let bookRecommended = books.filter((x) => Object.values(x)[8] === Object.values(book)[8]);
 
+  const value = useContext(Context);
+  let privet = +id;
+  let reviews = [{ id: privet, comment: comments }];
+
+  const [commentObj, setCommentObj] = useState(reviews);
+
+  console.log('reviews->', comments);
+
+  if (value.check) {
+    setCommentObj(reviews);
+    value.check = 0;
+  }
+  if (privet === book?.id) {
+    let aaa = commentObj.find((x: any) => x.id === privet);
+    console.log(aaa);
+  }
+
+  if (commentObj[0].comment.length < comments.length) {
+    setCommentObj(reviews);
+  }
+
   const [textComment, setTextComment] = useState('');
   const handleInput = (e: any) => {
     setTextComment(e.target.value);
+    setCommentObj(reviews);
   };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
     const id = uniqid();
     addComment(textComment, id);
+    setCommentObj(reviews);
   };
 
   const handleClick = (e: any) => {
@@ -187,7 +212,7 @@ function ProductCard({ items, addItem }: Foo) {
       </div>
       <div className="reviews">
         <form onSubmit={handleSubmit} className="comments-item-create">
-          <input type="text" value={textComment} onChange={handleInput} />
+          <input type="text" value={textComment} onChange={handleInput} minLength={2} />
           <input type="submit" hidden />
         </form>
         {!!comments.length &&

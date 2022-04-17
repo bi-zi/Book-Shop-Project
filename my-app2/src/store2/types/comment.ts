@@ -31,10 +31,7 @@ interface UpdateCommentAction {
 
 interface DeleteCommentAction {
   type: CommentsActionTypes.COMMENT_DELETE;
-  payload: {
-    text: string;
-    id: string;
-  };
+  id: string;
 }
 
 export type CommentsAction = AddCommentAction | UpdateCommentAction | DeleteCommentAction;
