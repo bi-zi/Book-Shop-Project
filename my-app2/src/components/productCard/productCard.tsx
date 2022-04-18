@@ -210,7 +210,7 @@ function ProductCard({ items, addItem }: Foo) {
           })}
         </Slider>
       </div>
-      <div className="reviews">
+      {/* <div className="reviews">
         <form onSubmit={handleSubmit} className="comments-item-create">
           <input type="text" value={textComment} onChange={handleInput} minLength={2} />
           <input type="submit" hidden />
@@ -219,7 +219,7 @@ function ProductCard({ items, addItem }: Foo) {
           comments.map((res) => {
             return <SingleComment key={res.id} data={res} />;
           })}
-      </div>
+      </div> */}
     </div>
   );
 }
