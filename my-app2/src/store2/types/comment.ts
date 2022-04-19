@@ -5,6 +5,9 @@ export interface CommentState {
 interface Comment {
   text: string;
   id: string;
+  com: number;
+  stat: [],
+  bookId: number
 }
 
 export enum CommentsActionTypes {
@@ -18,6 +21,9 @@ interface AddCommentAction {
   payload: {
     text: string;
     id: string;
+    com: number;
+    stat: [];
+    bookId: number;
   };
 }
 
@@ -26,6 +32,9 @@ interface UpdateCommentAction {
   payload: {
     text: string;
     id: string;
+    com: number;
+    stat: [];
+    bookId: number;
   };
 }
 

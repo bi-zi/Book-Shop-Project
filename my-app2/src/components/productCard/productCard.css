@@ -164,10 +164,10 @@
 }
 
 .book_buy:active button {
-color: white;
-border: 3px solid rgb(0, 0, 0);
-background: linear-gradient(top, rgb(255, 255, 255), rgb(122, 240, 205) 90%);
-background: -webkit-linear-gradient(top, rgb(44, 247, 186), rgb(61, 129, 109) 90%);
+  color: white;
+  border: 3px solid rgb(0, 0, 0);
+  background: linear-gradient(top, rgb(255, 255, 255), rgb(122, 240, 205) 90%);
+  background: -webkit-linear-gradient(top, rgb(44, 247, 186), rgb(61, 129, 109) 90%);
 }
 
 .book_marks button {
@@ -181,10 +181,10 @@ background: -webkit-linear-gradient(top, rgb(44, 247, 186), rgb(61, 129, 109) 90
 }
 
 .book_marks:active button {
-color: rgb(255, 255, 255);
-border: 3px solid rgb(0, 0, 0);
-background: linear-gradient(top, rgb(255, 255, 255), rgb(255, 255, 255) 90%);
-background: -webkit-linear-gradient(top, rgb(131, 130, 130), rgb(71, 71, 71) 90%);
+  color: rgb(255, 255, 255);
+  border: 3px solid rgb(0, 0, 0);
+  background: linear-gradient(top, rgb(255, 255, 255), rgb(255, 255, 255) 90%);
+  background: -webkit-linear-gradient(top, rgb(131, 130, 130), rgb(71, 71, 71) 90%);
 }
 
 /* ------------- delivery ------------- */
@@ -275,6 +275,11 @@ background: -webkit-linear-gradient(top, rgb(131, 130, 130), rgb(71, 71, 71) 90%
 
   width: 1200px;
   height: 500px;
+
+}
+
+.sas {
+  pointer-events: visiblePainted;
 }
 
 .slider_name {
@@ -300,7 +305,6 @@ background: -webkit-linear-gradient(top, rgb(131, 130, 130), rgb(71, 71, 71) 90%
   background-color: rgb(255, 255, 255);
   box-shadow: 0 2px 13px rgb(0 0 0 / 30%), 0 5px 10px rgb(0 0 0 / 20%);
   margin-bottom: 5px;
-  pointer-events: none;
 }
 
 .slider_card_info {
@@ -308,7 +312,6 @@ background: -webkit-linear-gradient(top, rgb(131, 130, 130), rgb(71, 71, 71) 90%
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-
 
   font-size: 13px;
   color: #ffd900;
@@ -340,7 +343,7 @@ background: -webkit-linear-gradient(top, rgb(131, 130, 130), rgb(71, 71, 71) 90%
   background-color: rgb(255, 255, 255);
 }
 
-.slick-arrow:before{
+.slick-arrow:before {
   font-size: 26px;
   color: rgb(0, 0, 0);
 }
@@ -351,7 +354,7 @@ background: -webkit-linear-gradient(top, rgb(131, 130, 130), rgb(71, 71, 71) 90%
   background-color: rgb(120, 240, 204);
 }
 
-.reviews{
+.reviews {
   position: absolute;
   top: 100px;
   font-size: 40px;

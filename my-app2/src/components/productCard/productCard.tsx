@@ -14,54 +14,54 @@ import { Context } from '../context';
 export interface Foo {
   items: any[];
   addItem: any;
+  removeItem: any;
 }
 
-function ProductCard({ items, addItem }: Foo) {
+function ProductCard({ items, addItem, removeItem }: Foo) {
   const { books, error, loading } = useTypedSelector((state) => state.book);
   const comments = useTypedSelector((state) => state.comment.comments);
-  const { fetchBooks, addComment } = useActions();
+  const { fetchBooks, addComment, deleteComment } = useActions();
   const { id } = useParams<{ id: number | any }>();
   let book = books[id];
   let checkId = items?.find((x: any) => x.id === +id);
   let bookRecommended = books.filter((x) => Object.values(x)[8] === Object.values(book)[8]);
-
   const value = useContext(Context);
-  let privet = +id;
-  let reviews = [{ id: privet, comment: comments }];
 
-  const [commentObj, setCommentObj] = useState(reviews);
-
-  console.log('reviews->', comments);
-
-  if (value.check) {
-    setCommentObj(reviews);
-    value.check = 0;
-  }
-  if (privet === book?.id) {
-    let aaa = commentObj.find((x: any) => x.id === privet);
-    console.log(aaa);
-  }
-
-  if (commentObj[0].comment.length < comments.length) {
-    setCommentObj(reviews);
-  }
+  //------------------------------------------------------------
 
   const [textComment, setTextComment] = useState('');
+  const [comId, setComId] = useState(0);
+  console.log(comments);
+  console.log(
+    comments
+      ?.filter((x) => x.bookId === +id)
+      .map((x) => x.stat)
+      .flat(),
+  );
+  console.log(book?.id);
+
   const handleInput = (e: any) => {
     setTextComment(e.target.value);
-    setCommentObj(reviews);
+
+    setComId(book.id);
   };
+
+  let a = comments
+    ?.filter((x) => x.bookId === +id)
+    .map((x) => x.stat)
+    .flat();
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    const id = uniqid();
-    addComment(textComment, id);
-    setCommentObj(reviews);
+    if (textComment.length > 1) {
+      const id = uniqid();
+      addComment(textComment, id, comId);
+      setTextComment('');
+    }
   };
 
   const handleClick = (e: any) => {
     e.preventDefault();
-    addItem(book);
   };
 
   const settings = {
@@ -73,6 +73,7 @@ function ProductCard({ items, addItem }: Foo) {
   };
 
   const handlerScrollUp = () => {
+    setTextComment('');
     window.scrollTo({
       top: 0,
       left: 0,
@@ -132,7 +133,7 @@ function ProductCard({ items, addItem }: Foo) {
         <div className="book_price">
           {book?.price} ₽ <div className="availability">В наличии</div>
         </div>
-        {checkId?.id === +id ? (
+        {id === 1 ? (
           <Link to="/Basket" className="book_buy">
             <button>Перейти в корзину</button>
           </Link>
@@ -192,7 +193,7 @@ function ProductCard({ items, addItem }: Foo) {
             if (i < 16) {
               i++;
               return (
-                <Link key={book.id} onClick={handlerScrollUp} to={`/Book/${book.id}`}>
+                <Link className="sas" key={book.id} to={`/Book/${book.id}`} onClick={handlerScrollUp}>
                   <div className={`slider_book ${i}`} key={book?.id}>
                     <div className="slider_card_settings">
                       <img height="250px" width="150px" src={book?.imageUrl} alt="" />
@@ -210,16 +211,16 @@ function ProductCard({ items, addItem }: Foo) {
           })}
         </Slider>
       </div>
-      {/* <div className="reviews">
+      <div className="reviews">
         <form onSubmit={handleSubmit} className="comments-item-create">
           <input type="text" value={textComment} onChange={handleInput} minLength={2} />
-          <input type="submit" hidden />
+          <input type="submit" />
         </form>
-        {!!comments.length &&
-          comments.map((res) => {
+        {!!a?.length &&
+          a?.map((res: any) => {
             return <SingleComment key={res.id} data={res} />;
           })}
-      </div> */}
+      </div>
     </div>
   );
 }

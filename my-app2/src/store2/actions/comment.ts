@@ -1,9 +1,9 @@
 import { CommentsActionTypes } from '../types/comment';
 
-export const addComment = (text: string, id: string) => {
+export const addComment = (text: string, id: string, comId: number) => {
   return {
     type: CommentsActionTypes.COMMENT_CREATE,
-    payload:  {text, id}
+    payload: { bookId: comId, stat: [{ text, id }] },
   };
 };
 

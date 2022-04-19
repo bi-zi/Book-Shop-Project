@@ -13,7 +13,9 @@ interface Cart {
   description: string;
   category: string;
   categoryRu: string;
+
 }
+
 
 export enum CartActionTypes {
   ADD_ITEM = 'ADD_ITEM',

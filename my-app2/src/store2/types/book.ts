@@ -1,5 +1,5 @@
 export interface BookState {
-  books: Book[]
+  books: Book[];
 
   loading: boolean;
   error: null | string;
@@ -17,6 +17,7 @@ interface Book {
   description: string;
   category: string;
   categoryRu: string;
+  
 }
 
 export enum BookActionTypes {

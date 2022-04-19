@@ -12,7 +12,6 @@ export interface Foo {
   items: any[];
   itemsCount: number;
   removeItem: any;
-  id: number;
 }
 
 const ShoppingCart = ({ items, itemsCount, removeItem }: Foo) => {
@@ -42,6 +41,7 @@ const ShoppingCart = ({ items, itemsCount, removeItem }: Foo) => {
 
   let totalPrice = items.reduce((acc, item) => (acc += item.price * item.counter), 0);
 
+  console.log(items)
   return (
     <div className="cart">
       <div className="menu">
