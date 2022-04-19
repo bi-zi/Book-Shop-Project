@@ -5,9 +5,10 @@ export interface CommentState {
 interface Comment {
   text: string;
   id: string;
-  com: number;
-  stat: [],
-  bookId: number
+  comId: string;
+  stat: {};
+  bookId: string;
+
 }
 
 export enum CommentsActionTypes {
@@ -21,9 +22,9 @@ interface AddCommentAction {
   payload: {
     text: string;
     id: string;
-    com: number;
-    stat: [];
-    bookId: number;
+    comId: string;
+    stat: {};
+    bookId: string;
   };
 }
 
@@ -32,15 +33,15 @@ interface UpdateCommentAction {
   payload: {
     text: string;
     id: string;
-    com: number;
-    stat: [];
-    bookId: number;
+    comId: string;
+    stat: {};
+    bookId: string;
   };
 }
 
 interface DeleteCommentAction {
   type: CommentsActionTypes.COMMENT_DELETE;
-  id: string;
+  comId: string;
 }
 
 export type CommentsAction = AddCommentAction | UpdateCommentAction | DeleteCommentAction;

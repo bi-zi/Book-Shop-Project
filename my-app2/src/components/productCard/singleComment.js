@@ -5,26 +5,28 @@ import { useActions } from '../../hooks/useActions';
 function SingleComment({ data }) {
   const { deleteComment, updateComment } = useActions();
   const [commentText, setCommentText] = useState('');
-  const { text, id } = data;
+  const { stat, bookId } = data;
   const value = useContext(Context);
 
   const handleUpdate = (e) => {
     e.preventDefault();
-    updateComment(commentText, id);
+    updateComment(commentText, stat.id, bookId);
     value.setCheck(1);
     value.check = 1;
   };
 
+  // console.log(stat.id);
   const handleDelete = (e) => {
     e.preventDefault();
-    deleteComment(id);
+    deleteComment(stat.id);
   };
 
+  let a = stat.text;
   useEffect(() => {
-    if (text) {
-      setCommentText(text);
+    if (a) {
+      setCommentText(a);
     }
-  }, [text]);
+  }, [a]);
 
   const handleInput = (e) => {
     setCommentText(e.target.value);

@@ -1,22 +1,23 @@
 import { CommentsActionTypes } from '../types/comment';
 
-export const addComment = (text: string, id: string, comId: number) => {
+export const addComment = (text: string, id: string, comId: string) => {
   return {
     type: CommentsActionTypes.COMMENT_CREATE,
-    payload: { bookId: comId, stat: [{ text, id }] },
+    payload: { bookId: comId, stat: { text, id } },
   };
 };
 
-export const updateComment = (text: string, id: string) => {
+export const updateComment = (text: string, id: string, comId: string) => {
   return {
     type: CommentsActionTypes.COMMENT_UPDATE,
-    payload: { text, id },
+    payload: [{ bookId: comId, stat: { text, id  } }],
   };
 };
 
-export const deleteComment = (id: string) => {
+export const deleteComment = (comId: string) => {
   return {
     type: CommentsActionTypes.COMMENT_DELETE,
-    id,
+    comId,
+
   };
 };

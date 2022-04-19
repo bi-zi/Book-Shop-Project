@@ -14,13 +14,12 @@ import { Context } from '../context';
 export interface Foo {
   items: any[];
   addItem: any;
-  removeItem: any;
 }
 
-function ProductCard({ items, addItem, removeItem }: Foo) {
+function ProductCard({ items, addItem }: Foo) {
   const { books, error, loading } = useTypedSelector((state) => state.book);
   const comments = useTypedSelector((state) => state.comment.comments);
-  const { fetchBooks, addComment, deleteComment } = useActions();
+  const { fetchBooks, addComment } = useActions();
   const { id } = useParams<{ id: number | any }>();
   let book = books[id];
   let checkId = items?.find((x: any) => x.id === +id);
@@ -30,26 +29,20 @@ function ProductCard({ items, addItem, removeItem }: Foo) {
   //------------------------------------------------------------
 
   const [textComment, setTextComment] = useState('');
-  const [comId, setComId] = useState(0);
-  console.log(comments);
+  const [comId, setComId] = useState(id);
+  console.log('comm->', comments);
   console.log(
-    comments
-      ?.filter((x) => x.bookId === +id)
-      .map((x) => x.stat)
-      .flat(),
+    'a->',
+    comments.flat().filter((x) => x.bookId === id),
   );
-  console.log(book?.id);
 
   const handleInput = (e: any) => {
     setTextComment(e.target.value);
 
-    setComId(book.id);
+    setComId(id);
   };
 
-  let a = comments
-    ?.filter((x) => x.bookId === +id)
-    .map((x) => x.stat)
-    .flat();
+  let a = comments?.filter((x) => x.bookId === id);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -218,7 +211,7 @@ function ProductCard({ items, addItem, removeItem }: Foo) {
         </form>
         {!!a?.length &&
           a?.map((res: any) => {
-            return <SingleComment key={res.id} data={res} />;
+            return <SingleComment key={res.stat.id} data={res} />;
           })}
       </div>
     </div>
