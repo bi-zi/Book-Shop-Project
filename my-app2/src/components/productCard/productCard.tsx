@@ -67,11 +67,11 @@ function ProductCard({ items, addItem }: Foo) {
 
   const [textComment, setTextComment] = useState('');
   const [comId, setComId] = useState(id);
-  console.log('comm->', comments);
-  console.log(
-    'a->',
-    comments.flat().filter((x) => x.bookId === id),
-  );
+  // console.log('comm->', comments);
+  // console.log(
+  //   'a->',
+  //   comments.flat().filter((x) => x.bookId === id),
+  // );
 
   const handleInput = (e: any) => {
     setTextComment(e.target.value);
@@ -241,11 +241,35 @@ function ProductCard({ items, addItem }: Foo) {
           })}
         </Slider>
       </div>
+
       <div className="reviews">
-        <form onSubmit={handleSubmit} className="comments-item-create">
-          <input type="text" value={textComment} onChange={handleInput} minLength={2} />
-          <input type="submit" />
-        </form>
+        <button className="otziv"></button>
+        Отзывы
+        <div className="write_review_box">
+          <form onSubmit={handleSubmit}>
+            <div className="write_review_name">
+              <label className="writer_name">Имя или псевдоним</label>
+              <input type="text" value={'asdafasdf'} className="write_name_input" />
+              <input type="submit" hidden />
+            </div>
+
+            <div className="text_title">
+              <label className="text_title_name">Заголовок</label>
+              <input type="text" value={0} className="text_title_input" />
+              <input type="submit" hidden />
+            </div>
+
+            <div className="comment">
+              <label className="comment_name">Комментарий</label>
+              <textarea value={textComment} onChange={handleInput} className="comment_name_area" />
+            </div>
+
+            <div className="total_characters">Всего символов: 1</div>
+
+            <input type="text" value={0} onChange={handleInput} minLength={2} />
+            <input type="submit" />
+          </form>
+        </div>
         {!!a?.length &&
           a?.map((res: any) => {
             return <SingleComment key={res.stat.id} data={res} />;

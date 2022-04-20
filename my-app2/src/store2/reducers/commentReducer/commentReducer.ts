@@ -14,7 +14,10 @@ export const commentsReducer = (state = initialState, action: CommentsAction): C
     case CommentsActionTypes.COMMENT_UPDATE:
       const { payload } = action;
       const { comments } = state;
-      const itemIndex = comments.findIndex((res) => res.id === payload.id);
+      const itemIndex = comments.findIndex((res) => {
+        return Object.values(res.stat)[1] === Object.values(payload.stat)[1];
+      });
+      
       const nextComments = [...comments.slice(0, itemIndex), payload, ...comments.slice(itemIndex + 1)];
 
       return {
@@ -26,11 +29,10 @@ export const commentsReducer = (state = initialState, action: CommentsAction): C
       return (() => {
         const { comId } = action;
         const { comments } = state;
-        const itemIndex = comments.findIndex((x) => {
-          return Object.values(x.stat)[1] === comId;
+        const itemIndex = comments.findIndex((res) => {
+          return Object.values(res.stat)[1] === comId;
         });
 
-        console.log('-----', Object.values(comments[0].stat));
         const nextComments = [...comments.slice(0, itemIndex), ...comments.slice(itemIndex + 1)];
 
         return {

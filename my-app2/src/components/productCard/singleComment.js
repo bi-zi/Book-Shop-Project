@@ -15,11 +15,17 @@ function SingleComment({ data }) {
     value.check = 1;
   };
 
-  // console.log(stat.id);
   const handleDelete = (e) => {
     e.preventDefault();
     deleteComment(stat.id);
   };
+  let date = new Date();
+  let output =
+    String(date.getDate()).padStart(2, '0') +
+    ':' +
+    String(date.getMonth() + 1).padStart(2, '0') +
+    ':' +
+    date.getFullYear();
 
   let a = stat.text;
   useEffect(() => {
@@ -37,8 +43,20 @@ function SingleComment({ data }) {
       <div onClick={handleDelete} className="comments-item-delete">
         &times;
       </div>
-      <input type="text" value={commentText} onChange={handleInput} minLength={2} />
-      <input type="submit" hidden />
+
+      <div className="recall_box">
+        <div className="recall_box_time">Дата написания отзыва {output}</div>
+        <textarea
+          type="text"
+          value={commentText}
+          onChange={handleInput}
+          className="recall_box_text"
+          minLength={2}
+        />
+        <button>
+          <input type="submit" hidden />
+        </button>
+      </div>
     </form>
   );
 }

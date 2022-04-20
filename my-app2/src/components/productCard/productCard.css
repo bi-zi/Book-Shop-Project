@@ -275,7 +275,6 @@
 
   width: 1200px;
   height: 500px;
-
 }
 
 .sas {
@@ -355,10 +354,110 @@
 }
 
 .reviews {
-  position: absolute;
-  top: 100px;
+  position: relative;
+  bottom: 500px;
   font-size: 40px;
 }
-.reviews input {
-  font-size: 50px;
+
+.otziv {
+  width: 100px;
+  height: 50px;
+}
+
+.write_review_box {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(166, 166, 176);
+}
+
+.write_review_name {
+  padding: 20px 0 20px 10px;
+}
+
+.writer_name {
+  font-size: 20px;
+  padding-right: 31px;
+}
+
+.write_name_input {
+  width: 250px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+.text_title {
+  padding: 20px 0 20px 10px;
+}
+
+.text_title_name {
+  font-size: 20px;
+  padding-right: 122px;
+}
+
+.text_title_input {
+  width: 1000px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+.comment {
+  padding: 20px 0 20px 10px;
+}
+
+.comment_name {
+  position: relative;
+  font-size: 20px;
+  bottom: 160px;
+  padding-right: 91px;
+}
+
+.comment_name_area {
+  width: 1000px;
+  height: 300px;
+
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.recall_box {
+  border: 2px solid;
+  border-radius: 12px;
+  margin: 20px auto;
+  width: 99%;
+}
+
+.recall_box_time {
+  font-size: 14px;
+  opacity: 0.4;
+  font-weight: b;
+  margin: 15px 0 0 25px;
+}
+
+.recall_box_text {
+  text-align: left;
+  font-size: 16px;
+  overflow-x: hidden;
+  margin: 10px 25px 20px 25px;
+}
+
+textarea {
+  width: 1200px;
+  height: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 2px solid;
 }
