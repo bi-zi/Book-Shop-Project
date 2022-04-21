@@ -1,5 +1,4 @@
 .book_page_container {
-  border: 5px solid;
   margin-left: auto;
   margin-right: auto;
   min-height: calc(100vh - 70px);
@@ -359,22 +358,51 @@
   font-size: 40px;
 }
 
-.otziv {
-  width: 100px;
+.comment_generate {
+  height: 570px;
+}
+
+.recall_button {
+  background-color: rgb(120, 240, 204);
+  width: 1280px;
   height: 50px;
+
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.recall_button:active {
+  color: white;
+  border: 3px solid rgb(0, 0, 0);
+  background: linear-gradient(top, rgb(255, 255, 255), rgb(122, 240, 205) 90%);
+  background: -webkit-linear-gradient(top, rgb(44, 247, 186), rgb(61, 129, 109) 90%);
+}
+
+.close_write_box {
+  position: relative;
+
+  left: 1225px;
+  top: 20px;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .write_review_box {
   width: 100%;
   height: 100%;
-  background-color: rgb(166, 166, 176);
+  border-radius: 20px;
+  background-color: rgb(120, 240, 204, 0.5);
+  z-index: 0;
 }
 
 .write_review_name {
-  padding: 20px 0 20px 10px;
+  position: relative;
+  bottom: 45px;
+  padding: 20px 0 20px 20px;
 }
 
-.writer_name {
+.writer_review_name {
   font-size: 20px;
   padding-right: 31px;
 }
@@ -387,7 +415,9 @@
 }
 
 .text_title {
-  padding: 20px 0 20px 10px;
+  position: relative;
+  bottom: 45px;
+  padding: 20px 0 20px 20px;
 }
 
 .text_title_name {
@@ -396,41 +426,71 @@
 }
 
 .text_title_input {
-  width: 1000px;
+  width: 1020px;
   height: 30px;
   border-radius: 5px;
   border: 1px solid;
 }
 
 .comment {
-  padding: 20px 0 20px 10px;
+  position: relative;
+  bottom: 45px;
+  padding: 20px 0 20px 20px;
+  z-index: 0;
 }
 
 .comment_name {
   position: relative;
   font-size: 20px;
-  bottom: 160px;
+  bottom: 165px;
   padding-right: 91px;
 }
 
 .comment_name_area {
-  width: 1000px;
+  width: 1020px;
   height: 300px;
 
   line-height: 1.5;
   border-radius: 5px;
   border: 1px solid;
+  resize: none;
 }
 
+.total_characters {
+  position: relative;
+  bottom: 75px;
+  font-size: 15px;
+  text-align: right;
+  padding-right: 25px;
+  z-index: 0;
+}
 
+.input_check {
+  position: relative;
+  font-size: 24px;
+  margin-left: 20px;
+  bottom: 45px;
+  color: red;
+}
 
+.submit_button  {
+    position: relative;
+  bottom: 65px;
+  background-color: rgb(255, 255, 255);
+  width: 200px;
+  height: 30px;
+  margin: 5px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
 
-
-
-
-
-
-
+.submit_button:active  {
+  color: rgb(255, 255, 255);
+  border: 3px solid rgb(0, 0, 0);
+  background: linear-gradient(top, rgb(255, 255, 255), rgb(255, 255, 255) 90%);
+  background: -webkit-linear-gradient(top, rgb(131, 130, 130), rgb(71, 71, 71) 90%);
+}
 
 
 .recall_box {
@@ -438,26 +498,72 @@
   border-radius: 12px;
   margin: 20px auto;
   width: 99%;
+  padding-bottom: -100px;
+}
+
+.reacall_dox_delete {
+  position: relative;
+  top: 5px;
+  left: 1225px;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .recall_box_time {
+  position: relative;
+  bottom: 40px;
   font-size: 14px;
   opacity: 0.4;
   font-weight: b;
-  margin: 15px 0 0 25px;
+  padding: 15px 0 0 20px;
+  z-index: 0;
+}
+.recal_comment_topic {
+  position: relative;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 20px 20px 10px 20px;
+  bottom: 40px;
 }
 
 .recall_box_text {
+  position: relative;
+  width: 300px;
+  bottom: 40px;
+  width: 1225px;
+  text-align: left;
+  font-size: 16px;
+  margin: 10px 20px 10px 20px;
+  white-space: pre-line;
+}
+
+.recall_box_area {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  bottom: 40px;
+  width: 1225px;
   text-align: left;
   font-size: 16px;
   overflow-x: hidden;
-  margin: 10px 25px 20px 25px;
+  margin: 10px 20px 10px 20px;
+  resize: none;
 }
 
-textarea {
-  width: 1200px;
-  height: 100%;
-  line-height: 1.5;
-  border-radius: 5px;
-  border: 2px solid;
+.recal_writer_name {
+  position: relative;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: right;
+  bottom: 50px;
+  padding-right: 25px;
+  z-index: 0;
+}
+
+.edit_recall button {
+  position: relative;
+  z-index: 1;
+  left: 20px;
+  bottom: 20px;
+  cursor: pointer;
 }

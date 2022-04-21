@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
 import uniqid from 'uniqid';
@@ -9,7 +9,9 @@ import { Link, useParams } from 'react-router-dom';
 import Slider from 'react-slick';
 import './productCard.css';
 import SingleComment from './singleComment';
-import { Context } from '../context';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 export interface Foo {
   items: any[];
@@ -61,37 +63,50 @@ function ProductCard({ items, addItem }: Foo) {
   let book = books[id];
   let checkId = items?.find((x: any) => x.id === +id);
   let bookRecommended = books.filter((x) => Object.values(x)[8] === Object.values(book)[8]);
-  const value = useContext(Context);
+  let reviews = comments?.filter((x) => x.bookId === id);
 
-  //------------------------------------------------------------
-
+  const [nameComment, setNameComment] = useState('');
+  const [titleComment, setTitleComment] = useState('');
   const [textComment, setTextComment] = useState('');
+
+  const [writeСomment, setWriteСomment] = useState(0);
+
   const [comId, setComId] = useState(id);
-  // console.log('comm->', comments);
+  console.log('comm->', comments);
   // console.log(
   //   'a->',
   //   comments.flat().filter((x) => x.bookId === id),
   // );
 
-  const handleInput = (e: any) => {
-    setTextComment(e.target.value);
-
+  const handleInput1 = (e: any) => {
+    setNameComment(e.target.value);
+    setComId(id);
+  };
+  const handleInput2 = (e: any) => {
+    setTitleComment(e.target.value);
     setComId(id);
   };
 
-  let a = comments?.filter((x) => x.bookId === id);
+  const handleInput3 = (e: any) => {
+    setTextComment(e.target.value);
+    setComId(id);
+  };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
     if (textComment.length > 1) {
       const id = uniqid();
-      addComment(textComment, id, comId);
+      addComment(textComment, id, comId, nameComment, titleComment);
       setTextComment('');
+      setNameComment('');
+      setTitleComment('');
+      setWriteСomment(0);
     }
   };
 
   const handleClick = (e: any) => {
     e.preventDefault();
+    addItem(book);
   };
 
   const settings = {
@@ -104,6 +119,8 @@ function ProductCard({ items, addItem }: Foo) {
 
   const handlerScrollUp = () => {
     setTextComment('');
+    setNameComment('');
+    setTitleComment('');
     window.scrollTo({
       top: 0,
       left: 0,
@@ -163,7 +180,7 @@ function ProductCard({ items, addItem }: Foo) {
         <div className="book_price">
           {book?.price} ₽ <div className="availability">В наличии</div>
         </div>
-        {id === 1 ? (
+        {checkId?.id === +id ? (
           <Link to="/Basket" className="book_buy">
             <button>Перейти в корзину</button>
           </Link>
@@ -243,35 +260,59 @@ function ProductCard({ items, addItem }: Foo) {
       </div>
 
       <div className="reviews">
-        <button className="otziv"></button>
-        Отзывы
-        <div className="write_review_box">
-          <form onSubmit={handleSubmit}>
-            <div className="write_review_name">
-              <label className="writer_name">Имя или псевдоним</label>
-              <input type="text" value={'asdafasdf'} className="write_name_input" />
-              <input type="submit" hidden />
-            </div>
+        <div>Отзывы {reviews.length}</div>
+        {writeСomment === 0 ? (
+          <button className="recall_button" onClick={() => setWriteСomment(1)}>
+            Оставить отзыв
+          </button>
+        ) : (
+          <div className="write_review_box">
+            <form className="comment_generate" onSubmit={handleSubmit}>
+              <div className="close_write_box" onClick={() => setWriteСomment(0)}>
+                <FontAwesomeIcon icon={faXmark} />
+              </div>
 
-            <div className="text_title">
-              <label className="text_title_name">Заголовок</label>
-              <input type="text" value={0} className="text_title_input" />
-              <input type="submit" hidden />
-            </div>
+              <div className="write_review_name">
+                <label className="writer_review_name">Имя или псевдоним</label>
+                <input
+                  type="text"
+                  value={nameComment}
+                  onChange={handleInput1}
+                  className="write_name_input"
+                  minLength={2}
+                />
+              </div>
 
-            <div className="comment">
-              <label className="comment_name">Комментарий</label>
-              <textarea value={textComment} onChange={handleInput} className="comment_name_area" />
-            </div>
+              <div className="text_title">
+                <label className="text_title_name">Заголовок</label>
+                <input
+                  type="text"
+                  value={titleComment}
+                  onChange={handleInput2}
+                  className="text_title_input"
+                  minLength={2}
+                />
+              </div>
 
-            <div className="total_characters">Всего символов: 1</div>
+              <div className="comment">
+                <label className="comment_name">Комментарий</label>
+                <textarea value={textComment} onChange={handleInput3} className="comment_name_area" />
+              </div>
 
-            <input type="text" value={0} onChange={handleInput} minLength={2} />
-            <input type="submit" />
-          </form>
-        </div>
-        {!!a?.length &&
-          a?.map((res: any) => {
+              {nameComment.length < 2 || titleComment.length < 2 || textComment.length < 2 ? (
+                <div className="input_check">Заполните все поля</div>
+              ) : (
+                <button onSubmit={handleSubmit} className="submit_button">
+                  Добавить отзыв
+                </button>
+              )}
+
+              <div className="total_characters">Всего символов: {textComment.length}</div>
+            </form>
+          </div>
+        )}
+        {!!reviews?.length &&
+          reviews?.map((res: any) => {
             return <SingleComment key={res.stat.id} data={res} />;
           })}
       </div>

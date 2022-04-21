@@ -3,12 +3,13 @@ export interface CommentState {
 }
 
 interface Comment {
-  text: string;
-  id: string;
+  bookId: string;
   comId: string;
   stat: {};
-  bookId: string;
-
+  comName: string;
+  comTitle: string;
+  text: string;
+  id: string;
 }
 
 export enum CommentsActionTypes {
@@ -20,22 +21,26 @@ export enum CommentsActionTypes {
 interface AddCommentAction {
   type: CommentsActionTypes.COMMENT_CREATE;
   payload: {
-    text: string;
-    id: string;
+    bookId: string;
     comId: string;
     stat: {};
-    bookId: string;
+    comName: string;
+    comTitle: string;
+    text: string;
+    id: string;
   };
 }
 
 interface UpdateCommentAction {
   type: CommentsActionTypes.COMMENT_UPDATE;
   payload: {
-    text: string;
-    id: string;
+    bookId: string;
     comId: string;
     stat: {};
-    bookId: string;
+    comName: string;
+    comTitle: string;
+    text: string;
+    id: string;
   };
 }
 

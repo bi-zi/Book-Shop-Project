@@ -17,7 +17,8 @@ export const commentsReducer = (state = initialState, action: CommentsAction): C
       const itemIndex = comments.findIndex((res) => {
         return Object.values(res.stat)[1] === Object.values(payload.stat)[1];
       });
-      
+
+
       const nextComments = [...comments.slice(0, itemIndex), payload, ...comments.slice(itemIndex + 1)];
 
       return {
