@@ -37,12 +37,12 @@ function SingleComment({ data }) {
   const handleInput = (e) => {
     setCommentText(e.target.value);
   };
- 
+
 
   return (
     <form onSubmit={handleUpdate} className="comments-item">
       <div className="recall_box">
-        <div onClick={handleDelete} className="reacall_dox_delete">
+        <div onClick={handleDelete} className="reacall_box_delete">
           &times;
         </div>
         <div className="recall_box_time">Дата написания отзыва {output}</div>

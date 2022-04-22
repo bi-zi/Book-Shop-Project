@@ -264,7 +264,7 @@ function ProductCard({ items, addItem }: Foo) {
       </div>
 
       <div className="reviews">
-        <div>Отзывы {reviews.length}</div>
+        <div className="reviews_count">Отзывы {reviews.length}</div>
         {writeСomment === 0 ? (
           <button className="recall_button" onClick={() => setWriteСomment(1)}>
             Оставить отзыв

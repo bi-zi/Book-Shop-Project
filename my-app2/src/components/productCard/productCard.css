@@ -573,6 +573,10 @@
 }
 
 @media (max-width: 1000px) {
+  .book_page_container {
+    width: 980px;
+  }
+
   .main_image {
     height: 500px;
     width: 300px;
@@ -583,7 +587,7 @@
     left: 420px;
     bottom: 525px;
 
-    width: 723px;
+    width: 0px;
     height: 120px;
     z-index: 0;
   }
@@ -646,10 +650,10 @@
   .book_price {
     position: relative;
     top: 9px;
-    left: 35px;
+    left: 0px;
     margin: 0;
 
-    padding: 20px 0 0 0;
+    padding: 20px 0 0 35px;
 
     font-size: 18px;
     font-weight: bolder;
@@ -683,7 +687,7 @@
   .delivery {
     left: 720px;
     bottom: 630px;
-    width: 300px;
+    width: 245px;
     height: 200px;
   }
 
@@ -738,5 +742,214 @@
     opacity: 0.3;
     font-weight: bolder;
     margin-bottom: 20px;
+  }
+
+  .recommendations {
+    width: 900px;
+    margin-left: 45px;
+  }
+
+  .slider_name {
+    font-size: 24px;
+  }
+
+  .slider_book {
+    margin: 0 40px;
+    width: 150px !important;
+    height: 420px;
+    padding-top: 45px;
+  }
+
+  .slider_book:hover {
+    transform: scale(1.2);
+  }
+
+  .slider_card_settings {
+    margin-bottom: 5px;
+  }
+
+  .slider_card_info {
+    font-size: 13px;
+  }
+
+  .slider_price {
+    padding-top: 3px;
+  }
+
+  .slider_book_author {
+    font-size: 12px;
+  }
+
+  .slider_book_name {
+    width: 150px;
+    font-size: 15px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    height: 380px;
+    z-index: 2;
+    width: 35px;
+    border-radius: 10px;
+  }
+
+  .slick-arrow:before {
+    font-size: 26px;
+  }
+
+  .slick-prev:hover,
+  .slick-next:hover {
+    height: 380px;
+  }
+
+  .reviews {
+    bottom: 500px;
+    font-size: 40px;
+    width: 940px;
+    margin: 0 auto;
+  }
+
+  .comment_generate {
+    height: 570px;
+  }
+
+  .reviews_count {
+    font-size: 26px;
+  }
+
+  .recall_button {
+    width: 920px;
+    height: 50px;
+
+    font-size: 20px;
+  }
+
+  .close_write_box {
+    position: absolute;
+    left: 900px;
+    top: 40px;
+  }
+
+  .write_review_name {
+    bottom: 10px;
+    padding: 20px 0 20px 20px;
+  }
+
+  .writer_review_name {
+    font-size: 20px;
+    padding-right: 31px;
+  }
+
+  .write_name_input {
+    width: 250px;
+    height: 30px;
+  }
+
+  .text_title {
+    bottom: 10px;
+    padding: 20px 0 20px 20px;
+  }
+
+  .text_title_name {
+    font-size: 20px;
+    padding-right: 122px;
+  }
+
+  .text_title_input {
+    width: 650px;
+    height: 30px;
+  }
+
+  .comment {
+    bottom: 10px;
+    padding: 20px 0 20px 20px;
+  }
+
+  .comment_name {
+    font-size: 20px;
+    bottom: 165px;
+    padding-right: 91px;
+  }
+
+  .comment_name_area {
+    width: 650px;
+    height: 300px;
+    font-size: 16px;
+    padding: 10px;
+    line-height: 1.5;
+  }
+
+  .total_characters {
+    bottom: 45px;
+    font-size: 15px;
+    padding-right: 25px;
+  }
+
+  .input_check {
+    font-size: 24px;
+    margin-left: 20px;
+    bottom: 10px;
+  }
+
+  .submit_button {
+    bottom: 35px;
+    width: 200px;
+    height: 30px;
+    margin: 5px 20px;
+    font-size: 14px;
+  }
+
+  .recall_box {
+    margin: 20px 0;
+    width: 920px;
+    padding-bottom: -100px;
+  }
+
+  .reacall_box_delete {
+    position: absolute;
+    top: 110px;
+    left: 890px;
+  }
+
+  .recall_box_time {
+    bottom: 0px;
+    font-size: 14px;
+    opacity: 0.4;
+    padding: 15px 0 0 20px;
+  }
+
+  .recal_comment_topic {
+    font-size: 18px;
+    padding: 20px 20px 10px 20px;
+    bottom: 0px;
+  }
+
+  .recall_box_text {
+    width: 300px;
+    bottom: 0px;
+    width: 875px;
+    font-size: 16px;
+    margin: 10px 20px 10px 20px;
+  }
+
+  .recall_box_area {
+    width: 300px;
+    height: 300px;
+    bottom: 0px;
+    width: 875px;
+    font-size: 16px;
+    margin: 10px 20px 10px 20px;
+  }
+
+  .recal_writer_name {
+    font-size: 14px;
+    bottom: 20px;
+    padding-right: 25px;
+  }
+
+  .edit_recall button {
+    z-index: 1;
+    left: 20px;
+    bottom: 5px;
   }
 }
