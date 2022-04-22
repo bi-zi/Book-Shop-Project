@@ -72,7 +72,7 @@ function ProductCard({ items, addItem }: Foo) {
   const [writeСomment, setWriteСomment] = useState(0);
 
   const [comId, setComId] = useState(id);
-  console.log('comm->', comments);
+  // console.log('comm->', comments);
   // console.log(
   //   'a->',
   //   comments.flat().filter((x) => x.bookId === id),
@@ -240,10 +240,14 @@ function ProductCard({ items, addItem }: Foo) {
             if (i < 16) {
               i++;
               return (
-                <Link className="sas" key={book.id} to={`/Book/${book.id}`} onClick={handlerScrollUp}>
+                <Link
+                  className="slider_link"
+                  key={book.id}
+                  to={`/Book/${book.id}`}
+                  onClick={handlerScrollUp}>
                   <div className={`slider_book ${i}`} key={book?.id}>
                     <div className="slider_card_settings">
-                      <img height="250px" width="150px" src={book?.imageUrl} alt="" />
+                      <img className="slider_img" height="250px" width="150px" src={book?.imageUrl} alt="" />
                       <div className="slider_card_info">
                         <div className="slider_rating">★{book?.bookRating}★</div>
                         <div className="slider_price">{book?.price} ₽</div>

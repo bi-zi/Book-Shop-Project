@@ -2,6 +2,7 @@
   margin-left: auto;
   margin-right: auto;
   min-height: calc(100vh - 70px);
+  margin-top: 100px;
   width: 1280px;
   height: 100%;
 }
@@ -88,7 +89,7 @@
   padding: 0;
   cursor: pointer;
   font-size: 32px;
-  line-height: 32px;
+  line-height: 30px;
   color: lightgrey;
   text-shadow: 1px 1px #bbb;
 }
@@ -276,7 +277,7 @@
   height: 500px;
 }
 
-.sas {
+.slider_link {
   pointer-events: visiblePainted;
 }
 
@@ -569,4 +570,173 @@
   left: 20px;
   bottom: 20px;
   cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .main_image {
+    height: 500px;
+    width: 300px;
+    margin: 20px;
+  }
+
+  .book_description {
+    left: 420px;
+    bottom: 525px;
+
+    width: 723px;
+    height: 120px;
+    z-index: 0;
+  }
+
+  .book_name {
+    width: 350px;
+    left: -40px;
+    font-size: 20px;
+  }
+
+  .book_author {
+    font-size: 13px;
+  }
+
+  .star {
+    bottom: 50px;
+    font-size: 26px;
+    top: 76px;
+    left: -42px;
+  }
+
+  .book_rating {
+    font-size: 14px;
+    top: 90px;
+    left: -17px;
+  }
+
+  .reviews_number {
+    font-size: 11px;
+    width: 120px;
+    top: 95px;
+    left: 20px;
+  }
+
+  .rating_area {
+    width: 265px;
+    top: 82px;
+    left: 0px;
+    margin: 0 auto;
+  }
+
+  .rating_area:not(:checked) > label {
+    float: right;
+    width: 32px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 32px;
+    color: lightgrey;
+    text-shadow: 1px 1px #bbb;
+  }
+
+  .trade_container {
+    left: 720px;
+    bottom: 645px;
+    width: 250px;
+    height: 170px;
+  }
+
+  .book_price {
+    position: relative;
+    top: 9px;
+    left: 35px;
+    margin: 0;
+
+    padding: 20px 0 0 0;
+
+    font-size: 18px;
+    font-weight: bolder;
+  }
+
+  .availability {
+    position: relative;
+    top: -8px;
+    left: 55px;
+    margin: 0;
+
+    padding: 12px 0 0 0;
+    font-size: 14px;
+  }
+
+  .book_buy button {
+    width: 200px;
+    height: 50px;
+
+    font-size: 18px;
+  }
+
+  .book_marks button {
+    width: 200px;
+    height: 30px;
+    margin: 5px 10px;
+
+    font-size: 12px;
+  }
+
+  .delivery {
+    left: 720px;
+    bottom: 630px;
+    width: 300px;
+    height: 200px;
+  }
+
+  .shipping_methods {
+    font-size: 10px;
+  }
+
+  .book_shop {
+    font-size: 12px;
+  }
+
+  .shipping_cost {
+    font-weight: bold;
+  }
+
+  .delivery_date {
+    font-size: 11px;
+  }
+
+  .place_receipt {
+    font-size: 12px;
+  }
+  .сourier {
+    font-size: 13px;
+  }
+
+  .сourier_cost {
+    font-size: 12px;
+    padding-left: 150px;
+  }
+
+  .сourier_cost_over {
+    font-size: 11px;
+  }
+
+  .orders_over {
+    font-size: 11px;
+  }
+
+  .annotation {
+    width: 980px;
+  }
+
+  .annotation_name {
+    font-size: 18px;
+    padding-bottom: 10px;
+    font-weight: bolder;
+  }
+
+  .annotation_report {
+    font-size: 12px;
+    opacity: 0.3;
+    font-weight: bolder;
+    margin-bottom: 20px;
+  }
 }

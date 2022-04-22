@@ -27,17 +27,17 @@ function SingleComment({ data }) {
     ':' +
     date.getFullYear();
 
-  let a = stat.text;
+  let text = stat.text;
   useEffect(() => {
-    if (a) {
-      setCommentText(a);
+    if (text) {
+      setCommentText(text);
     }
-  }, [a]);
+  }, [text]);
 
   const handleInput = (e) => {
     setCommentText(e.target.value);
   };
-  console.log(data);
+ 
 
   return (
     <form onSubmit={handleUpdate} className="comments-item">

@@ -44,7 +44,7 @@ function BookList() {
           <Link key={book.id} to={`/Book/${book.id}`}>
             <div className="book_list_card" key={book.id}>
               <div className="card_list_settings">
-                <img height="310px" width="200px" src={book.imageUrl} alt="" />
+                <img className='card_img' height="310px" width="200px" src={book.imageUrl} alt="" />
                 <div className="card_list_info">
                   <div className="rating">★{book.bookRating}★</div>
                   <div className="price">{book.price} ₽</div>

@@ -1,7 +1,11 @@
 .header {
+  width: 100%;
   height: 70px;
-  margin-bottom: 20px;
+
   font-weight: bolder;
+
+  position: fixed;
+  top: 0;
 
   display: flex;
   flex-direction: row;
@@ -9,6 +13,7 @@
   align-items: center;
 
   background-color: rgb(120, 240, 204);
+  z-index: 999;
 }
 
 .webName {
@@ -28,11 +33,11 @@ input {
   width: 100%;
   height: 35px;
   padding-left: 10px;
-  border: 2px solid #7BA7AB;
+  border: 2px solid #7ba7ab;
   border-radius: 5px;
   outline: none;
   background: #ffffff;
-  color: #9E9C9C;
+  color: #9e9c9c;
 }
 
 .dropDownList {
@@ -61,7 +66,7 @@ input {
   z-index: 1;
 }
 
-.sorting .link ,
+.sorting .link,
 .categories .link {
   color: black;
   padding: 12px 16px;
@@ -82,4 +87,127 @@ input {
 
 .dropDownList:hover .categories {
   display: block;
+}
+
+@media (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .webName {
+    margin-left: 20px;
+  }
+
+  input {
+    width: 200px;
+    height: 35px;
+  }
+
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+
+  .menu__btn {
+    margin: 25px 20px 0 0;
+    transform: scale(1.2);
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: flex;
+    position: absolute;
+
+    width: 100%;
+    height: 4px;
+    background-color: #000000;
+    transition-duration: 0.25s;
+  }
+
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+
+  .menu__box {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    padding: 0px 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-color: rgb(120, 240, 204);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    transition-duration: 0.25s;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 460px) {
+  .webName {
+    font-size: 16px;
+    margin-left: 20px;
+  }
+
+  input {
+    width: 120px;
+    height: 25px;
+  }
+
+    .menu__btn {
+    margin: 22px 10px 0 0;
+    transform: scale(1);
+
+  }
+
+
+  .allBooks {
+    font-size: 12px;
+  }
+
+  .dropDownList {
+    font-size: 12px;
+  }
+
+  .sorting {
+    font-size: 12px;
+    z-index: 1;
+  }
+
+  .categories {
+    font-size: 12px;
+    z-index: 1;
+  }
+  .shoppingCart {
+    font-size: 12px;
+    padding-right: 40px;
+  }
 }

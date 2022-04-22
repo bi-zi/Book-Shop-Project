@@ -41,7 +41,6 @@ const ShoppingCart = ({ items, itemsCount, removeItem }: Foo) => {
 
   let totalPrice = items.reduce((acc, item) => (acc += item.price * item.counter), 0);
 
-  console.log(items);
   return (
     <div className="cart">
       <div className="menu">
