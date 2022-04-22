@@ -9,7 +9,11 @@ function BookList() {
   const { books, error, loading } = useTypedSelector((state) => state.book);
   const { fetchBooks } = useActions();
   const value = useContext(Context);
-  let stackOfBooks = books.sort(() => Math.random() - 0.5);
+  let stackOfBooks = books
+    .sort(() => Math.random() - 0.5)
+    .filter((x) => {
+      return x.bookName.toLowerCase().includes(value.seacrh.toLowerCase());
+    });
   let sortNumber = value.sort;
 
   if (sortNumber === 1) {
@@ -35,25 +39,23 @@ function BookList() {
 
   return (
     <div className="book_list_container">
-
-        {stackOfBooks.map((book) => {
-          return (
-            <Link key={book.id} to={`/Book/${book.id}`}>
-              <div className="book_list_card" key={book.id}>
-                <div className="card_list_settings">
-                  <img height="310px" width="200px" src={book.imageUrl} alt="" />
-                  <div className="card_list_info">
-                    <div className="rating">★{book.bookRating}★</div>
-                    <div className="price">{book.price} ₽</div>
-                  </div>
+      {stackOfBooks.map((book) => {
+        return (
+          <Link key={book.id} to={`/Book/${book.id}`}>
+            <div className="book_list_card" key={book.id}>
+              <div className="card_list_settings">
+                <img height="310px" width="200px" src={book.imageUrl} alt="" />
+                <div className="card_list_info">
+                  <div className="rating">★{book.bookRating}★</div>
+                  <div className="price">{book.price} ₽</div>
                 </div>
-                <div className="card_list_author">{book.authorName}</div>
-                <div className="card_list_name">{book.bookName}</div>
               </div>
-            </Link>
-          );
-        })}
-
+              <div className="card_list_author">{book.authorName}</div>
+              <div className="card_list_name">{book.bookName}</div>
+            </div>
+          </Link>
+        );
+      })}
     </div>
   );
 }

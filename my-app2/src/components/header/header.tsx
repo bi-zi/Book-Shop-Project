@@ -12,6 +12,16 @@ function Header() {
       <Link to="/" className="webName">
         Book Shop
       </Link>
+
+      <form action="" method="get">
+        <input
+          name="s"
+          placeholder="Искать здесь..."
+          className="seacrch_input"
+          onChange={(e: any) => value.setSeacrh(e.target.value)}
+          type="text"
+        />
+      </form>
       <Link to="/" className="allBooks">
         Все книги
       </Link>

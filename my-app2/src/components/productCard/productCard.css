@@ -410,6 +410,8 @@
 .write_name_input {
   width: 250px;
   height: 30px;
+
+  color: black;
   border-radius: 5px;
   border: 1px solid;
 }
@@ -428,6 +430,7 @@
 .text_title_input {
   width: 1020px;
   height: 30px;
+  color: black;
   border-radius: 5px;
   border: 1px solid;
 }
@@ -449,6 +452,7 @@
 .comment_name_area {
   width: 1020px;
   height: 300px;
+  font-size: 16px;
 
   line-height: 1.5;
   border-radius: 5px;
@@ -473,8 +477,8 @@
   color: red;
 }
 
-.submit_button  {
-    position: relative;
+.submit_button {
+  position: relative;
   bottom: 65px;
   background-color: rgb(255, 255, 255);
   width: 200px;
@@ -485,13 +489,12 @@
   cursor: pointer;
 }
 
-.submit_button:active  {
+.submit_button:active {
   color: rgb(255, 255, 255);
   border: 3px solid rgb(0, 0, 0);
   background: linear-gradient(top, rgb(255, 255, 255), rgb(255, 255, 255) 90%);
   background: -webkit-linear-gradient(top, rgb(131, 130, 130), rgb(71, 71, 71) 90%);
 }
-
 
 .recall_box {
   border: 2px solid;

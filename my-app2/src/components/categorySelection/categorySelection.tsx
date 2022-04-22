@@ -42,9 +42,17 @@ function Category() {
   }
 
   if (pageNumber > 1 || (sortNumber === 1 && pageNumber > 0)) {
-    stackOfBooks = books.filter((book) => Object.values(book)[8] === categoryСheck);
+    stackOfBooks = books
+      .filter((book) => Object.values(book)[8] === categoryСheck)
+      .filter((x) => {
+        return x.bookName.toLowerCase().includes(value.seacrh.toLowerCase());
+      });
     if (sortNumber === 1) {
-      stackOfBooks.sort((a, b) => (a.bookRating < b.bookRating ? 1 : -1));
+      stackOfBooks
+        .sort((a, b) => (a.bookRating < b.bookRating ? 1 : -1))
+        .filter((x) => {
+          return x.bookName.toLowerCase().includes(value.seacrh.toLowerCase());
+        });
     }
   }
 

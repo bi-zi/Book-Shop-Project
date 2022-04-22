@@ -277,6 +277,7 @@ function ProductCard({ items, addItem }: Foo) {
                 <input
                   type="text"
                   value={nameComment}
+                  placeholder="От 2 символов"
                   onChange={handleInput1}
                   className="write_name_input"
                   minLength={2}
@@ -289,6 +290,7 @@ function ProductCard({ items, addItem }: Foo) {
                   type="text"
                   value={titleComment}
                   onChange={handleInput2}
+                  placeholder="От 2 символов"
                   className="text_title_input"
                   minLength={2}
                 />
@@ -296,7 +298,12 @@ function ProductCard({ items, addItem }: Foo) {
 
               <div className="comment">
                 <label className="comment_name">Комментарий</label>
-                <textarea value={textComment} onChange={handleInput3} className="comment_name_area" />
+                <textarea
+                  placeholder=" От 2 символов"
+                  value={textComment}
+                  onChange={handleInput3}
+                  className="comment_name_area"
+                />
               </div>
 
               {nameComment.length < 2 || titleComment.length < 2 || textComment.length < 2 ? (
