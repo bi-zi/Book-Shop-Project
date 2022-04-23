@@ -1,21 +1,23 @@
-import React, {  useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { useActions } from '../../hooks/useActions';
 
-function SingleComment({ data }) {
+export interface Foo {
+  data: any;
+}
+
+function SingleComment({ data }: Foo) {
   const { deleteComment, updateComment } = useActions();
   const [commentText, setCommentText] = useState('');
   const { stat, bookId } = data;
-
   const [writeСomment, setWriteСomment] = useState(0);
 
-  const handleUpdate = (e) => {
+  const handleUpdate = (e: any) => {
     e.preventDefault();
     updateComment(commentText, stat.id, bookId, stat.comName, stat.comTitle);
-
   };
 
-  const handleDelete = (e) => {
+  const handleDelete = (e: any) => {
     e.preventDefault();
     deleteComment(stat.id);
   };
@@ -34,10 +36,9 @@ function SingleComment({ data }) {
     }
   }, [text]);
 
-  const handleInput = (e) => {
+  const handleInput = (e: any) => {
     setCommentText(e.target.value);
   };
-
 
   return (
     <form onSubmit={handleUpdate} className="comments-item">
@@ -53,7 +54,6 @@ function SingleComment({ data }) {
           <p className="recall_box_text">{commentText}</p>
         ) : (
           <textarea
-            type="text"
             value={commentText}
             onChange={handleInput}
             className="recall_box_area"

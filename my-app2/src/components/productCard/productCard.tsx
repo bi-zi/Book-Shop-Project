@@ -1,23 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
-import uniqid from 'uniqid';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { addItem } from '../../store2/actions/cart';
 import { Link, useParams } from 'react-router-dom';
-import Slider from 'react-slick';
 import { useGlobalEvent } from 'beautiful-react-hooks';
-import './productCard.css';
+import uniqid from 'uniqid';
+import Slider from 'react-slick';
 import SingleComment from './singleComment';
-
+import './productCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
-
-export interface Foo {
-  items: any[];
-  addItem: any;
-}
 
 //      ⠀⠀⣶⣦⠀⣶⡆⢠⣴⠶⣶⣄⠀⠀⠀⢠⣴⠶⠶ ⢀⣴⠶⢶⣄ ⣠⡴⠶⣶⡄ ⣶⠶⣶⣄⠀⠀ ⢀⣴⠶⠶⠄⢠⡴⠶⢶⡄⠀⣶⠶⣶⣄⢰⡶⠶⠖⢠⠶⢶⡄⠀
 //       ⢠⣿⢻⡄⣿⢠⣿⠃⠀⢸⣿⠀⠀⢰⣿⠁⢠⣤⠀⣿⡇⠀⠀⣿⢸⣿⠁⠀⣿⡇⢰⣿⠀⢸⣿⠀⠀⠀⣿⠁⠀⠀⢰⣿⠁⠀⢸⡟⢰⣿⠀⢸⣿ ⣿⣷⢶⠀⠀⣤⠟⠁⠀
@@ -56,11 +50,17 @@ export interface Foo {
 // ⠀⠀⠀⠀⠀⡐⠠⠀⠁⠠⠀⠀⠄⠨⡂⡂⠐⠐⠨⢐⢑⢌⢓⢆⢖⢌⢊⠎⠌⢌⢢⠪⠨⠀⢀⠀⠀⠂⠀⠐⠀⠀⠂⠀⠀⠀⠀⡀⠄⠀⠀⡀⠄⠀⠀⡀⠄⠂⠀⠁⠀⠁⠈⠐⢄⠀
 // ⠀⠀⠀⠠⠊⠀⠠⠐⠀⠠⠀⢁⠠⠨⡐⠀⠂⢁⠨⢐⠐⢄⢑⠌⡢⡑⡑⡌⡊⢢⢑⠡⠁⡐⠀⠄⠁⠀⠂⠀⠂⠁⠀⠀⠂⠈⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠈
 
+export interface Foo {
+  items: any[];
+  addItem: any;
+}
+
 function ProductCard({ items, addItem }: Foo) {
   const { books, error, loading } = useTypedSelector((state) => state.book);
   const comments = useTypedSelector((state) => state.comment.comments);
   const { fetchBooks, addComment } = useActions();
   const { id } = useParams<{ id: number | any }>();
+
   let book = books[id];
   let checkId = items?.find((x: any) => x.id === +id);
   let bookRecommended = books.filter((x) => Object.values(x)[8] === Object.values(book)[8]);

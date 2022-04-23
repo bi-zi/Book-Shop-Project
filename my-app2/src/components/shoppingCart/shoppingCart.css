@@ -5,6 +5,9 @@ hr {
   height: 2px;
 }
 
+/* ------------- cart ------------- */
+
+
 .cart {
   text-align: center;
   min-height: calc(100vh - 60px);
@@ -49,6 +52,8 @@ hr {
   font-size: 24px;
   font-weight: bold;
 }
+
+/* ------------- product------------- */
 
 .product {
   display: flex;

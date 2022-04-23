@@ -353,6 +353,8 @@
   background-color: rgb(120, 240, 204);
 }
 
+/* ------------- reviews------------- */
+
 .reviews {
   position: relative;
   bottom: 500px;
@@ -496,6 +498,8 @@
   background: linear-gradient(top, rgb(255, 255, 255), rgb(255, 255, 255) 90%);
   background: -webkit-linear-gradient(top, rgb(131, 130, 130), rgb(71, 71, 71) 90%);
 }
+
+/* ------------- recall_box------------- */
 
 .recall_box {
   border: 2px solid;

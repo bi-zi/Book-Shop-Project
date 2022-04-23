@@ -9,7 +9,7 @@ function Header() {
   let swapSort = value.sort;
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  useGlobalEvent('resize',  (e: any) => {
+  useGlobalEvent('resize', (e: any) => {
     setWindowWidth(window.innerWidth);
   });
 

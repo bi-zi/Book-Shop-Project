@@ -81,7 +81,7 @@ function Category() {
           <Link key={book.id} to={`/Book/${book.id}`}>
             <div className="category_card" key={book.id}>
               <div className="category_card_settings">
-                <img height="310px" width="200px" src={book.imageUrl} alt="" />
+                <img  className="category_img" height="310px" width="200px" src={book.imageUrl} alt="" />
                 <div className="category_card_info">
                   <div className="rating">★{book.bookRating}★</div>
                   <div className="price">{book.price} ₽</div>

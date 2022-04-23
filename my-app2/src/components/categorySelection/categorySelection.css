@@ -2,6 +2,7 @@
   text-align: center;
   max-width: 100%;
   min-width: 100%;
+  margin-top: 100px;
   min-height: calc(100vh - 70px);
 }
 
@@ -22,7 +23,6 @@
   box-shadow: 0 1px 3px rgb(0 0 0 / 20%), 0 5px 10px rgb(0 0 0 / 10%);
   margin-bottom: 5px;
   height: 340px;
-
 }
 
 .category_card_info {
@@ -45,4 +45,33 @@
   font-size: 16px !important;
   font-weight: bolder;
   word-wrap: break-word;
+}
+
+@media (min-width: 320px) and (max-width: 460px) {
+  .category_card {
+    width: 120px;
+    margin: 0 10px 20px 10px;
+  }
+
+  .category_img {
+    width: 120px;
+    height: 210px;
+  }
+
+  .category_card_settings {
+    margin-bottom: 5px;
+    height: 240px;
+  }
+
+  .category_card_info {
+    font-size: 14px;
+  }
+
+  .category_card_author {
+    font-size: 10px !important;
+  }
+
+  .category_name {
+    font-size: 12px !important;
+  }
 }
