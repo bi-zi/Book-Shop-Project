@@ -60,7 +60,13 @@ const ShoppingCart = ({ items, itemsCount, removeItem }: Foo) => {
               <Link to={`/Book/${book.id}`}>
                 <div className="product_cart_book">
                   <div className="product_cart_settings">
-                    <img height="250px" width="150px" src={book.imageUrl} alt="" />
+                    <img
+                      className="product_cart_img"
+                      height="250px"
+                      width="150px"
+                      src={book.imageUrl}
+                      alt=""
+                    />
                   </div>
                 </div>
               </Link>

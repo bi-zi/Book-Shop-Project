@@ -240,6 +240,7 @@ function ProductCard({ items, addItem }: Foo) {
       {windowWidth > 460 ? (
         <div className="recommendations">
           <h2 className="slider_name">{books[id]?.categoryRu}</h2>
+
           <Slider {...settings}>
             {bookRecommended.map((book) => {
               let i = 0;
@@ -273,7 +274,6 @@ function ProductCard({ items, addItem }: Foo) {
               }
             })}
           </Slider>
-          )
         </div>
       ) : (
         ''
