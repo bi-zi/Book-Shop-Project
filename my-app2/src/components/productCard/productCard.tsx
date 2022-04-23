@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { addItem } from '../../store2/actions/cart';
 import { Link, useParams } from 'react-router-dom';
 import Slider from 'react-slick';
+import { useGlobalEvent } from 'beautiful-react-hooks';
 import './productCard.css';
 import SingleComment from './singleComment';
 
@@ -68,8 +69,12 @@ function ProductCard({ items, addItem }: Foo) {
   const [nameComment, setNameComment] = useState('');
   const [titleComment, setTitleComment] = useState('');
   const [textComment, setTextComment] = useState('');
-
   const [writeСomment, setWriteСomment] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useGlobalEvent('resize', (e: any) => {
+    setWindowWidth(window.innerWidth);
+  });
 
   const [comId, setComId] = useState(id);
   // console.log('comm->', comments);
@@ -157,22 +162,23 @@ function ProductCard({ items, addItem }: Foo) {
           {book?.bookName}
           <div className="book_author">{book?.authorName}</div>
         </div>
+        <div className="book_description_container">
+          <div className="star">★</div>
+          <div className="book_rating">{book?.bookRating}</div>
+          <div className="reviews_number">1337 оценок</div>
 
-        <div className="star">★</div>
-        <div className="book_rating">{book?.bookRating}</div>
-        <div className="reviews_number">1337 оценок</div>
-
-        <div className="rating_area">
-          <input type="radio" id="star-5" name="rating" value="5" />
-          <label htmlFor="star-5" title="Оценка «5»"></label>
-          <input type="radio" id="star-4" name="rating" value="4" />
-          <label htmlFor="star-4" title="Оценка «4»"></label>
-          <input type="radio" id="star-3" name="rating" value="3" />
-          <label htmlFor="star-3" title="Оценка «3»"></label>
-          <input type="radio" id="star-2" name="rating" value="2" />
-          <label htmlFor="star-2" title="Оценка «2»"></label>
-          <input type="radio" id="star-1" name="rating" value="1" />
-          <label htmlFor="star-1" title="Оценка «1»"></label>
+          <div className="rating_area">
+            <input type="radio" id="star-5" name="rating" value="5" />
+            <label htmlFor="star-5" title="Оценка «5»"></label>
+            <input type="radio" id="star-4" name="rating" value="4" />
+            <label htmlFor="star-4" title="Оценка «4»"></label>
+            <input type="radio" id="star-3" name="rating" value="3" />
+            <label htmlFor="star-3" title="Оценка «3»"></label>
+            <input type="radio" id="star-2" name="rating" value="2" />
+            <label htmlFor="star-2" title="Оценка «2»"></label>
+            <input type="radio" id="star-1" name="rating" value="1" />
+            <label htmlFor="star-1" title="Оценка «1»"></label>
+          </div>
         </div>
       </div>
 
@@ -247,7 +253,13 @@ function ProductCard({ items, addItem }: Foo) {
                   onClick={handlerScrollUp}>
                   <div className={`slider_book ${i}`} key={book?.id}>
                     <div className="slider_card_settings">
-                      <img className="slider_img" height="250px" width="150px" src={book?.imageUrl} alt="" />
+                      <img
+                        className="slider_img"
+                        height="250px"
+                        width="150px"
+                        src={book?.imageUrl}
+                        alt=""
+                      />
                       <div className="slider_card_info">
                         <div className="slider_rating">★{book?.bookRating}★</div>
                         <div className="slider_price">{book?.price} ₽</div>
