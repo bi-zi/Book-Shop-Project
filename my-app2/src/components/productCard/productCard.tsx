@@ -237,43 +237,47 @@ function ProductCard({ items, addItem }: Foo) {
         <div className="annotation_report">Сообщить об ошибке</div>
       </div>
 
-      <div className="recommendations">
-        <h2 className="slider_name">{books[id]?.categoryRu}</h2>
-
-        <Slider {...settings}>
-          {bookRecommended.map((book) => {
-            let i = 0;
-            if (i < 16) {
-              i++;
-              return (
-                <Link
-                  className="slider_link"
-                  key={book.id}
-                  to={`/Book/${book.id}`}
-                  onClick={handlerScrollUp}>
-                  <div className={`slider_book ${i}`} key={book?.id}>
-                    <div className="slider_card_settings">
-                      <img
-                        className="slider_img"
-                        height="250px"
-                        width="150px"
-                        src={book?.imageUrl}
-                        alt=""
-                      />
-                      <div className="slider_card_info">
-                        <div className="slider_rating">★{book?.bookRating}★</div>
-                        <div className="slider_price">{book?.price} ₽</div>
+      {windowWidth > 460 ? (
+        <div className="recommendations">
+          <h2 className="slider_name">{books[id]?.categoryRu}</h2>
+          <Slider {...settings}>
+            {bookRecommended.map((book) => {
+              let i = 0;
+              if (i < 16) {
+                i++;
+                return (
+                  <Link
+                    className="slider_link"
+                    key={book.id}
+                    to={`/Book/${book.id}`}
+                    onClick={handlerScrollUp}>
+                    <div className={`slider_book ${i}`} key={book?.id}>
+                      <div className="slider_card_settings">
+                        <img
+                          className="slider_img"
+                          height="250px"
+                          width="150px"
+                          src={book?.imageUrl}
+                          alt=""
+                        />
+                        <div className="slider_card_info">
+                          <div className="slider_rating">★{book?.bookRating}★</div>
+                          <div className="slider_price">{book?.price} ₽</div>
+                        </div>
                       </div>
+                      <div className="slider_book_author">{book?.authorName}</div>
+                      <div className="slider_book_name">{book?.bookName}</div>
                     </div>
-                    <div className="slider_book_author">{book?.authorName}</div>
-                    <div className="slider_book_name">{book?.bookName}</div>
-                  </div>
-                </Link>
-              );
-            }
-          })}
-        </Slider>
-      </div>
+                  </Link>
+                );
+              }
+            })}
+          </Slider>
+          )
+        </div>
+      ) : (
+        ''
+      )}
 
       <div className="reviews">
         <div className="reviews_count">Отзывы {reviews.length}</div>

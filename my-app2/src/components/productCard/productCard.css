@@ -245,7 +245,7 @@
 .annotation {
   position: relative;
   bottom: 0;
-  max-height: 460px;
+  height: 100%;
   width: 1100px;
   top: -500px;
   padding-left: 20px;
@@ -505,10 +505,10 @@
   padding-bottom: -100px;
 }
 
-.reacall_dox_delete {
+.reacall_box_delete {
   position: relative;
   top: 5px;
-  left: 1225px;
+  left: 0px;
   z-index: 1;
   cursor: pointer;
 }
@@ -1109,8 +1109,8 @@
   }
 
   .total_characters {
-    position: absolute;
-    left: 540px;
+    position: relative;
+    left: 0px;
     bottom: 35px;
     font-size: 15px;
     padding-right: 25px;
@@ -1276,9 +1276,11 @@
     position: static;
     margin-left: 10px;
     width: 280px;
+    height: 100%;
+    margin-bottom: 0;
   }
 
-  .annotation_text{
+  .annotation_text {
     font-size: 11px;
   }
 
@@ -1295,71 +1297,13 @@
     margin-bottom: 20px;
   }
 
-  .recommendations {
-    position: static;
-    width: 900px;
-    margin-left: 45px;
-  }
-
-  .slider_name {
-    font-size: 24px;
-  }
-
-  .slider_book {
-    margin: 0 40px;
-    width: 150px !important;
-    height: 420px;
-    padding-top: 45px;
-  }
-
-  .slider_book:hover {
-    transform: scale(1.2);
-  }
-
-  .slider_card_settings {
-    margin-bottom: 5px;
-  }
-
-  .slider_card_info {
-    font-size: 13px;
-  }
-
-  .slider_price {
-    padding-top: 3px;
-  }
-
-  .slider_book_author {
-    font-size: 12px;
-  }
-
-  .slider_book_name {
-    width: 150px;
-    font-size: 15px;
-  }
-
-  .slick-prev,
-  .slick-next {
-    height: 380px;
-    z-index: 2;
-    width: 35px;
-    border-radius: 10px;
-  }
-
-  .slick-arrow:before {
-    font-size: 26px;
-  }
-
-  .slick-prev:hover,
-  .slick-next:hover {
-    height: 380px;
-  }
-
   .reviews {
-      position: static;
-    bottom: 500px;
+    position: static;
+    text-align: center;
     font-size: 40px;
-    width: 940px;
-    margin: 0 auto;
+    width: 260px;
+
+    margin: 20px auto 20px auto;
   }
 
   .comment_generate {
@@ -1371,137 +1315,158 @@
   }
 
   .recall_button {
-    width: 920px;
+    width: 230px;
     height: 50px;
 
     font-size: 20px;
   }
 
   .close_write_box {
-    position: absolute;
-    left: 900px;
-    top: 40px;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 50px;
+    padding-top: 5px;
+    padding-left: 220px;
+    margin-bottom: -50px;
   }
 
   .write_review_name {
-    bottom: 10px;
-    padding: 20px 0 20px 20px;
+    width: 260px;
+    padding: 0px 0 0 20px;
   }
 
   .writer_review_name {
-    font-size: 20px;
-    padding-right: 31px;
+    padding-left: 10px;
+
+    font-size: 14px;
   }
 
   .write_name_input {
-    width: 250px;
+    margin-left: -20px;
+    width: 240px;
     height: 30px;
   }
 
   .text_title {
-    bottom: 10px;
-    padding: 20px 0 20px 20px;
+    width: 260px;
+    padding: 0;
   }
 
   .text_title_name {
-    font-size: 20px;
-    padding-right: 122px;
+    padding-left: 90px;
+    font-size: 14px;
   }
 
   .text_title_input {
-    width: 650px;
+    width: 240px;
     height: 30px;
   }
 
   .comment {
-    bottom: 10px;
-    padding: 20px 0 20px 20px;
+    width: 260px;
+    height: 300px;
+    padding: 0;
+
+    margin-bottom: -80px;
   }
 
   .comment_name {
-    font-size: 20px;
-    bottom: 165px;
-    padding-right: 91px;
+    position: static;
+    padding-left: 75px;
+    font-size: 14px;
   }
 
   .comment_name_area {
-    width: 650px;
-    height: 300px;
-    font-size: 16px;
-    padding: 10px;
+    width: 240px;
+    height: 250px;
+    font-size: 14px;
     line-height: 1.5;
   }
 
   .total_characters {
-    bottom: 45px;
-    font-size: 15px;
+    position: relative;
+    bottom: -110px;
+    left: 0;
+    font-size: 12px;
+    margin-top: -20px;
     padding-right: 25px;
   }
 
   .input_check {
-    font-size: 24px;
+    position: relative;
+    top: 90px;
+    left: 0;
+    font-size: 20px;
     margin-left: 20px;
     bottom: 10px;
   }
 
   .submit_button {
-    bottom: 35px;
-    width: 200px;
-    height: 30px;
-    margin: 5px 20px;
-    font-size: 14px;
+    position: relative;
+    top: 80px;
+    left: 0;
+    margin: 0;
   }
 
   .recall_box {
     margin: 20px 0;
-    width: 920px;
+    width: 260px;
     padding-bottom: -100px;
   }
 
   .reacall_box_delete {
+    position: relative;
+    left: 220px;
     text-align: right;
+    width: 25px;
+    margin-bottom: -40px;
     margin-right: 10px;
   }
 
   .recall_box_time {
     bottom: 0px;
-    font-size: 14px;
+    font-size: 11px;
     opacity: 0.4;
-    padding: 15px 0 0 20px;
+    padding: 15px 40px 0 0px;
   }
 
   .recal_comment_topic {
-    font-size: 18px;
-    padding: 20px 20px 10px 20px;
+    text-align: left;
+    font-size: 16px;
+    padding: 10px 10px 10px 20px;
     bottom: 0px;
   }
 
   .recall_box_text {
     width: 300px;
     bottom: 0px;
-    width: 875px;
-    font-size: 16px;
-    margin: 10px 20px 10px 20px;
+    width: 230px;
+    font-size: 14px;
+    margin: 0 20px 10px 20px;
   }
 
   .recall_box_area {
     width: 300px;
     height: 300px;
     bottom: 0px;
-    width: 875px;
-    font-size: 16px;
-    margin: 10px 20px 10px 20px;
+    width: 230px;
+    font-size: 14px;
+    margin: 0 20px -10px 20px;
   }
 
   .recal_writer_name {
     font-size: 14px;
-    bottom: 20px;
+    bottom: 25px;
     padding-right: 25px;
   }
 
   .edit_recall button {
     z-index: 1;
-    left: 20px;
+    width: 100px;
+    height: 30px;
+    font-size: 11px;
+    left: -60px;
     bottom: 5px;
   }
 }
