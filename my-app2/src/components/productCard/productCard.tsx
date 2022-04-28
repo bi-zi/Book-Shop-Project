@@ -243,16 +243,14 @@ function ProductCard({ items, addItem }: Foo) {
 
           <Slider {...settings}>
             {bookRecommended.map((book) => {
-              let i = 0;
-              if (i < 16) {
-                i++;
+
                 return (
                   <Link
                     className="slider_link"
                     key={book.id}
                     to={`/Book/${book.id}`}
                     onClick={handlerScrollUp}>
-                    <div className={`slider_book ${i}`} key={book?.id}>
+                    <div className={`slider_book ${0}`} key={book?.id}>
                       <div className="slider_card_settings">
                         <img
                           className="slider_img"
@@ -271,7 +269,7 @@ function ProductCard({ items, addItem }: Foo) {
                     </div>
                   </Link>
                 );
-              }
+
             })}
           </Slider>
         </div>

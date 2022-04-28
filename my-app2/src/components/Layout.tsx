@@ -6,8 +6,7 @@ import Footer from './footer/footer';
 
 const Layout = () => {
   const [sort, setSort] = useState(0);
-   const [seacrh, setSeacrh] = useState('');
-
+  const [seacrh, setSeacrh] = useState('');
 
   const value = {
     sort,
@@ -15,7 +14,6 @@ const Layout = () => {
     seacrh,
     setSeacrh,
   };
-
 
   return (
     <Context.Provider value={value}>
@@ -27,10 +25,9 @@ const Layout = () => {
   );
 };
 
-  export type GlobalContent = {
-    sort: number;
-    setSort: (c: number) => void;
-  };
-
+export type GlobalContent = {
+  sort: number;
+  setSort: (c: number) => void;
+};
 
 export default Layout;

@@ -1,6 +1,6 @@
 # Book Shop 📚
 
-![alt text](<./Видео без названия — сделано в Clipchamp (1).gif>)
+![alt text](<./BookShop.gif>)
 
 ## React Redux TypeScript
 

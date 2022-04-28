@@ -1,6 +1,6 @@
 # Book Shop 📚
 
-![alt text](<./my-app2/Видео%20без%20названия%20—%20сделано%20в%20Clipchamp%20(1).gif>)
+![alt text](<./my-app2/BookShop.gif>)
 
 ## React Redux TypeScript
 
