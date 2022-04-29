@@ -1,10 +1,10 @@
 import React, { Suspense } from 'react';
 import Layout from './components/Layout';
-import Homepage from './pages/MainPage';
-import Category from './pages/CategoryPage';
-import BookPage from './pages/ProductPage';
-import Basket from './pages/Basket';
-import NotFoundPage from './pages/NotFoundPage';
+import Homepage from './pages/mainPage';
+import Category from './pages/categoryPage';
+import BookPage from './pages/productPage';
+import Basket from './pages/basket';
+import NotFoundPage from './pages/notFoundPage';
 import { Routes, Route } from 'react-router-dom';
 
 

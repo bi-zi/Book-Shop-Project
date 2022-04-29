@@ -3,7 +3,7 @@ import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import { addItem } from '../../store2/actions/cart';
+import { addItem } from '../../store/actions/cart';
 import { Link, useParams } from 'react-router-dom';
 import { useGlobalEvent } from 'beautiful-react-hooks';
 import uniqid from 'uniqid';
