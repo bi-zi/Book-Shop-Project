@@ -91,7 +91,7 @@ const ShoppingCart = ({ items, itemsCount, removeItem }: Foo) => {
                 </div>
 
                 <div className="product_cost">
-                  <div className="product_price">{book.price * book.counter} ₽</div>
+                  <div className="product_price">{book?.price * book?.counter} ₽</div>
                   <div className="price_multiplication">
                     {book?.price} ₽ x {book.counter}шт
                   </div>
