@@ -1,4 +1,4 @@
-import { CommentsAction, CommentsActionTypes, CommentState } from '../../types/comment';
+import { CommentsAction, CommentsActionTypes, CommentState } from '../types/comment';
 
 const initialState: CommentState = {
   comments: [],
