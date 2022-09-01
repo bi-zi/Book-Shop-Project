@@ -6,7 +6,7 @@ export const fetchBooks = () => {
   return async (dispatch: Dispatch<BookAction>) => {
     try {
       dispatch({ type: BookActionTypes.FETCH_BOOKS });
-      const response = await axios.get('https://backend-for-books-shop.herokuapp.com/books');
+      const response = await axios.get('https://backend-for-book-shop.onrender.com//books');
       dispatch({ type: BookActionTypes.FETCH_BOOKS_SUCCESS, payload: response.data });
     } catch (e) {
       dispatch({
