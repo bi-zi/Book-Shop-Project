@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Context } from './context';
+// import { Context } from './context';
 import Header from './header/header';
 import Footer from './footer/footer';
 
@@ -16,12 +16,11 @@ const Layout = () => {
   };
 
   return (
-    <Context.Provider value={value}>
+    <>
       <Header />
       <Outlet></Outlet>
-
       <Footer />
-    </Context.Provider>
+    </>
   );
 };
 

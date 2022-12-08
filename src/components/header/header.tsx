@@ -1,17 +1,12 @@
-import React, { useContext, useState } from 'react';
-import { Context } from '../context';
+import React from 'react';
+import { useAppDispatch, useAppSelector } from '../../store/store';
+import { setSortBooks } from '../../store/books/slice';
 import { Link } from 'react-router-dom';
-import { useGlobalEvent } from 'beautiful-react-hooks';
 import './header.css';
 
 function Header() {
-  const value = useContext(Context);
-  let swapSort = value.sort;
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const dispatch = useAppDispatch();
 
-  useGlobalEvent('resize', (e: any) => {
-    setWindowWidth(window.innerWidth);
-  });
 
   return (
     <div className="header">
@@ -20,20 +15,14 @@ function Header() {
       </Link>
 
       <form action="" method="get">
-        <input
-          name="s"
-          placeholder="Искать здесь..."
-          className="seacrch_input"
-          onChange={(e: any) => value.setSeacrh(e.target.value)}
-          type="text"
-        />
+        <input name="s" placeholder="Искать здесь..." className="seacrch_input" type="text" />
       </form>
       <input id="menu__toggle" type="checkbox" hidden />
       <label className="menu__btn" htmlFor="menu__toggle">
         <span></span>
       </label>
 
-      {windowWidth > 768 ? (
+      {2005 > 768 ? (
         <>
           <Link to="/" className="allBooks">
             Все книги
@@ -41,32 +30,16 @@ function Header() {
           <div className="dropDownList">
             Сортировка
             <div className="sorting">
-              <div
-                className="link"
-                onClick={() =>
-                  value.setSort(swapSort === 0 || swapSort === 2 || swapSort === 3 ? 1 : 0)
-                }>
+              <div className="link" onClick={() => dispatch(setSortBooks(1))}>
                 По рейтингу
               </div>
-              <div
-                className="link"
-                onClick={() =>
-                  value.setSort(swapSort === 0 || swapSort === 2 || swapSort === 1 ? 3 : 2)
-                }>
+              <div className="link" onClick={() => dispatch(setSortBooks(2))}>
                 По цене ↑
               </div>
-              <div
-                className="link"
-                onClick={() =>
-                  value.setSort(swapSort === 0 || swapSort === 3 || swapSort === 1 ? 2 : 3)
-                }>
+              <div className="link" onClick={() => dispatch(setSortBooks(3))}>
                 По цене ↓
               </div>
-              <div
-                className="link"
-                onClick={() =>
-                  value.setSort(swapSort === 1 || swapSort === 2 || swapSort === 3 ? 0 : 0)
-                }>
+              <div className="link" onClick={() => dispatch(setSortBooks(0))}>
                 Сброс
               </div>
             </div>
@@ -74,22 +47,22 @@ function Header() {
           <div className="dropDownList">
             Категории
             <div className="categories">
-              <Link className="link" to="Category/Business_literature">
+              <Link className="link" to="Category/businessLiterature">
                 Бизнес Литература
               </Link>
-              <Link className="link" to="Category/Comics_manga">
+              <Link className="link" to="Category/comicsManga">
                 Комиксы и Макгонига
               </Link>
-              <Link className="link" to="Category/Detectives">
+              <Link className="link" to="Category/detectives">
                 Детективы
               </Link>
-              <Link className="link" to="Category/Fantasy">
+              <Link className="link" to="Category/fantasy">
                 Фантастика
               </Link>
-              <Link className="link" to="Category/Programming">
+              <Link className="link" to="Category/programming">
                 Программирование
               </Link>
-              <Link className="link" to="Category/Psychology">
+              <Link className="link" to="Category/psychology">
                 Психология
               </Link>
             </div>
@@ -106,32 +79,16 @@ function Header() {
           <div className="dropDownList">
             Сортировка
             <div className="sorting">
-              <div
-                className="link"
-                onClick={() =>
-                  value.setSort(swapSort === 0 || swapSort === 2 || swapSort === 3 ? 1 : 0)
-                }>
+              <div className="link" onClick={() => 1}>
                 По рейтингу
               </div>
-              <div
-                className="link"
-                onClick={() =>
-                  value.setSort(swapSort === 0 || swapSort === 2 || swapSort === 1 ? 3 : 2)
-                }>
+              <div className="link" onClick={() => 1}>
                 По цене ↑
               </div>
-              <div
-                className="link"
-                onClick={() =>
-                  value.setSort(swapSort === 0 || swapSort === 3 || swapSort === 1 ? 2 : 3)
-                }>
+              <div className="link" onClick={() => 1}>
                 По цене ↓
               </div>
-              <div
-                className="link"
-                onClick={() =>
-                  value.setSort(swapSort === 1 || swapSort === 2 || swapSort === 3 ? 0 : 0)
-                }>
+              <div className="link" onClick={() => 1}>
                 Сброс
               </div>
             </div>

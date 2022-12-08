@@ -1,15 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import { useTypedSelector } from '../../hooks/useTypedSelector';
-import { useActions } from '../../hooks/useActions';
+import { useAppDispatch, useAppSelector } from '../../store/store';
+import { fetchCategoryBooks,fetchSelectedBook } from '../../store/books/slice';
+
+
+
+
+
+
+
+// import { useTypedSelector } from '../../hooks/useTypedSelector';
+// import { useActions } from '../../hooks/useActions';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import { addItem } from '../../store/actions/cart';
+// import { addItem } from '../../store/actions/cart';
 import { Link, useParams } from 'react-router-dom';
-import { useGlobalEvent } from 'beautiful-react-hooks';
+// import { useGlobalEvent } from 'beautiful-react-hooks';
 import uniqid from 'uniqid';
 import Slider from 'react-slick';
 import SingleComment from './singleComment';
 import './productCard.css';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
@@ -55,16 +65,20 @@ export interface Foo {
   addItem: any;
 }
 
-function ProductCard({ items, addItem }: Foo) {
-  const { books, error, loading } = useTypedSelector((state) => state.book);
-  const comments = useTypedSelector((state) => state.comment.comments);
-  const { fetchBooks, addComment } = useActions();
+function ProductCard() {
+  const dispatch = useAppDispatch();
+  const booksSlice = useAppSelector((state) => state.booksSlice);
+
   const { id } = useParams<{ id: number | any }>();
 
-  let book = books[id];
-  let checkId = items?.find((x: any) => x.id === +id);
-  let bookRecommended = books.filter((x) => Object.values(x)[8] === Object.values(book)[8]);
-  let reviews = comments?.filter((x) => x.bookId === id);
+  // const { books, error, loading } = useTypedSelector((state) => state.book);
+  // const comments = useTypedSelector((state) => state.comment.comments);
+  // const { fetchBooks, addComment } = useActions();
+
+  let book = booksSlice.selectedBook;
+  // let checkId = items?.find((x: any) => x.id === +id);
+  // let bookRecommended = books.filter((x) => Object.values(x)[8] === Object.values(book)[8]);
+  // let reviews = comments?.filter((x) => x.bookId === id);
 
   const [nameComment, setNameComment] = useState('');
   const [titleComment, setTitleComment] = useState('');
@@ -72,9 +86,9 @@ function ProductCard({ items, addItem }: Foo) {
   const [writeСomment, setWriteСomment] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  useGlobalEvent('resize', (e: any) => {
-    setWindowWidth(window.innerWidth);
-  });
+  // useGlobalEvent('resize', (e: any) => {
+  //   setWindowWidth(window.innerWidth);
+  // });
 
   const [comId, setComId] = useState(id);
   // console.log('comm->', comments);
@@ -101,7 +115,7 @@ function ProductCard({ items, addItem }: Foo) {
     e.preventDefault();
     if (textComment.length > 1) {
       const id = uniqid();
-      addComment(textComment, id, comId, nameComment, titleComment);
+      // addComment(textComment, id, comId, nameComment, titleComment);
       setTextComment('');
       setNameComment('');
       setTitleComment('');
@@ -111,7 +125,7 @@ function ProductCard({ items, addItem }: Foo) {
 
   const handleClick = (e: any) => {
     e.preventDefault();
-    addItem(book);
+    // addItem(book);
   };
 
   const settings = {
@@ -134,20 +148,20 @@ function ProductCard({ items, addItem }: Foo) {
   };
 
   useEffect(() => {
-    fetchBooks();
+    dispatch(fetchSelectedBook(id));
   }, []);
 
-  if (loading) {
-    return <h1>Идет загрузка...</h1>;
-  }
+  // if (loading) {
+  //   return <h1>Идет загрузка...</h1>;
+  // }
 
-  if (error) {
-    return <h1>{error}</h1>;
-  }
+  // if (error) {
+  //   return <h1>{error}</h1>;
+  // }
 
   return (
     <div className="book_page_container">
-      <img className="main_image" src={book?.imageUrl} alt="" />
+      // <img className="main_image" src={book?.imageUrl} alt="" />
 
       <div className="social_media">
         <div className="vk"></div>
@@ -186,7 +200,7 @@ function ProductCard({ items, addItem }: Foo) {
         <div className="book_price">
           {book?.price} ₽ <div className="availability">В наличии</div>
         </div>
-        {checkId?.id === +id ? (
+        {0 === +id ? (
           <Link to="/Basket" className="book_buy">
             <button>Перейти в корзину</button>
           </Link>
@@ -236,7 +250,7 @@ function ProductCard({ items, addItem }: Foo) {
         <div className="annotation_text">{book?.description}</div>
         <div className="annotation_report">Сообщить об ошибке</div>
       </div>
-
+{/*
       {windowWidth > 460 ? (
         <div className="recommendations">
           <h2 className="slider_name">{books[id]?.categoryRu}</h2>
@@ -275,10 +289,10 @@ function ProductCard({ items, addItem }: Foo) {
         </div>
       ) : (
         ''
-      )}
+      )} */}
 
       <div className="reviews">
-        <div className="reviews_count">Отзывы {reviews.length}</div>
+        <div className="reviews_count">Отзывы {}</div>
         {writeСomment === 0 ? (
           <button className="recall_button" onClick={() => setWriteСomment(1)}>
             Оставить отзыв
@@ -336,21 +350,25 @@ function ProductCard({ items, addItem }: Foo) {
             </form>
           </div>
         )}
-        {!!reviews?.length &&
-          reviews?.map((res: any) => {
-            return <SingleComment key={res.stat.id} data={res} />;
-          })}
+
       </div>
     </div>
   );
 }
 
-const mapStateToProps = ({ cart: { cartItems = [] } }) => ({
-  items: cartItems,
-});
+// {
+//   !!reviews?.length &&
+//     reviews?.map((res: any) => {
+//       return <SingleComment key={res.stat.id} data={res} />;
+//     });
+// }
 
-const mapDispatchToProps = (dispatch: Dispatch) => ({
-  addItem: (item: any) => dispatch(addItem(item)),
-});
+// const mapStateToProps = ({ cart: { cartItems = [] } }) => ({
+//   items: cartItems,
+// });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductCard);
+// const mapDispatchToProps = (dispatch: Dispatch) => ({
+//   // addItem: (item: any) => dispatch(addItem(item)),
+// });
+
+export default ProductCard

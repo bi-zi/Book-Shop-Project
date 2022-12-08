@@ -15,7 +15,7 @@ function App() {
         <Route index element={<Homepage />} />,
         <Route path="Category/:name" element={<Category />} />,
         <Route path="Book/:id" element={<BookPage />} />,
-        <Route path="Basket" element={<Basket />} />,
+        {/* <Route path="Basket" element={<Basket />} />, */}
         <Route path="*" element={<NotFoundPage />} />,
       </Route>
     </Routes>

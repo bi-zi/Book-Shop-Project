@@ -1,50 +1,35 @@
 import React, { useEffect, useContext } from 'react';
-import { useTypedSelector } from '../../hooks/useTypedSelector';
-import { useActions } from '../../hooks/useActions';
-import { Context } from '../context';
+import { useAppDispatch, useAppSelector } from '../../store/store';
+import { fetchBooks } from '../../store/books/slice';
 import { Link } from 'react-router-dom';
 import './bookList.css';
 
 function BookList() {
-  const { books, error, loading } = useTypedSelector((state) => state.book);
-  const { fetchBooks } = useActions();
-  const value = useContext(Context);
-  let stackOfBooks = books
-    .sort(() => Math.random() - 0.5)
-    .filter((x) => {
-      return x.bookName.toLowerCase().includes(value.seacrh.toLowerCase());
-    });
-  let sortNumber = value.sort;
+  const dispatch = useAppDispatch();
+  const booksSlice = useAppSelector((state) => state.booksSlice);
 
-  if (sortNumber === 1) {
-    stackOfBooks.sort((a, b) => (a.bookRating < b.bookRating ? 1 : -1));
-  }
-
-  if (sortNumber === 2 || sortNumber === 3) {
-    sortNumber === 2
-      ? stackOfBooks.sort((a, b) => (a.price < b.price ? 1 : -1))
-      : stackOfBooks.sort((a, b) => (a.price > b.price ? 1 : -1));
-  }
+  const books = booksSlice?.allBooks;
+  console.log(booksSlice)
 
   useEffect(() => {
-    fetchBooks();
+    dispatch(fetchBooks());
   }, []);
 
-  if (loading) {
-    return <h1>Идет загрузка...</h1>;
-  }
-  if (error) {
-    return <h1>{error}</h1>;
-  }
+  // if (loading) {
+  //   return <h1>Идет загрузка...</h1>;
+  // }
+  // if (error) {
+  //   return <h1>{error}</h1>;
+  // }
 
   return (
     <div className="book_list_container">
-      {stackOfBooks.map((book) => {
+      {books.map((book) => {
         return (
-          <Link key={book.id} to={`/Book/${book.id}`}>
+          <Link key={book.id} to={`/Book/${book.id}`} >
             <div className="book_list_card" key={book.id}>
               <div className="card_list_settings">
-                <img className='card_img' height="310px" width="200px" src={book.imageUrl} alt="" />
+                <img className="card_img" height="310px" width="200px" src={book.imageUrl} alt="" />
                 <div className="card_list_info">
                   <div className="rating">★{book.bookRating}★</div>
                   <div className="price">{book.price} ₽</div>

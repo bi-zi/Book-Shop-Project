@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from 'react';
 
-import { useActions } from '../../hooks/useActions';
+// import { useActions } from '../../hooks/useActions';
 
 export interface Foo {
   data: any;
 }
 
 function SingleComment({ data }: Foo) {
-  const { deleteComment, updateComment } = useActions();
+  // const { deleteComment, updateComment } = useActions();
   const [commentText, setCommentText] = useState('');
   const { stat, bookId } = data;
   const [writeСomment, setWriteСomment] = useState(0);
 
   const handleUpdate = (e: any) => {
     e.preventDefault();
-    updateComment(commentText, stat.id, bookId, stat.comName, stat.comTitle);
+    // updateComment(commentText, stat.id, bookId, stat.comName, stat.comTitle);
   };
 
   const handleDelete = (e: any) => {
     e.preventDefault();
-    deleteComment(stat.id);
+    // deleteComment(stat.id);
   };
   let date = new Date();
   let output =
