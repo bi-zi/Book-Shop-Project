@@ -1,0 +1,50 @@
+.delivery {
+  position: relative;
+  left: 955px;
+  bottom: 730px;
+  width: 300px;
+  height: 200px;
+}
+
+.shipping_methods {
+  font-size: 13px;
+  padding-bottom: 15px;
+}
+
+.city_name {
+  color: rgb(34, 145, 209);
+  cursor: pointer;
+}
+
+.book_shop {
+  font-size: 15px;
+  padding-bottom: 15px;
+}
+
+.shipping_cost {
+  font-weight: bold;
+  padding-left: 40px;
+}
+
+.delivery_date {
+  font-size: 12px;
+}
+
+.place_receipt {
+  font-size: 15px;
+  padding-bottom: 15px;
+}
+
+.сourier_cost {
+  font-weight: bold;
+  padding-left: 176px;
+}
+
+.сourier_cost_over {
+  font-size: 12px;
+  color: red;
+}
+
+.orders_over {
+  font-size: 12px;
+}

@@ -1,4 +1,4 @@
-.book_list_container {
+.all-books-container {
   text-align: center;
   max-width: 100%;
   min-width: 100%;
@@ -6,14 +6,14 @@
   min-height: calc(100vh - 70px);
 }
 
-.book_list_card {
+.all-books-container__card {
   display: inline-block;
   width: 200px;
   margin: 0 10px 50px 10px;
   text-align: left;
 }
 
-.card_list_settings {
+.all-books-container__card__background {
   background-color: #fff;
   box-shadow: 0 1px 3px rgb(0 0 0 / 20%), 0 5px 10px rgb(0 0 0 / 10%);
   margin-bottom: 5px;
@@ -49,7 +49,7 @@
     margin: 0 10px 20px 10px;
   }
 
-  .card_img {
+  .all-books-container__card__background-img {
     width: 120px;
     height: 210px;
   }

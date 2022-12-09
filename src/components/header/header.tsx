@@ -1,12 +1,11 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../store/store';
-import { setSortBooks } from '../../store/books/slice';
+import { useAppDispatch, useAppSelector } from '../../store/Store';
+import { setSortBooks } from '../../store/Books/Slice';
 import { Link } from 'react-router-dom';
-import './header.css';
+import './Style.css';
 
-function Header() {
+export const Header = () => {
   const dispatch = useAppDispatch();
-
 
   return (
     <div className="header">
@@ -123,6 +122,4 @@ function Header() {
       )}
     </div>
   );
-}
-
-export default Header;
+};

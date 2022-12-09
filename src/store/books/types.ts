@@ -22,6 +22,8 @@ export interface BooksSliceState {
   allBooks: Books[];
   categoryBooks: Books[];
   selectedBook: Books;
+  recommendBooks: Books[];
+
   sortNumber: number;
   categorySelect: string;
   status: Status;

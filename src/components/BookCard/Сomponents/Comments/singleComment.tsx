@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 // import { useActions } from '../../hooks/useActions';
 
@@ -8,9 +8,9 @@ export interface Foo {
 
 function SingleComment({ data }: Foo) {
   // const { deleteComment, updateComment } = useActions();
-  const [commentText, setCommentText] = useState('');
+  const [commentText, setCommentText] = React.useState('');
   const { stat, bookId } = data;
-  const [writeСomment, setWriteСomment] = useState(0);
+  const [writeСomment, setWriteСomment] = React.useState(0);
 
   const handleUpdate = (e: any) => {
     e.preventDefault();
@@ -30,7 +30,7 @@ function SingleComment({ data }: Foo) {
     date.getFullYear();
 
   let text = stat.text;
-  useEffect(() => {
+  React.useEffect(() => {
     if (text) {
       setCommentText(text);
     }

@@ -1,0 +1,84 @@
+.recommendations {
+  position: relative;
+  top: -500px;
+  margin: auto;
+
+  width: 1200px;
+  height: 500px;
+}
+
+.slider_link {
+  pointer-events: visiblePainted;
+}
+
+.slider_name {
+  color: rgb(120, 240, 204);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.slider_book {
+  margin: 0 40px;
+  width: 150px !important;
+  height: 420px;
+  text-align: left;
+  padding-top: 45px;
+  cursor: pointer;
+}
+
+.slider_book:hover {
+  transform: scale(1.2);
+}
+
+.slider_card_settings {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 13px rgb(0 0 0 / 30%), 0 5px 10px rgb(0 0 0 / 20%);
+  margin-bottom: 5px;
+}
+
+.slider_card_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  font-size: 13px;
+  color: #ffd900;
+  font-weight: bolder;
+}
+
+.slider_price {
+  padding-top: 3px;
+}
+
+.slider_book_author {
+  font-size: 12px;
+}
+
+.slider_book_name {
+  display: flex;
+  width: 150px;
+  font-size: 15px;
+  font-weight: bolder;
+  word-wrap: break-word;
+}
+
+.slick-prev,
+.slick-next {
+  height: 380px;
+  z-index: 289;
+  width: 35px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.slick-arrow:before {
+  font-size: 26px;
+  color: rgb(0, 0, 0);
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  height: 380px;
+  background-color: rgb(120, 240, 204);
+}

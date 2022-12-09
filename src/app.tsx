@@ -1,25 +1,17 @@
-import React, { Suspense } from 'react';
-import Layout from './components/Layout';
-import Homepage from './pages/mainPage';
-import Category from './pages/categoryPage';
-import BookPage from './pages/productPage';
-import Basket from './pages/basket';
-import NotFoundPage from './pages/notFoundPage';
+import { Layout } from './Components/Layout';
+import { MainPage, CategoriesPage, BookPage, BasketPage, NotFoundPage } from './Pages/index';
 import { Routes, Route } from 'react-router-dom';
 
-
-function App() {
+export const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Homepage />} />,
-        <Route path="Category/:name" element={<Category />} />,
+        <Route index element={<MainPage />} />,
+        <Route path="Category/:name" element={<CategoriesPage />} />,
         <Route path="Book/:id" element={<BookPage />} />,
-        {/* <Route path="Basket" element={<Basket />} />, */}
+        {/* <Route path="Basket" element={<BasketPage />} />, */}
         <Route path="*" element={<NotFoundPage />} />,
       </Route>
     </Routes>
   );
-}
-
-export default App;
+};

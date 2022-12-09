@@ -1,0 +1,103 @@
+.book_description {
+  position: relative;
+  left: 450px;
+  bottom: 625px;
+
+  width: 723px;
+  height: 120px;
+}
+
+.book_name {
+  width: 430px;
+  left: 20px;
+  position: absolute;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.book_author {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.book_rating {
+  position: absolute;
+  color: #000000;
+  font-size: 20px;
+  display: flex;
+  top: 90px;
+  left: 47px;
+}
+
+.ratingContainer {
+  position: absolute;
+  top: 90px;
+}
+
+.star {
+  bottom: 50px;
+  font-size: 33px;
+  color: #ffd700;
+  position: absolute;
+  top: 73px;
+  left: 17px;
+}
+
+.reviews_number {
+  position: absolute;
+  font-size: 14px;
+  width: 120px;
+  top: 95px;
+  left: 110px;
+}
+
+.rating_area {
+  overflow: hidden;
+  width: 265px;
+  position: absolute;
+  top: 80px;
+  left: 140px;
+  margin: 0 auto;
+}
+
+.rating_area:not(:checked) > input {
+  display: none;
+}
+
+.rating_area:not(:checked) > label {
+  float: right;
+  width: 35px;
+  padding: 0;
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 30px;
+  color: lightgrey;
+  text-shadow: 1px 1px #bbb;
+}
+
+.rating_area:not(:checked) > label:before {
+  content: '★';
+}
+
+.rating_area > input:checked ~ label {
+  color: #ffd700;
+  text-shadow: 1px 1px #c60;
+}
+
+.rating_area:not(:checked) > label:hover,
+.rating_area:not(:checked) > label:hover ~ label {
+  color: gold;
+}
+
+.rating_area > input:checked + label:hover,
+.rating_area > input:checked + label:hover ~ label,
+.rating_area > input:checked ~ label:hover,
+.rating_area > input:checked ~ label:hover ~ label,
+.rating_area > label:hover ~ input:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px goldenrod;
+}
+
+.rating_area > label:active {
+  position: relative;
+}

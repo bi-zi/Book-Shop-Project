@@ -1,20 +1,9 @@
 import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-// import { Context } from './context';
-import Header from './header/header';
-import Footer from './footer/footer';
+import { Header } from './Header/Header';
+import { Footer } from './Footer/Footer';
 
-const Layout = () => {
-  const [sort, setSort] = useState(0);
-  const [seacrh, setSeacrh] = useState('');
-
-  const value = {
-    sort,
-    setSort,
-    seacrh,
-    setSeacrh,
-  };
-
+export const Layout = () => {
   return (
     <>
       <Header />
@@ -23,10 +12,3 @@ const Layout = () => {
     </>
   );
 };
-
-export type GlobalContent = {
-  sort: number;
-  setSort: (c: number) => void;
-};
-
-export default Layout;

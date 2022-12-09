@@ -1,10 +1,10 @@
 import React, { useEffect, useContext } from 'react';
-import { useAppDispatch, useAppSelector } from '../../store/store';
-import { fetchCategoryBooks } from '../../store/books/slice';
+import { useAppDispatch, useAppSelector } from '../../store/Store';
+import { fetchCategoryBooks } from '../../store/Books/Slice';
 import { Link, useParams } from 'react-router-dom';
-import './categorySelection.css';
+import './Style.css';
 
-function Category() {
+export const BooksCategory = () => {
   const dispatch = useAppDispatch();
   const booksSlice = useAppSelector((state) => state.booksSlice);
   const { name }: any = useParams();
@@ -14,13 +14,6 @@ function Category() {
   useEffect(() => {
     dispatch(fetchCategoryBooks(name));
   }, [dispatch, name]);
-
-  // if (loading) {
-  //   return <h1>Идет загрузка...</h1>;
-  // }
-  // if (error) {
-  //   return <h1>{error}</h1>;
-  // }
 
   return (
     <div id="20" className="category_list_container">
@@ -44,6 +37,4 @@ function Category() {
       })}
     </div>
   );
-}
-
-export default Category;
+};

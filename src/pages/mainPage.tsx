@@ -1,8 +1,6 @@
 import React from 'react';
-import BookList from '../components/bookList/bookList';
+import { AllBooks } from '../Components/AllBooks/AllBooks';
 
-function MainPage()  {
-  return <BookList/>;
+export const MainPage = () => {
+  return <AllBooks />;
 };
-
-export default MainPage;
