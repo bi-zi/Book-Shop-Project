@@ -1,4 +1,4 @@
-.book_page_container {
+.book-card-container {
   margin-left: auto;
   margin-right: auto;
   min-height: calc(100vh - 70px);
@@ -7,7 +7,12 @@
   height: 100%;
 }
 
-.main_image {
+.book-card__upper-container {
+  display: flex;
+  position: relative;
+}
+
+.book-card-main-image {
   height: 600px;
   width: 400px;
 
@@ -16,3 +21,36 @@
   margin: 20px;
 }
 
+@media (max-width: 1000px) {
+  .book-card-container {
+    width: 980px;
+  }
+
+  .book-card-main-image {
+    height: 500px;
+    width: 300px;
+    margin: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-card-container {
+    width: 768px;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 460px) {
+  .book-card-container {
+    width: 320px;
+    text-align: center;
+  }
+
+  .book-card-main-image {
+    height: 340px;
+    width: 220px;
+    margin: auto;
+  }
+
+
+}

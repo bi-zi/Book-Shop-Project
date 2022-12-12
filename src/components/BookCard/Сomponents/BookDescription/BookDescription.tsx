@@ -8,17 +8,18 @@ interface MyProps {
 
 export const BookDescription = ({ book }: MyProps) => {
   return (
-    <div className="book_description">
-      <div className="book_name">
+    <div className="book-card__info-container">
+      <div className="book-card__info-container__title">
         {book?.bookName}
-        <div className="book_author">{book?.authorName}</div>
+        <div className="book-card__info-container__title-author">{book?.authorName}</div>
       </div>
-      <div className="book_description_container">
-        <div className="star">★</div>
-        <div className="book_rating">{book?.bookRating}</div>
-        <div className="reviews_number">1337 оценок</div>
 
-        <div className="rating_area">
+      <div className="book-card__info-container__description">
+        <div className="book-card__info-container__description-star">★</div>
+        <div className="book-card__info-container__description-rating">{book?.bookRating}</div>
+        <div className="book-card__info-container__description-reviews">1337 оценок</div>
+
+        <div className="book-card__info-container__description__rating-area">
           <input type="radio" id="star-5" name="rating" value="5" />
           <label htmlFor="star-5" title="Оценка «5»"></label>
           <input type="radio" id="star-4" name="rating" value="4" />

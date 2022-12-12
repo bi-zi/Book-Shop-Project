@@ -1,17 +1,15 @@
-
-.trade_container {
+.book-card__trade {
   text-align: center;
   background-color: rgb(120, 240, 204, 0.3);
 
   position: relative;
-  left: 950px;
-  bottom: 745px;
+
   border-radius: 15px;
   width: 300px;
   height: 200px;
 }
 
-.book_price {
+.book-card__trade-price {
   margin: 0 0 0 20px;
   display: flex;
   padding-top: 45px;
@@ -21,7 +19,7 @@
   font-weight: bolder;
 }
 
-.availability {
+.book-card__trade-availability {
   padding-top: 12px;
   padding-left: 95px;
 
@@ -29,7 +27,7 @@
   font-weight: normal;
 }
 
-.book_buy button {
+.book-card__trade-availability-buy button {
   background-color: rgb(120, 240, 204);
   width: 250px;
   height: 50px;
@@ -39,26 +37,58 @@
   cursor: pointer;
 }
 
-.book_buy:active button {
+.book-card__trade-availability-buy:active button {
   color: white;
   border: 3px solid rgb(0, 0, 0);
   background: linear-gradient(top, rgb(255, 255, 255), rgb(122, 240, 205) 90%);
   background: -webkit-linear-gradient(top, rgb(44, 247, 186), rgb(61, 129, 109) 90%);
 }
 
-.book_marks button {
-  background-color: rgb(255, 255, 255);
-  width: 250px;
-  height: 40px;
-  margin: 5px 20px;
-  border-radius: 5px;
-  font-size: 14px;
-  cursor: pointer;
-}
 
-.book_marks:active button {
-  color: rgb(255, 255, 255);
-  border: 3px solid rgb(0, 0, 0);
-  background: linear-gradient(top, rgb(255, 255, 255), rgb(255, 255, 255) 90%);
-  background: -webkit-linear-gradient(top, rgb(131, 130, 130), rgb(71, 71, 71) 90%);
+@media (max-width: 1000px) {
+  .book-card__trade {
+    width: 250px;
+    height: 170px;
+  }
+
+  .book-card__trade-price {
+    position: relative;
+    margin: 0;
+
+    padding: 20px 0 0 35px;
+
+    font-size: 18px;
+    font-weight: bolder;
+  }
+
+  .book-card__trade-availability {
+    position: relative;
+    margin: 0;
+
+    padding: 12px 0 0 0;
+    font-size: 14px;
+  }
+
+  .book-card__trade-buy button {
+    width: 200px;
+    height: 50px;
+
+    font-size: 18px;
+  }
+
+
+  @media (max-width: 768px) {
+    .book-card__trade {
+      width: 250px;
+      height: 170px;
+    }
+
+    @media (min-width: 320px) and (max-width: 460px) {
+      .book-card__trade {
+        position: static;
+        margin-left: 50px;
+        width: 220px;
+      }
+    }
+  }
 }

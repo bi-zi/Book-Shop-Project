@@ -1,36 +1,37 @@
-import React from 'react'
-import './Style.css'
+import React from 'react';
+import './Style.css';
 
 export const Delivery = () => {
   return (
-    <div className="delivery">
-      <div className="shipping_methods">
-        Способы доставки в <span className="city_name">Город "--":</span>
+    <div className="book-card__delivery-container">
+      <div className="book-card__delivery-container__shipping-methods">
+        Способы доставки в
+        <span className="book-card__delivery-container__selection-place"> Город "--":</span>
       </div>
 
-      <div className="book_shop">
+      <div className="book-card__delivery-container__shops">
         В магазины сети
-        <span className="city_name"> Адреса</span>
-        <span className="shipping_cost"> Бесплатно</span>
+        <span className="book-card__delivery-shops-place"> Адреса</span>
+        <span className="book-card__delivery-shops-cost"> Бесплатно</span>
         <br />
-        <span className="delivery_date">Завтра</span>
+        <span className="book-card__delivery-shops-cost-date">Завтра</span>
       </div>
 
-      <div className="place_receipt">
+      <div className="book-card__delivery-container__place-of-receipt">
         В пункты выдачи
-        <span className="city_name"> Адреса</span>
-        <span className="shipping_cost">Бесплатно</span>
+        <span className="book-card__delivery-shops-place"> Адреса</span>
+        <span className="book-card__delivery-shops-cost">Бесплатно</span>
         <br />
-        <span className="delivery_date">Завтра</span>
+        <span className="book-card__delivery-shops-cost-date">Завтра</span>
       </div>
 
       <div className="сourier">
         Курьером
-        <span className="сourier_cost"> 322 ₽</span>
+        <span className="book-card__delivery-container__сourier-cost"> 322 ₽</span>
         <br />
-        <span className="сourier_cost_over">Бесплатно</span>
-        <span className="orders_over"> при заказе от 3000₽</span>
+        <span className="book-card__delivery-container__сourier-over">Бесплатно</span>
+        <span className="book-card__delivery-container__сourier-orders"> при заказе от 3000₽</span>
       </div>
     </div>
   );
-}
+};

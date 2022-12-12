@@ -14,23 +14,19 @@ export const TradeContainer = ({ book, linkId }: MyProps) => {
   };
 
   return (
-    <div className="trade_container">
-      <div className="book_price">
-        {book?.price} ₽ <div className="availability">В наличии</div>
+    <div className="book-card__trade">
+      <div className="book-card__trade-price">
+        {book?.price} ₽ <div className="book-card__trade-availability">В наличии</div>
       </div>
       {0 === +linkId ? (
-        <Link to="/Basket" className="book_buy">
+        <Link to="/Basket" className="book-card__trade-buy">
           <button>Перейти в корзину</button>
         </Link>
       ) : (
-        <div className="book_buy">
+        <div className="book-card__trade-buy">
           <button onClick={handleClick}>Купить</button>
         </div>
       )}
-
-      <div className="book_marks">
-        <button>В закладки</button>
-      </div>
     </div>
   );
 };

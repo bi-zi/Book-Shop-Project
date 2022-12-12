@@ -23,18 +23,18 @@ export const AllBooks = () => {
               <div className="all-books-container__card__background">
                 <img
                   className="all-books-container__card__background-img"
-                  height="310px"
-                  width="200px"
+                  height="10px"
+                  width="10px"
                   src={book.imageUrl}
                   alt=""
                 />
-                <div className="card_list_info">
-                  <div className="rating">★{book.bookRating}★</div>
-                  <div className="price">{book.price} ₽</div>
+                <div className="all-books-container__card__info">
+                  <span className="all-books-container__card__info-rating">★{book.bookRating}★</span>
+                  <span className="all-books-container__card__info-price">{book.price} ₽</span>
                 </div>
               </div>
-              <div className="card_list_author">{book.authorName}</div>
-              <div className="card_list_name">{book.bookName}</div>
+              <div className="all-books-container__card-author">{book.authorName}</div>
+              <div className="all-books-container__card-book-name">{book.bookName}</div>
             </div>
           </Link>
         );

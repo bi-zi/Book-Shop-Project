@@ -34,33 +34,38 @@ export const Recommendations = () => {
   return (
     <>
       {2000 > 460 ? (
-        <div className="recommendations">
-          <h2 className="slider_name">{recommendBooks[0]?.categoryRu}</h2>
+        <div className="book-card-recommendations-container">
+          <h2 className="book-card-recommendations-container__slider-name">
+            {recommendBooks[0]?.categoryRu}
+          </h2>
 
           <Slider {...settings}>
             {recommendBooks.map((book) => {
               return (
                 <Link
-                  className="slider_link"
+                  className="book-card-recommendations-container-link"
                   key={book.id}
                   to={`/Book/${book.id}`}
                   onClick={handlerScrollUp}>
-                  <div className={`slider_book ${0}`} key={book?.id}>
-                    <div className="slider_card_settings">
+                  <div className={`book-card-recommendations-container__card ${0}`} key={book?.id}>
+                    <div className="book-card-recommendations-container__card-background">
                       <img
-                        className="slider_img"
+                        className="book-card-recommendations-container__card-img"
                         height="250px"
                         width="150px"
                         src={book?.imageUrl}
                         alt=""
                       />
-                      <div className="slider_card_info">
-                        <div className="slider_rating">★{book?.bookRating}★</div>
-                        <div className="slider_price">{book?.price} ₽</div>
+                      <div className="book-card-recommendations-container__card-info">
+                        <div>★{book?.bookRating}★</div>
+                        <div>{book?.price} ₽</div>
                       </div>
                     </div>
-                    <div className="slider_book_author">{book?.authorName}</div>
-                    <div className="slider_book_name">{book?.bookName}</div>
+
+                    <div className="book-card-recommendations-container__card-author">
+                      {book?.authorName}
+                    </div>
+                    <div className="book-card-recommendations-container__card-name">{book?.bookName}</div>
                   </div>
                 </Link>
               );

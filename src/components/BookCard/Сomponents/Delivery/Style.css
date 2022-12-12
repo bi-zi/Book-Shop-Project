@@ -1,50 +1,149 @@
-.delivery {
+.book-card__delivery-container {
   position: relative;
-  left: 955px;
-  bottom: 730px;
   width: 300px;
   height: 200px;
 }
 
-.shipping_methods {
+.book-card__delivery-container__shipping-methods {
   font-size: 13px;
   padding-bottom: 15px;
 }
 
-.city_name {
+.book-card__delivery-shops-place {
   color: rgb(34, 145, 209);
   cursor: pointer;
 }
 
-.book_shop {
+.book-card__delivery-shops {
   font-size: 15px;
   padding-bottom: 15px;
 }
 
-.shipping_cost {
+.book-card__delivery-shops-cost {
   font-weight: bold;
   padding-left: 40px;
 }
 
-.delivery_date {
+.book-card__delivery-shops-cost-date {
   font-size: 12px;
 }
 
-.place_receipt {
+.book-card__delivery-container__place-of-receipt {
   font-size: 15px;
   padding-bottom: 15px;
 }
 
-.сourier_cost {
+.book-card__delivery-container__сourier {
+}
+
+.book-card__delivery-container__сourier-cost {
   font-weight: bold;
   padding-left: 176px;
 }
 
-.сourier_cost_over {
+.book-card__delivery-container__сourier-over {
   font-size: 12px;
   color: red;
 }
 
-.orders_over {
+.book-card__delivery-container__сourier-orders {
   font-size: 12px;
+}
+
+@media (max-width: 1000px) {
+  .book-car__delivery-container {
+    width: 245px;
+    height: 200px;
+  }
+
+  .book-car__delivery-container__shipping-methods {
+    font-size: 10px;
+  }
+
+  .book-card__delivery-container__selection {
+    font-size: 12px;
+  }
+
+  .book-card__delivery-container__selection-cost {
+    font-weight: bold;
+  }
+
+  .book-card__delivery-container__selection-cost-date {
+    font-size: 11px;
+  }
+
+  .book-card__delivery-container__place-of-receipt {
+    font-size: 12px;
+  }
+  .book-card__delivery-container__сourier {
+    font-size: 13px;
+  }
+
+  .book-card__delivery-container__сourier-cost {
+    font-size: 12px;
+    padding-left: 150px;
+  }
+
+  .book-card__delivery-container__сourier-over {
+    font-size: 11px;
+  }
+
+  .book-card__delivery-container__сourier-orders {
+    font-size: 11px;
+  }
+
+  @media (max-width: 768px) {
+    .book-car__delivery-container {
+      width: 245px;
+      height: 200px;
+    }
+
+    @media (min-width: 320px) and (max-width: 460px) {
+      .book-car__delivery-container {
+        position: static;
+        margin-top: 20px;
+        width: 260px;
+        height: 150px;
+      }
+
+      .book-car__delivery-container__shipping-methods {
+        font-size: 10px;
+        padding-right: 17px;
+      }
+
+      .book-card__delivery-container__selection {
+        padding-left: 46px;
+        font-size: 10px;
+      }
+
+      .book-card__delivery-container__selection-cost {
+        font-size: 9px;
+        font-weight: bold;
+      }
+
+      .book-card__delivery-container__selection-cost-date {
+        font-size: 11px;
+      }
+
+      .book-card__delivery-container__place-of-receipt {
+        padding-left: 45px;
+        font-size: 10px;
+      }
+
+      .book-card__delivery-container__сourier {
+        margin-left: 42px;
+        font-size: 11px;
+      }
+
+      .book-card__delivery-container__сourier-cost {
+        padding-left: 125px;
+        font-size: 10px;
+      }
+
+      .book-card__delivery-container__сourier-over {
+        margin-left: -42px;
+        font-size: 11px;
+      }
+    }
+  }
 }

@@ -1,70 +1,54 @@
-.book_description {
-  position: relative;
-  left: 450px;
-  bottom: 625px;
-
+.book-card__info-container {
   width: 723px;
   height: 120px;
 }
 
-.book_name {
+.book-card__info-container__title {
   width: 430px;
-  left: 20px;
   position: absolute;
   font-weight: bolder;
   font-size: 30px;
 }
 
-.book_author {
+.book-card__info-container__title-author {
   font-weight: normal;
   font-size: 18px;
 }
 
-.book_rating {
+.book-card__info-container__description {
+}
+
+.book-card__info-container__description-rating {
   position: absolute;
   color: #000000;
   font-size: 20px;
   display: flex;
-  top: 90px;
-  left: 47px;
 }
 
-.ratingContainer {
-  position: absolute;
-  top: 90px;
-}
-
-.star {
-  bottom: 50px;
+.book-card__info-container__description-star {
   font-size: 33px;
   color: #ffd700;
   position: absolute;
-  top: 73px;
-  left: 17px;
 }
 
-.reviews_number {
+.book-card__info-container__description-reviews {
   position: absolute;
   font-size: 14px;
   width: 120px;
-  top: 95px;
-  left: 110px;
 }
 
-.rating_area {
+.book-card__info-container__description__rating-area {
   overflow: hidden;
   width: 265px;
   position: absolute;
-  top: 80px;
-  left: 140px;
   margin: 0 auto;
 }
 
-.rating_area:not(:checked) > input {
+.book-card__info-container__description__rating-area:not(:checked) > input {
   display: none;
 }
 
-.rating_area:not(:checked) > label {
+.book-card__info-container__description__rating-area:not(:checked) > label {
   float: right;
   width: 35px;
   padding: 0;
@@ -75,29 +59,151 @@
   text-shadow: 1px 1px #bbb;
 }
 
-.rating_area:not(:checked) > label:before {
+.book-card__info-container__description__rating-area:not(:checked) > label:before {
   content: '★';
 }
 
-.rating_area > input:checked ~ label {
+.book-card__info-container__description__rating-area > input:checked ~ label {
   color: #ffd700;
   text-shadow: 1px 1px #c60;
 }
 
-.rating_area:not(:checked) > label:hover,
-.rating_area:not(:checked) > label:hover ~ label {
+.book-card__info-container__description__rating-area:not(:checked) > label:hover,
+.book-card__info-container__description__rating-area:not(:checked) > label:hover ~ label {
   color: gold;
 }
 
-.rating_area > input:checked + label:hover,
-.rating_area > input:checked + label:hover ~ label,
-.rating_area > input:checked ~ label:hover,
-.rating_area > input:checked ~ label:hover ~ label,
-.rating_area > label:hover ~ input:checked ~ label {
+.book-card__info-container__description__rating-area > input:checked + label:hover,
+.book-card__info-container__description__rating-area > input:checked + label:hover ~ label,
+.book-card__info-container__description__rating-area > input:checked ~ label:hover,
+.book-card__info-container__description__rating-area > input:checked ~ label:hover ~ label,
+.book-card__info-container__description__rating-area > label:hover ~ input:checked ~ label {
   color: gold;
   text-shadow: 1px 1px goldenrod;
 }
 
-.rating_area > label:active {
+.book-card__info-container__description__rating-area > label:active {
   position: relative;
+}
+
+@media (max-width: 1000px) {
+  .book-card__info-container {
+
+    width: 0px;
+    height: 120px;
+    z-index: 0;
+  }
+
+  .book-card__info-container__title {
+    width: 350px;
+    font-size: 20px;
+  }
+
+  .book-card__info-container__title-author {
+    font-size: 13px;
+  }
+
+  .book-card__info-container__description-star {
+    font-size: 26px;
+  }
+
+  .book-card__info-container__description-rating {
+    font-size: 14px;
+  }
+
+  .book-card__info-container__description-reviews {
+    font-size: 11px;
+    width: 120px;
+  }
+
+  .book-card__info-container__description__rating-area {
+    width: 265px;
+    margin: 0 auto;
+  }
+
+  .book-card__info-container__description__rating-area:not(:checked) > label {
+    float: right;
+    width: 32px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 32px;
+    color: lightgrey;
+    text-shadow: 1px 1px #bbb;
+  }
+
+  @media (max-width: 768px) {
+    .book-card__info-container {
+
+      width: 0px;
+      height: 120px;
+    }
+
+    @media (min-width: 320px) and (max-width: 460px) {
+      .book-card__info-container {
+        position: static;
+        padding: auto;
+        width: 250px;
+        height: 100px;
+      }
+
+      .book-card__info-container_container {
+        display: inline-block;
+      }
+
+      .book-card__info-container__title {
+        position: static;
+        width: 250px;
+        margin-left: 30px;
+        font-size: 16px;
+      }
+
+      .book-card__info-container__title-author {
+        position: static;
+        width: 250px;
+        font-size: 11px;
+      }
+
+      .book-card__info-container_container {
+        display: inline-block;
+      }
+
+      .book-card__info-container__description-star {
+        position: static;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-left: 50px;
+        float: left;
+      }
+
+      .book-card__info-container__description-rating {
+        position: static;
+        float: left;
+        width: 20px;
+        margin: 20px 0 0 5px;
+
+        font-size: 12px;
+      }
+
+      .book-card__info-container__description-reviews {
+        float: left;
+        position: static;
+        margin: 24px 0 0 0;
+        font-size: 9px;
+        width: 70px;
+      }
+
+      .book-card__info-container__description__rating-area {
+        float: right;
+        position: static;
+        width: 260px;
+        margin: -25px 0 0 0;
+      }
+
+      .book-card__info-container__description__rating-area:not(:checked) > label {
+        width: 20px;
+        font-size: 20px;
+      }
+    }
+  }
 }

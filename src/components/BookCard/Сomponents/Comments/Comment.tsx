@@ -6,7 +6,7 @@ export interface Foo {
   data: any;
 }
 
-function SingleComment({ data }: Foo) {
+function Comment({ data }: Foo) {
   // const { deleteComment, updateComment } = useActions();
   const [commentText, setCommentText] = React.useState('');
   const { stat, bookId } = data;
@@ -78,4 +78,4 @@ function SingleComment({ data }: Foo) {
   );
 }
 
-export default SingleComment;
+export default Comment;

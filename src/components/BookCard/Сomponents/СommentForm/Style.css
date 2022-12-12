@@ -1,0 +1,444 @@
+.book-card-comment-form-container {
+  position: relative;
+  bottom: 500px;
+  font-size: 40px;
+}
+
+.book-card-comment-form-container-count {
+}
+
+.book-card-comment-form-container__form {
+  height: 570px;
+}
+
+.book-card-comment-form-container-open {
+  background-color: rgb(120, 240, 204);
+  width: 1280px;
+  height: 50px;
+
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.book-card-comment-form-container-open:active {
+  color: white;
+  border: 3px solid rgb(0, 0, 0);
+  background: linear-gradient(top, rgb(255, 255, 255), rgb(122, 240, 205) 90%);
+  background: -webkit-linear-gradient(top, rgb(44, 247, 186), rgb(61, 129, 109) 90%);
+}
+
+.book-card-comment-form-container-close {
+  position: relative;
+
+  left: 1225px;
+  top: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.book-card-comment-form-container__form__user-info {
+  position: relative;
+  bottom: 45px;
+  padding: 20px 0 20px 20px;
+}
+
+.book-card-comment-form-container__form__user-info-label {
+  font-size: 20px;
+  padding-right: 31px;
+}
+
+.book-card-comment-form-container__form__user-info-input {
+  width: 250px;
+  height: 30px;
+
+  color: black;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+.book-card-comment-form-container__form__caption {
+  position: relative;
+  bottom: 45px;
+  padding: 20px 0 20px 20px;
+}
+
+.book-card-comment-form-container__form__caption-label {
+  font-size: 20px;
+  padding-right: 122px;
+}
+
+.book-card-comment-form-container__form__caption-input {
+  width: 1020px;
+  height: 30px;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+.book-card-comment-form-container__form__text {
+  position: relative;
+  bottom: 45px;
+  padding: 20px 0 20px 20px;
+  z-index: 0;
+}
+
+.book-card-comment-form-container__form__text-label {
+  position: relative;
+  font-size: 20px;
+  bottom: 165px;
+  padding-right: 91px;
+}
+
+.book-card-comment-form-container__form__text-textarea {
+  width: 1020px;
+  height: 300px;
+  font-size: 16px;
+
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid;
+  resize: none;
+}
+
+.book-card-comment-form-container__form-total-characters {
+  position: relative;
+  bottom: 75px;
+  font-size: 15px;
+  text-align: right;
+  padding-right: 25px;
+  z-index: 0;
+}
+
+.book-card-comment-form-container__form-validation {
+  position: relative;
+  font-size: 24px;
+  margin-left: 20px;
+  bottom: 45px;
+  color: red;
+}
+
+.book-card-comment-form-container__form-submit-button {
+  position: relative;
+  bottom: 65px;
+  background-color: rgb(255, 255, 255);
+  width: 200px;
+  height: 30px;
+  margin: 5px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.book-card-comment-form-container__form-submit-button:active {
+  color: rgb(255, 255, 255);
+  border: 3px solid rgb(0, 0, 0);
+  background: linear-gradient(top, rgb(255, 255, 255), rgb(255, 255, 255) 90%);
+  background: -webkit-linear-gradient(top, rgb(131, 130, 130), rgb(71, 71, 71) 90%);
+}
+
+@media (max-width: 1000px) {
+  .book-card-comment-form-container {
+    bottom: 500px;
+    font-size: 40px;
+    width: 940px;
+    margin: 0 auto;
+  }
+
+  .book-card-comment-form-container__form {
+    height: 570px;
+  }
+
+  .book-card-comment-form-container-count {
+    font-size: 26px;
+  }
+
+  .book-card-comment-form-container-open {
+    width: 920px;
+    height: 50px;
+
+    font-size: 20px;
+  }
+
+  .book-card-comment-form-container-close {
+    position: absolute;
+    left: 900px;
+    top: 40px;
+  }
+
+  .book-card-comment-form-container__form__user-info {
+    bottom: 10px;
+    padding: 20px 0 20px 20px;
+  }
+
+  .book-card-comment-form-container__form__user-info-label {
+    font-size: 20px;
+    padding-right: 31px;
+  }
+
+  .book-card-comment-form-container__form__user-info-input {
+    width: 250px;
+    height: 30px;
+  }
+
+  .book-card-comment-form-container__form__caption {
+    bottom: 10px;
+    padding: 20px 0 20px 20px;
+  }
+
+  .book-card-comment-form-container__form__caption-label {
+    font-size: 20px;
+    padding-right: 122px;
+  }
+
+  .book-card-comment-form-container__form__caption-input {
+    width: 650px;
+    height: 30px;
+  }
+
+  .book-card-comment-form-container__form__text {
+    bottom: 10px;
+    padding: 20px 0 20px 20px;
+  }
+
+  .book-card-comment-form-container__form__text-label {
+    font-size: 20px;
+    bottom: 165px;
+    padding-right: 91px;
+  }
+
+  .book-card-comment-form-container__form__text-textarea {
+    width: 650px;
+    height: 300px;
+    font-size: 16px;
+    padding: 10px;
+    line-height: 1.5;
+  }
+
+  .book-card-comment-form-container__form-total-characters {
+    bottom: 45px;
+    font-size: 15px;
+    padding-right: 25px;
+  }
+
+  .book-card-comment-form-container__form-validation {
+    font-size: 24px;
+    margin-left: 20px;
+    bottom: 10px;
+  }
+
+  .book-card-comment-form-container__form-submit-button {
+    bottom: 35px;
+    width: 200px;
+    height: 30px;
+    margin: 5px 20px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .book-card-comment-form-container {
+      width: 720px;
+      margin: 0 15px;
+    }
+
+    .book-card-comment-form-container__form {
+      height: 570px;
+    }
+
+    .book-card-comment-form-container-count {
+      font-size: 24px;
+    }
+
+    .book-card-comment-form-container-open {
+      width: 720px;
+    }
+
+    .book-card-comment-form-container-close {
+      left: 675px;
+    }
+
+    .book-card-comment-form-container__form__user-info {
+      bottom: 10px;
+      padding: 20px 0 20px 20px;
+    }
+
+    .book-card-comment-form-container__form__user-info-label {
+      font-size: 18px;
+      padding-right: 31px;
+    }
+
+    .book-card-comment-form-container__form__user-info-input {
+      width: 240px;
+      height: 25px;
+    }
+
+    .book-card-comment-form-container__form__caption {
+      bottom: 10px;
+      padding: 20px 0 20px 20px;
+    }
+
+    .book-card-comment-form-container__form__caption-label {
+      font-size: 18px;
+      padding-right: 113px;
+    }
+
+    .book-card-comment-form-container__form__caption-input {
+      width: 450px;
+      height: 25px;
+    }
+
+    .book-card-comment-form-container__form__text {
+      bottom: 10px;
+      padding: 20px 0 20px 20px;
+    }
+
+    .book-card-comment-form-container__form__text-label {
+      font-size: 18px;
+      bottom: 165px;
+      padding-right: 86px;
+    }
+
+    .book-card-comment-form-container__form__text-textarea {
+      width: 450px;
+      height: 300px;
+      font-size: 16px;
+      padding: 10px;
+      line-height: 1.5;
+    }
+
+    .book-card-comment-form-container__form-total-characters {
+      position: relative;
+      left: 0px;
+      bottom: 35px;
+      font-size: 15px;
+      padding-right: 25px;
+    }
+
+    .book-card-comment-form-container__form-validation {
+      font-size: 22px;
+      margin-left: 20px;
+      bottom: 10px;
+    }
+
+    .book-card-comment-form-container__form-submit-button {
+      bottom: 25px;
+      width: 180px;
+      height: 30px;
+      font-size: 13px;
+    }
+
+    @media (min-width: 320px) and (max-width: 460px) {
+      .book-card-comment-form-container {
+        position: static;
+        text-align: center;
+        font-size: 40px;
+        width: 260px;
+
+        margin: 20px auto 20px auto;
+      }
+
+      .book-card-comment-form-container__form {
+        height: 570px;
+      }
+
+      .book-card-comment-form-container-count {
+        font-size: 26px;
+      }
+
+      .book-card-comment-form-container-open {
+        width: 230px;
+        height: 50px;
+
+        font-size: 20px;
+      }
+
+      .book-card-comment-form-container-close {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 50px;
+        padding-top: 5px;
+        padding-left: 220px;
+        margin-bottom: -50px;
+      }
+
+      .book-card-comment-form-container__form__user-info {
+        width: 260px;
+        padding: 0px 0 0 20px;
+      }
+
+      .book-card-comment-form-container__form__user-info-label {
+        padding-left: 10px;
+
+        font-size: 14px;
+      }
+
+      .book-card-comment-form-container__form__user-info-input {
+        margin-left: -20px;
+        width: 240px;
+        height: 30px;
+      }
+
+      .book-card-comment-form-container__form__caption {
+        width: 260px;
+        padding: 0;
+      }
+
+      .book-card-comment-form-container__form__caption-label {
+        padding-left: 90px;
+        font-size: 14px;
+      }
+
+      .book-card-comment-form-container__form__caption-input {
+        width: 240px;
+        height: 30px;
+      }
+
+      .book-card-comment-form-container__form__text {
+        width: 260px;
+        height: 300px;
+        padding: 0;
+
+        margin-bottom: -80px;
+      }
+
+      .book-card-comment-form-container__form__text-label {
+        position: static;
+        padding-left: 75px;
+        font-size: 14px;
+      }
+
+      .book-card-comment-form-container__form__text-textarea {
+        width: 240px;
+        height: 250px;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .book-card-comment-form-container__form-total-characters {
+        position: relative;
+        bottom: -110px;
+        left: 0;
+        font-size: 12px;
+        margin-top: -20px;
+        padding-right: 25px;
+      }
+
+      .book-card-comment-form-container__form-validation {
+        position: relative;
+        top: 90px;
+        left: 0;
+        font-size: 20px;
+        margin-left: 20px;
+        bottom: 10px;
+      }
+
+      .book-card-comment-form-container__form-submit-button {
+        position: relative;
+        top: 80px;
+        left: 0;
+        margin: 0;
+      }
+    }
+  }
+}
