@@ -1,24 +1,39 @@
 .book-card-container {
-  margin-left: auto;
-  margin-right: auto;
-  min-height: calc(100vh - 70px);
-  margin-top: 100px;
+  margin: 10vh auto 0 auto;
+
   width: 1280px;
   height: 100%;
+  min-height: calc(100vh - 70px);
 }
 
 .book-card__upper-container {
   display: flex;
   position: relative;
+
+  margin-bottom: 2vh;
+
+  width: 100%;
+  justify-content: space-between;
+}
+
+.book-card__upped-container__trade-delivery {
+  position: relative;
+}
+
+.book-card__lower-container {
+  position: relative;
+  width: 100%;
 }
 
 .book-card-main-image {
-  height: 600px;
-  width: 400px;
+  position: relative;
 
-  image-rendering: auto;
-  box-shadow: 0px 0px 12px grey;
-  margin: 20px;
+  width: 30%;
+  height: auto;
+
+  object-fit: cover;
+
+  box-shadow: 0px 0px 1.2vh grey;
 }
 
 @media (max-width: 1000px) {
@@ -37,7 +52,6 @@
   .book-card-container {
     width: 768px;
   }
-
 }
 
 @media (min-width: 320px) and (max-width: 460px) {
@@ -51,6 +65,4 @@
     width: 220px;
     margin: auto;
   }
-
-
 }

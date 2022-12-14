@@ -6,6 +6,7 @@ export const fetchBooks = createAsyncThunk('allBooks/fetchBooks', async () => {
   const { data } = await axios.get<Books[]>('http://localhost:4444/allBooks');
   return data;
 });
+
 export const fetchCategoryBooks = createAsyncThunk<Books[], string>(
   'categoryBooks/fetchCategoryBooks',
   async (category) => {
@@ -14,27 +15,9 @@ export const fetchCategoryBooks = createAsyncThunk<Books[], string>(
   },
 );
 
-export const fetchSelectedBook = createAsyncThunk<Books, string>(
-  'selectedBook/fetchSelectedBook',
-  async (selectedBookId) => {
-    const { data } = await axios.get<Books>(`http://localhost:4444/selectedBook/${selectedBookId}`);
-    return data;
-  },
-);
-
-export const fetchRecommendBooks = createAsyncThunk<Books[], string>(
-  'recommendBooks/fetchRecommendBooks',
-  async (booksCategory) => {
-    const { data } = await axios.get<Books[]>(`http://localhost:4444/recommendBooks/${booksCategory}`);
-    return data;
-  },
-);
-
 const initialState: BooksSliceState = {
   allBooks: [],
   categoryBooks: [],
-  selectedBook: {} as Books,
-  recommendBooks: [],
 
   sortNumber: -1,
   categorySelect: '',
@@ -74,7 +57,7 @@ const booksSlice = createSlice({
     });
     builder.addCase(fetchBooks.fulfilled, (state, action) => {
       state.status = Status.SUCCESS;
-      state.allBooks = [...action.payload].sort(() => Math.random() - 0.5) as Books[];
+      state.allBooks = action.payload;
     });
     builder.addCase(fetchBooks.rejected, (state, action) => {
       state.status = Status.ERROR;
@@ -85,31 +68,9 @@ const booksSlice = createSlice({
     });
     builder.addCase(fetchCategoryBooks.fulfilled, (state, action) => {
       state.status = Status.SUCCESS;
-      state.categoryBooks = [...action.payload].sort(() => Math.random() - 0.5);
+      state.categoryBooks = action.payload;
     });
     builder.addCase(fetchCategoryBooks.rejected, (state, action) => {
-      state.status = Status.ERROR;
-    });
-
-    builder.addCase(fetchSelectedBook.pending, (state) => {
-      state.status = Status.LOADING;
-    });
-    builder.addCase(fetchSelectedBook.fulfilled, (state, action) => {
-      state.status = Status.SUCCESS;
-      state.selectedBook = action.payload;
-    });
-    builder.addCase(fetchSelectedBook.rejected, (state, action) => {
-      state.status = Status.ERROR;
-    });
-
-    builder.addCase(fetchRecommendBooks.pending, (state) => {
-      state.status = Status.LOADING;
-    });
-    builder.addCase(fetchRecommendBooks.fulfilled, (state, action) => {
-      state.status = Status.SUCCESS;
-      state.recommendBooks = action.payload;
-    });
-    builder.addCase(fetchRecommendBooks.rejected, (state, action) => {
       state.status = Status.ERROR;
     });
   },

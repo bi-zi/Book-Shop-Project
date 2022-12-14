@@ -12,17 +12,30 @@ export type Books = {
   categoryRu: string;
 };
 
+export type BookComments = {
+  bookId: number;
+
+  comments: Comment[];
+};
+
+interface Comment {
+  id: string
+  nickName: string;
+  title: string;
+  comment: string;
+  date: Date
+}
+
 export enum Status {
   LOADING = 'loading',
   SUCCESS = 'loaded',
   ERROR = 'error',
 }
 
-export interface BooksSliceState {
-  allBooks: Books[];
-  categoryBooks: Books[];
+export interface BooksInteractionSliceState {
+  selectedBook: Books;
+  recommendBooks: Books[];
 
-  sortNumber: number;
-  categorySelect: string;
+  booksComments: BookComments[];
   status: Status;
 }

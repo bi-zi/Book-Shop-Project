@@ -15,9 +15,13 @@ export const BookDescription = ({ book }: MyProps) => {
       </div>
 
       <div className="book-card__info-container__description">
-        <div className="book-card__info-container__description-star">★</div>
-        <div className="book-card__info-container__description-rating">{book?.bookRating}</div>
-        <div className="book-card__info-container__description-reviews">1337 оценок</div>
+        <div className="book-card__info-container__description__block">
+          <div className="book-card__info-container__description-star">★</div>
+          <div className="book-card__info-container__description-rating">{book?.bookRating}</div>
+          <div className="book-card__info-container__description-reviews">
+            {Math.floor(0 + Math.random() * (1000 + 1 - 0))} оценок
+          </div>
+        </div>
 
         <div className="book-card__info-container__description__rating-area">
           <input type="radio" id="star-5" name="rating" value="5" />

@@ -1,0 +1,11 @@
+.book-card-comment-container {
+  margin-top: 1vh;
+
+  width: 100%;
+  min-height: 200px;
+
+  border-radius: 15px;
+  border: 2px solid black;
+
+  background-color: rgb(168, 168, 168);
+}

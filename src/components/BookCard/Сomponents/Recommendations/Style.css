@@ -1,27 +1,36 @@
 .book-card-recommendations-container {
   position: relative;
-  margin: auto;
 
-  width: 1200px;
-  height: 500px;
+  margin-bottom: 6vh;
+
+  width: 100%;
+
+  user-select: none !important;
+}
+
+.book-card-recommendations-container__slider-name {
+  margin: 0;
+
+  padding-bottom: 2vh;
+
+  font-size: 24px;
+
+  color: rgb(120, 240, 204);
+  cursor: pointer;
 }
 
 .book-card-recommendations-container-link {
   pointer-events: visiblePainted;
 }
 
-.book-card-recommendations-container__slider-name {
-  color: rgb(120, 240, 204);
-  font-size: 24px;
-  cursor: pointer;
-}
-
 .book-card-recommendations-container__card {
-  margin: 0 40px;
-  width: 150px !important;
-  height: 420px;
+  padding-top: 20px;
+
+  width: 150px;
+  height: 250px;
+
   text-align: left;
-  padding-top: 45px;
+
   cursor: pointer;
 }
 
@@ -30,27 +39,33 @@
 }
 
 .book-card-recommendations-container__card-background {
+  margin-bottom: 5px;
+
+  width: 150px;
+
   background-color: rgb(255, 255, 255);
   box-shadow: 0 2px 13px rgb(0 0 0 / 30%), 0 5px 10px rgb(0 0 0 / 20%);
-  margin-bottom: 5px;
 }
 
 .book-card-recommendations-container__card-img {
+  width: 150px;
+  height: 250px;
 
+  object-fit: cover;
 }
 
 .book-card-recommendations-container__card-info {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
 
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-around;
+
+  font-weight: bolder;
   font-size: 13px;
   color: #ffd900;
-  font-weight: bolder;
 }
-
-
 
 .book-card-recommendations-container__card-author {
   font-size: 12px;
@@ -58,19 +73,50 @@
 
 .book-card-recommendations-container__card-name {
   display: flex;
+
   width: 150px;
   font-size: 15px;
+
   font-weight: bolder;
   word-wrap: break-word;
 }
 
+.slick-list {
+  margin: 0 auto;
+
+  padding-left: 2vw;
+  width: 94%;
+
+  height: 360px;
+}
+
+.slick-slide {
+  width: 150px;
+  height: 250px;
+}
+
+.slick-active {
+  width: 150px;
+  height: 250px;
+}
+
 .slick-prev,
 .slick-next {
-  height: 380px;
-  z-index: 289;
+  margin-top: 1vh;
+
   width: 35px;
+  height: 380px;
+
   border-radius: 10px;
-  background-color: rgb(255, 255, 255);
+  z-index: 289;
+}
+
+.slick-prev {
+  margin-left: 1.5vw;
+}
+
+.slick-next {
+  margin-right: 1.5vw;
 }
 
 .slick-arrow:before {
@@ -112,7 +158,6 @@
   .book-card-recommendations-container__card-info {
     font-size: 13px;
   }
-
 
   .book-card-recommendations-container__card-author {
     font-size: 12px;
@@ -166,8 +211,6 @@
       width: 100px;
       height: 200px;
     }
-
-
 
     .book-card-recommendations-container__card-author {
       font-size: 9px;

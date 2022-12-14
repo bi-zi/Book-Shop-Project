@@ -1,50 +1,58 @@
 .book-card-comment-form-container {
   position: relative;
-  bottom: 500px;
+  margin-bottom: 2vh;
   font-size: 40px;
 }
 
-.book-card-comment-form-container-count {
-}
-
-.book-card-comment-form-container__form {
-  height: 570px;
-}
-
 .book-card-comment-form-container-open {
-  background-color: rgb(120, 240, 204);
-  width: 1280px;
+  width: 100%;
   height: 50px;
 
-  border-radius: 5px;
   font-size: 20px;
+
+  border-radius: 15px;
+  border: 3px solid rgb(0, 0, 0);
+
+  background-color: rgb(120, 240, 204);
   cursor: pointer;
 }
 
 .book-card-comment-form-container-open:active {
-  color: white;
   border: 3px solid rgb(0, 0, 0);
+
+  color: white;
   background: linear-gradient(top, rgb(255, 255, 255), rgb(122, 240, 205) 90%);
   background: -webkit-linear-gradient(top, rgb(44, 247, 186), rgb(61, 129, 109) 90%);
 }
 
-.book-card-comment-form-container-close {
+.book-card-comment-form-container__form {
   position: relative;
+  height: 100%;
 
-  left: 1225px;
-  top: 20px;
+  border-radius: 15px;
+
+  background-color: rgb(120, 240, 204);
+}
+
+.book-card-comment-form-container-close {
+  position: absolute;
+
+  right: 20px;
+  top: 15px;
+
   cursor: pointer;
   z-index: 1;
 }
 
 .book-card-comment-form-container__form__user-info {
   position: relative;
-  bottom: 45px;
-  padding: 20px 0 20px 20px;
+
+  margin: 20px 0 20px 20px;
 }
 
 .book-card-comment-form-container__form__user-info-label {
   font-size: 20px;
+
   padding-right: 31px;
 }
 
@@ -52,34 +60,33 @@
   width: 250px;
   height: 30px;
 
-  color: black;
   border-radius: 5px;
   border: 1px solid;
+
+  color: black;
 }
 
 .book-card-comment-form-container__form__caption {
-  position: relative;
-  bottom: 45px;
-  padding: 20px 0 20px 20px;
+  margin: 20px 0 20px 20px;
 }
 
 .book-card-comment-form-container__form__caption-label {
-  font-size: 20px;
   padding-right: 122px;
+  font-size: 20px;
 }
 
 .book-card-comment-form-container__form__caption-input {
   width: 1020px;
   height: 30px;
-  color: black;
+
   border-radius: 5px;
   border: 1px solid;
+  color: black;
 }
 
 .book-card-comment-form-container__form__text {
-  position: relative;
   bottom: 45px;
-  padding: 20px 0 20px 20px;
+  margin: 20px 0 20px 20px;
   z-index: 0;
 }
 
@@ -91,48 +98,55 @@
 }
 
 .book-card-comment-form-container__form__text-textarea {
+
   width: 1020px;
   height: 300px;
+
   font-size: 16px;
 
-  line-height: 1.5;
   border-radius: 5px;
   border: 1px solid;
+
   resize: none;
 }
 
 .book-card-comment-form-container__form-total-characters {
   position: relative;
-  bottom: 75px;
-  font-size: 15px;
-  text-align: right;
+
+  padding-bottom: 10px;
   padding-right: 25px;
+
+  font-size: 15px;
+
+  text-align: right;
   z-index: 0;
 }
 
 .book-card-comment-form-container__form-validation {
-  position: relative;
   font-size: 24px;
   margin-left: 20px;
-  bottom: 45px;
   color: red;
 }
 
 .book-card-comment-form-container__form-submit-button {
   position: relative;
-  bottom: 65px;
-  background-color: rgb(255, 255, 255);
+
+  margin: 5px 20px;
+
   width: 200px;
   height: 30px;
-  margin: 5px 20px;
-  border-radius: 5px;
+
   font-size: 14px;
+  border-radius: 5px;
+
+  background-color: rgb(255, 255, 255);
   cursor: pointer;
 }
 
 .book-card-comment-form-container__form-submit-button:active {
-  color: rgb(255, 255, 255);
   border: 3px solid rgb(0, 0, 0);
+
+  color: rgb(255, 255, 255);
   background: linear-gradient(top, rgb(255, 255, 255), rgb(255, 255, 255) 90%);
   background: -webkit-linear-gradient(top, rgb(131, 130, 130), rgb(71, 71, 71) 90%);
 }
