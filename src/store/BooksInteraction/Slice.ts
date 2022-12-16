@@ -35,7 +35,7 @@ const booksInteraction = createSlice({
     },
     setBooksCommentsPush: (state, action) => {
       state.booksComments
-        .find((book) => book.bookId === +action.payload.bookId)
+        .find((book) => book.bookId === action.payload.bookId)
         ?.comments.push(action.payload.comments[0]);
     },
   },

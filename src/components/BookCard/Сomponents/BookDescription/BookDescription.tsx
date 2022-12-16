@@ -19,7 +19,7 @@ export const BookDescription = ({ book }: MyProps) => {
           <div className="book-card__info-container__description-star">★</div>
           <div className="book-card__info-container__description-rating">{book?.bookRating}</div>
           <div className="book-card__info-container__description-reviews">
-            {Math.floor(0 + Math.random() * (1000 + 1 - 0))} оценок
+            {book.reviewsNumber} оценок
           </div>
         </div>
 

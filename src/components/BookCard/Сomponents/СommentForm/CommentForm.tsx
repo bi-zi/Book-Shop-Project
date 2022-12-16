@@ -21,7 +21,7 @@ export const CommentForm = ({ book }: MyProps) => {
   const [title, setTitle] = React.useState('');
   const [comment, setComment] = React.useState('');
 
-  const bookCommentsLength = booksInteraction.booksComments.find((comment) => comment.bookId === +book.id)
+  const bookCommentsLength = booksInteraction.booksComments.find((comment) => comment.bookId === book.id)
     ?.comments?.length;
 
   const createComment = (e: React.FormEvent<HTMLFormElement>) => {
@@ -32,16 +32,16 @@ export const CommentForm = ({ book }: MyProps) => {
       comments: [
         {
           id: uniqid(),
-          nickName: nickName,
+          nickName: nickName[0].toUpperCase() + nickName.toLowerCase().split('').splice(1, 999).join(''),
           title: title,
           comment: comment,
-          date: new Date().toUTCString(),
+          date: `${new Date().toLocaleTimeString()} ${new Date().toLocaleDateString()}`,
         },
       ],
     };
 
     const thisBookHasCommentary =
-      booksInteraction.booksComments.find((comment) => comment.bookId === +book.id) === undefined;
+      booksInteraction.booksComments.find((comment) => comment.bookId === book.id) === undefined;
 
     if (thisBookHasCommentary === true) dispatch(setBooksCommentsСreate(comments));
     if (thisBookHasCommentary === false) dispatch(setBooksCommentsPush(comments));
@@ -51,11 +51,17 @@ export const CommentForm = ({ book }: MyProps) => {
     setComment('');
   };
 
-  // console.log(booksInteraction.booksComments);
+  React.useEffect(() => {
+    setNickName('');
+    setTitle('');
+    setComment('');
+  }, [book.id]);
 
   return (
     <div className="book-card-comment-form-container">
-      <div className="book-card-comment-form-container-count">Отзывы {bookCommentsLength === undefined ? 0 : bookCommentsLength}</div>
+      <div className="book-card-comment-form-container-count">
+        Отзывы {bookCommentsLength === undefined ? 0 : bookCommentsLength}
+      </div>
 
       {checkForm ? (
         <form className="book-card-comment-form-container__form" onSubmit={(e) => createComment(e)}>

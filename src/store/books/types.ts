@@ -1,6 +1,5 @@
 export type Books = {
   id: number;
-  counter: number;
   imgaeUrl: string;
   imageUrl: string;
   bookName: string;
@@ -10,6 +9,7 @@ export type Books = {
   description: string;
   category: string;
   categoryRu: string;
+  reviewsNumber: number;
 };
 
 export enum Status {
