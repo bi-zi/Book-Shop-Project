@@ -9,7 +9,7 @@ export const App = () => {
         <Route index element={<MainPage />} />,
         <Route path="Category/:name" element={<CategoriesPage />} />,
         <Route path="Book/:id" element={<BookPage />} />,
-        {/* <Route path="Basket" element={<BasketPage />} />, */}
+        <Route path="Basket" element={<BasketPage />} />,
         <Route path="*" element={<NotFoundPage />} />,
       </Route>
     </Routes>

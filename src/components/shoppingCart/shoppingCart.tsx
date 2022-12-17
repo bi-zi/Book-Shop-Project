@@ -1,52 +1,47 @@
 import React from 'react';
+import { useAppDispatch, useAppSelector } from '../../store/Store';
+import {
+  fetchBasketBooks,
+  setBasketDeleteBook,
+  setBasketDeleteAll,
+  setNumberOfBooksPlus,
+  setNumberOfBooksMinus,
+} from '../../store/Basket/Slice';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
 import './Style.css';
 
 
+export const ShoppingCart = () => {
+  const dispatch = useAppDispatch();
+  const basket = useAppSelector((state) => state.basket);
 
-export const ShoppingCart = ( ) => {
-  // const [cardConnect, setCardConnect] = React.useState(items);
 
-  // const countPlus = (id: any) => {
-  //   items.map((post) => {
-  //     if (post.id === id) {
-  //       post.counter++;
-  //     }
-  //   });
-  //   setCardConnect(items.concat([]));
-  // };
+  const books = basket.basketBooks;
+  const booksCount = books.length;
 
-  // const countMinus = (id: Foo) => {
-  //   items.map((post) => {
-  //     if (post.id === id) {
-  //       post.counter--;
-  //     }
-  //   });
-  //   setCardConnect(items.concat([]));
-  // };
+  const totalPrice = books.reduce((total, book) => (total += book.price * book.numberOfBooks), 0);
 
-  // const removeAllProducts = (id: any) => {
-  //   items.map((x) => removeItem(x.id));
-  // };
-
-  // let totalPrice = items.reduce((acc, item) => (acc += item.price * item.counter), 0);
+  React.useEffect(() => {
+    dispatch(fetchBasketBooks(basket.basketBooksId));
+  }, [dispatch, basket.basketBooksId]);
 
   return (
     <div className="cart">
-      {/* <div className="menu">
-        <div className="goods_quantity">Корзина: {itemsCount}</div>
-        {itemsCount > 0 ? <div className="total_price">Общая цена {totalPrice} ₽</div> : null}
-        <div className="remove_all_product" onClick={removeAllProducts}>
+      <div className="menu">
+        <div className="goods_quantity">Корзина: {booksCount}</div>
+        {booksCount > 0 ? <div className="total_price">Общая цена {totalPrice} ₽</div> : null}
+
+        <div className="remove_all_product" onClick={() => dispatch(setBasketDeleteAll())}>
           <FontAwesomeIcon className="trash_icon" icon={faTrashCan} />
           <div className="products_delete">Удалить все товары</div>
         </div>
       </div>
 
       <div className="cart_container">
-        {itemsCount === 0 ? <div className="empty_basket">Ваша корзина пуста</div> : null}
-        {items.map((book) => {
+        {booksCount === 0 ? <div className="empty_basket">Ваша корзина пуста</div> : null}
+        {books.map((book, index) => {
           return (
             <div className="product" key={book.id}>
               <Link to={`/Book/${book.id}`}>
@@ -70,27 +65,29 @@ export const ShoppingCart = ( ) => {
                 </Link>
 
                 <div className="product_counter">
-                  {book.counter > 1 ? (
-                    <button className="counter_minus" onClick={() => countMinus(book.id)}>
+                  {book.numberOfBooks > 1 ? (
+                    <button
+                      className="counter_minus"
+                      onClick={() => dispatch(setNumberOfBooksMinus(index))}>
                       —
                     </button>
                   ) : (
                     <button className="counter_minus">—</button>
                   )}
-                  <div className="counter_number">{book.counter}</div>
-                  <button className="counter_plus" onClick={() => countPlus(book.id)}>
+                  <div className="counter_number">{book.numberOfBooks}</div>
+                  <button className="counter_plus" onClick={() => dispatch(setNumberOfBooksPlus(index))}>
                     +
                   </button>
                 </div>
 
                 <div className="product_cost">
-                  <div className="product_price">{book?.price * book?.counter} ₽</div>
+                  <div className="product_price">{book?.price * book?.numberOfBooks} ₽</div>
                   <div className="price_multiplication">
-                    {book?.price} ₽ x {book.counter}шт
+                    {book?.price} ₽ x {book.numberOfBooks}шт
                   </div>
                 </div>
 
-                <div className="remove_product" onClick={() => removeItem(book.id)}>
+                <div className="remove_product" onClick={() => dispatch(setBasketDeleteBook(index))}>
                   <FontAwesomeIcon className="trash_icon" icon={faTrashCan} />
                   <div>Удалить</div>
                 </div>
@@ -98,7 +95,7 @@ export const ShoppingCart = ( ) => {
             </div>
           );
         })}
-      </div> */}
+      </div>
     </div>
   );
 };

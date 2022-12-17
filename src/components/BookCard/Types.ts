@@ -1,5 +1,5 @@
 export type Books = {
-  id: number;
+  id: string;
   imgaeUrl: string;
   imageUrl: string;
   bookName: string;
@@ -9,5 +9,6 @@ export type Books = {
   description: string;
   category: string;
   categoryRu: string;
+  numberOfBooks: number;
   reviewsNumber: number;
 };

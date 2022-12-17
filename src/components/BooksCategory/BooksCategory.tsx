@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from 'react';
 import { useAppDispatch, useAppSelector } from '../../store/Store';
 import { fetchCategoryBooks } from '../../store/Books/Slice';
 import { Link, useParams } from 'react-router-dom';
-import './Style.css';
+import '../AllBooks/Style.css';
 
 export const BooksCategory = () => {
   const dispatch = useAppDispatch();
@@ -11,26 +11,39 @@ export const BooksCategory = () => {
 
   const books = booksSlice.categoryBooks;
 
+  console.log(books.filter((book, i) => book.id === books[i + 1]?.id));
+
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
     dispatch(fetchCategoryBooks(name));
   }, [dispatch, name]);
 
   return (
-    <div id="20" className="category_list_container">
-      <div className="category_name"></div>
+    <div id="20" className="all-books-container">
+      <div className="all-books-container-category-name">{books?.[0]?.categoryRu}</div>
       {books.map((book) => {
         return (
           <Link key={book.id} to={`/Book/${book.id}`}>
-            <div className="category_card" key={book.id}>
-              <div className="category_card_settings">
-                <img className="category_img" height="310px" width="200px" src={book.imageUrl} alt="" />
-                <div className="category_card_info">
-                  <div className="rating">★{book.bookRating}★</div>
-                  <div className="price">{book.price} ₽</div>
+            <div className="all-books-container__card" key={book.id}>
+              <div className="all-books-container__card__background">
+                <img
+                  className="all-books-container__card__background-img"
+                  height="10px"
+                  width="10px"
+                  src={book.imageUrl}
+                  alt=""
+                />
+                <div className="all-books-container__card__info">
+                  <span className="all-books-container__card__info-rating">★{book.bookRating}★</span>
+                  <span className="all-books-container__card__info-price">{book.price} ₽</span>
                 </div>
               </div>
-              <div className="category_card_author">{book.authorName}</div>
-              <div className="category_card_name">{book.bookName}</div>
+              <div className="all-books-container__card-author">{book.authorName}</div>
+              <div className="all-books-container__card-book-name">{book.bookName}</div>
             </div>
           </Link>
         );

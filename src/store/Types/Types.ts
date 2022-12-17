@@ -1,5 +1,5 @@
 export type Books = {
-  id: number;
+  id: string;
   imgaeUrl: string;
   imageUrl: string;
   bookName: string;
@@ -9,21 +9,22 @@ export type Books = {
   description: string;
   category: string;
   categoryRu: string;
+  numberOfBooks: number;
   reviewsNumber: number;
 };
 
 export type BookComments = {
-  bookId: number;
+  bookId: string;
 
   comments: Comment[];
 };
 
 interface Comment {
-  id: string
+  id: string;
   nickName: string;
   title: string;
   comment: string;
-  date: string
+  date: string;
 }
 
 export enum Status {
@@ -32,10 +33,26 @@ export enum Status {
   ERROR = 'error',
 }
 
+export interface BooksSliceState {
+  allBooks: Books[];
+  categoryBooks: Books[];
+
+  sortNumber: number;
+  categorySelect: string;
+  status: Status;
+}
+
 export interface BooksInteractionSliceState {
   selectedBook: Books;
   recommendBooks: Books[];
 
   booksComments: BookComments[];
+  status: Status;
+}
+
+export interface BasketSliceState {
+  basketBooks: Books[];
+  basketBooksId: string[];
+
   status: Status;
 }

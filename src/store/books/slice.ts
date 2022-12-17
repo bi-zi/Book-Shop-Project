@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { Books, BooksSliceState, Status } from './Types';
+import { Books, BooksSliceState, Status } from '../Types/Types';
 
 export const fetchBooks = createAsyncThunk('allBooks/fetchBooks', async () => {
   const { data } = await axios.get<Books[]>('http://localhost:4444/allBooks');
@@ -45,8 +45,8 @@ const booksSlice = createSlice({
 
         state.sortNumber = 3;
       } else if (action.payload === 0) {
-        state.allBooks = state.allBooks.sort(() => Math.random() - 0.5);
-        state.categoryBooks = state.categoryBooks.sort(() => Math.random() - 0.5);
+        state.allBooks = state.allBooks;
+        state.categoryBooks = state.categoryBooks;
         state.sortNumber = 0;
       }
     },

@@ -16,8 +16,9 @@
   z-index: 999;
 }
 
-.webName {
+.header-web-site-name {
   font-size: 25px;
+  
   color: rgb(0, 0, 0);
   cursor: pointer;
 }

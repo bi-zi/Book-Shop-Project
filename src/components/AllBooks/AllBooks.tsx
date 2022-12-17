@@ -10,12 +10,20 @@ export const AllBooks = () => {
 
   const books = booksSlice?.allBooks;
 
+
   React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+
     dispatch(fetchBooks());
   }, []);
 
   return (
     <div className="all-books-container">
+      <div className="all-books-container-category-name">Все книги</div>
       {books.map((book) => {
         return (
           <Link key={book.id} to={`/Book/${book.id}`}>

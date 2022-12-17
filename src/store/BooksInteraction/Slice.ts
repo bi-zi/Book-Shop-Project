@@ -1,6 +1,7 @@
+import { Comment } from './../../Components/BookCard/Сomponents/Comment/Comment';
 import axios from 'axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { Books, BooksInteractionSliceState, Status, BookComments } from './Types';
+import { Books, BooksInteractionSliceState, Status } from '../Types/Types';
 
 export const fetchSelectedBook = createAsyncThunk<Books, string>(
   'selectedBook/fetchSelectedBook',
@@ -18,11 +19,13 @@ export const fetchRecommendBooks = createAsyncThunk<Books[], string>(
   },
 );
 
+
 const initialState: BooksInteractionSliceState = {
   selectedBook: {} as Books,
   recommendBooks: [],
 
   booksComments: [],
+
   status: Status.LOADING,
 };
 
@@ -36,7 +39,20 @@ const booksInteraction = createSlice({
     setBooksCommentsPush: (state, action) => {
       state.booksComments
         .find((book) => book.bookId === action.payload.bookId)
-        ?.comments.push(action.payload.comments[0]);
+        ?.comments.unshift(action.payload.comments[0]);
+    },
+    setBooksCommentsDelete: (state, action) => {
+      const bookIndex = state.booksComments.findIndex((book) => book.bookId === action.payload.book);
+
+      state.booksComments[bookIndex].comments.splice(action.payload.commentIndex!, 1);
+    },
+    setBooksCommentsChange: (state, action) => {
+      const bookIndex = state.booksComments.findIndex((book) => book.bookId === action.payload.book);
+      state.booksComments[bookIndex].comments.splice(
+        action.payload.commentIndex!,
+        1,
+        action.payload.comment,
+      );
     },
   },
   extraReducers: (builder) => {
@@ -64,5 +80,10 @@ const booksInteraction = createSlice({
   },
 });
 
-export const { setBooksCommentsСreate, setBooksCommentsPush } = booksInteraction.actions;
+export const {
+  setBooksCommentsСreate,
+  setBooksCommentsPush,
+  setBooksCommentsDelete,
+  setBooksCommentsChange,
+} = booksInteraction.actions;
 export const booksInteractionReducer = booksInteraction.reducer;

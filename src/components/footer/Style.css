@@ -1,11 +1,14 @@
 .footer {
-
   margin-top: 20vh;
-  height: 50px;
-  background-color: rgb(120, 240, 204);
-  text-align: center;
+
   padding-top: 12px;
   padding-bottom: 60px;
+
+  height: 50px;
+
+  text-align: center;
   font-size: 25px;
   font-weight: bolder;
+
+  background-color: rgb(120, 240, 204);
 }
