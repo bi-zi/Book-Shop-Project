@@ -1,0 +1,225 @@
+.shopping-cart-container__book__cart {
+  display: flex;
+  position: relative;
+
+  padding: 10px 0;
+
+  height: 320px;
+  justify-content: space-between;
+
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.shopping-cart-container__book__cart-img {
+  width: auto;
+  max-width: 210px;
+  height: 100%;
+
+  box-shadow: 0 0px 20px rgb(0 0 0 / 20%), 0 5px 10px rgb(0 0 0 / 10%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+.shopping-cart-container__book__cart__info {
+  width: auto;
+  text-align: left;
+}
+
+.shopping-cart-container__book__cart__info-name {
+  width: 340px;
+
+  font-size: 20px;
+  font-weight: bolder;
+
+  word-wrap: break-word;
+}
+
+.shopping-cart-container__book__cart__info-author {
+  font-size: 16px;
+}
+
+.shopping-cart-container__book__cart__counter {
+  display: flex;
+  position: relative;
+}
+
+.shopping-cart-container__book__cart__counter-minus,
+.shopping-cart-container__book__cart__counter-number,
+.shopping-cart-container__book__cart__counter-plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 45px;
+  height: 45px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  border: solid 2px;
+
+  color: rgb(120, 240, 204);
+  background-color: rgb(255, 255, 255);
+
+  cursor: pointer;
+}
+
+.shopping-cart-container__book__cart__counter-minus:hover,
+.shopping-cart-container__book__cart__counter-plus:hover {
+  background-color: rgb(2, 2, 2);
+}
+
+.shopping-cart-container__book__cart__counter-minus {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.shopping-cart-container__book__cart__counter-plus {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.shopping-cart-container__book__cart__counter-number {
+  text-align: center;
+  border: solid 2px;
+
+  border-right: 0;
+  border-left: 0;
+}
+
+.shopping-cart-container__book__cart__cost {
+  width: 150px;
+}
+
+.shopping-cart-container__book__cart__cost-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.shopping-cart-container__book__cart__cost-multiplication {
+  font-size: 15px;
+}
+
+.shopping-cart-container__book__cart-remove {
+  cursor: pointer;
+}
+
+@media (width < 1010px) {
+  .shopping-cart-container__book__cart__info-name {
+    width: 300px;
+    font-size: 16px;
+  }
+
+  .shopping-cart-container__book__cart__info-author {
+    font-size: 14px;
+  }
+
+  .shopping-cart-container__book__cart__cost-price {
+    font-size: 20px;
+  }
+}
+
+@media (width < 775px) {
+  .shopping-cart-container__book__cart {
+    height: 250px;
+  }
+
+  .shopping-cart-container__book__cart-img {
+    max-width: 150px;
+  }
+
+  .shopping-cart-container__book__cart__info-name {
+    width: 260px;
+    font-size: 15px;
+  }
+
+  .shopping-cart-container__book__cart__info-author {
+    font-size: 12px;
+  }
+
+  .shopping-cart-container__book__cart__counter-minus,
+  .shopping-cart-container__book__cart__counter-number,
+  .shopping-cart-container__book__cart__counter-plus {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .shopping-cart-container__book__cart__cost {
+    width: 100px;
+  }
+
+  .shopping-cart-container__book__cart__cost-price {
+    font-size: 14px;
+  }
+
+  .shopping-cart-container__book__cart__cost-multiplication {
+    font-size: 12px;
+  }
+
+  .shopping-cart-container__book__cart-remove {
+    font-size: 12px;
+  }
+}
+
+@media (width > 320px) and (width < 465px) {
+  .shopping-cart-container__book__cart {
+    height: 200px;
+    justify-content: space-between;
+  }
+
+  .shopping-cart-container__book__cart-img {
+    max-width: 100px;
+    object-fit: fill;
+  }
+
+  .shopping-cart-container__book__cart__info {
+    height: 70px;
+    text-align: center;
+  }
+
+  .shopping-cart-container__book__cart__info-name {
+    width: 150px;
+    font-size: 12px;
+  }
+
+  .shopping-cart-container__book__cart__info-author {
+    font-size: 10px;
+  }
+
+  .shopping-cart-container__book__cart__counter {
+    position: absolute;
+
+    bottom: 10px;
+    left: 120px;
+  }
+
+  .shopping-cart-container__book__cart__counter-minus,
+  .shopping-cart-container__book__cart__counter-number,
+  .shopping-cart-container__book__cart__counter-plus {
+    width: 30px;
+    height: 30px;
+
+    font-size: 12px;
+  }
+
+  .shopping-cart-container__book__cart__cost {
+    width: 50px;
+  }
+
+  .shopping-cart-container__book__cart__cost-price {
+    font-size: 14px;
+  }
+
+  .shopping-cart-container__book__cart__cost-multiplication {
+    font-size: 10px;
+  }
+  .shopping-cart-container__book__cart-remove {
+    position: absolute;
+
+    right: 10px;
+    bottom: 10px;
+    font-size: 12px;
+  }
+}

@@ -11,8 +11,6 @@ export const BooksCategory = () => {
 
   const books = booksSlice.categoryBooks;
 
-  console.log(books.filter((book, i) => book.id === books[i + 1]?.id));
-
   useEffect(() => {
     window.scrollTo({
       top: 0,

@@ -25,23 +25,26 @@ const Basket = createSlice({
     setBasketBooksId: (state, action) => {
       state.basketBooksId.push(action.payload);
     },
-
     setBasketDeleteBook: (state, action) => {
+
       state.basketBooks.splice(action.payload, 1);
+
+
       state.basketBooksId.splice(action.payload, 1);
     },
-
     setBasketDeleteAll: (state) => {
       state.basketBooks = [];
       state.basketBooksId = [];
     },
-
     setNumberOfBooksPlus: (state, action) => {
-      state.basketBooks[action.payload].numberOfBooks += 1;
-    },
+      const index = state.basketBooks.findIndex(book => book.id === action.payload)
 
+      state.basketBooks[index].numberOfBooks += 1;
+    },
     setNumberOfBooksMinus: (state, action) => {
-      state.basketBooks[action.payload].numberOfBooks -= 1;
+      const index = state.basketBooks.findIndex((book) => book.id === action.payload);
+      
+      state.basketBooks[index].numberOfBooks -= 1;
     },
   },
   extraReducers: (builder) => {
