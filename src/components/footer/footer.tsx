@@ -4,7 +4,7 @@ import './Style.css';
 export const Footer = () => {
   return (
     <div className="footer">
-      <a href="https://github.com/bi-zi">Github</a>
+      <a  className="footer-github" href="https://github.com/bi-zi">Github</a>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-.all-books-container {
+.books-container {
   margin-top: 100px;
 
   max-width: 100%;
@@ -8,14 +8,14 @@
   text-align: center;
 }
 
-.all-books-container-category-name {
+.books-container-category-name {
   margin: 2vh auto 3vh auto;
-  
+
   font-size: 24px;
   font-weight: bolder;
 }
 
-.all-books-container__card {
+.books-container__card {
   display: inline-block;
 
   margin: 0 10px 40px 10px;
@@ -24,74 +24,79 @@
   text-align: left;
 }
 
-.all-books-container__card__background {
+.books-container__card__background {
   margin-bottom: 5px;
   height: 340px;
 
-  box-shadow: 0 1px 3px rgb(0 0 0 / 20%), 0 5px 10px rgb(0 0 0 / 10%);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 30%), 0 5px 10px rgb(0 0 0 / 10%);
   background-color: #fff;
 }
 
-.all-books-container__card__background-img {
+.books-container__card__background-img {
   width: 100%;
   height: 92%;
 
-  border-bottom: 2px dashed black;
+  box-shadow: 0px 2px 2px -2px rgba(2, 2, 2, 0.6);
 }
 
-.all-books-container__card__info {
+.books-container__card__info {
+  display: flex;
   position: relative;
 
-  text-align: center;
+
+  justify-content: space-around;
 
   font-size: 16px;
   font-weight: bolder;
   color: #ffd700;
 }
 
-.all-books-container__card__info-rating,
-.all-books-container__card__info-price {
-  margin: 0 16px;
+.books-container__card__info-price {
+  margin-top: 3px;
 }
 
-.all-books-container__card-author {
-  font-size: 14px !important;
+.books-container__card-author {
+  font-size: 14px;
 }
 
-.all-books-container__card-book-name {
+.books-container__card-book-name {
   display: flex;
 
   word-wrap: break-word;
 
-  font-size: 16px !important;
+  font-size: 16px ;
   font-weight: bolder;
 }
 
-@media (min-width: 320px) and (max-width: 460px) {
-  .all-books-container__card {
+@media (width > 320px) and (width < 465px) {
+  .books-container {
+    margin-top: 80px;
+  }
+
+  .books-container__card {
     margin: 0 10px 20px 10px;
     width: 120px;
   }
 
-  .all-books-container__card__background-img {
+  .books-container__card__background-img {
     width: 120px;
-    height: 210px;
+    height: 215px;
   }
 
-  .all-books-container__card__background {
+  .books-container__card__background {
     margin-bottom: 5px;
     height: 240px;
   }
 
-  .all-books-container__card__info {
-    font-size: 14px;
+  .books-container__card__info {
+    font-size: 12px;
   }
 
-  .all-books-container__card-author {
+  .books-container__card-author {
     font-size: 10px !important;
   }
 
-  .all-books-container__card-book-name {
+  .books-container__card-book-name {
     font-size: 12px !important;
   }
 }

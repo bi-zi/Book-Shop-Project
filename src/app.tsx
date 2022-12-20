@@ -4,8 +4,8 @@ import { Routes, Route } from 'react-router-dom';
 
 export const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
+    <Routes >
+      <Route path="/" element={<Layout />} >
         <Route index element={<MainPage />} />,
         <Route path="Category/:name" element={<CategoriesPage />} />,
         <Route path="Book/:id" element={<BookPage />} />,

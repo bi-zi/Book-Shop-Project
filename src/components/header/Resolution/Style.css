@@ -1,0 +1,72 @@
+.header-all-books,
+.header-basket {
+  font-size: 20px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.header__drop-down {
+  display: inline-block;
+
+  position: relative;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.header__drop-down__sort {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.header__drop-down-categories {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.header__drop-down__sort .header__drop-down-link,
+.header__drop-down-categories .header__drop-down-link {
+  color: black;
+  padding: 12px 16px;
+  font-size: 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.header__drop-down__sort .header__drop-down-link:hover,
+.header__drop-down-categories .header__drop-down-link:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.header__drop-down:hover .header__drop-down__sort,
+.header__drop-down:hover .header__drop-down-categories {
+  display: block;
+}
+
+.active-link {
+  background-color: rgb(0, 0, 0);
+  color: white !important;
+}
+
+@media (width > 320px) and (width < 465px) {
+  .header-all-books,
+  .header__drop-down,
+  .header__drop-down-sort,
+  .header__drop-down-categories,
+  .header-basket {
+    font-size: 12px;
+  }
+
+  .header-basket {
+    padding-right: 40px;
+  }
+}

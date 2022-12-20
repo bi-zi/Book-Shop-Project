@@ -24,7 +24,7 @@
   opacity: 0.3;
 }
 
-@media (max-width: 1000px) {
+@media (width < 1025px) {
   .book-card__annotation-container {
     width: 980px;
   }
@@ -42,12 +42,12 @@
     margin-bottom: 20px;
   }
 
-  @media (max-width: 768px) {
+  @media (width < 775px) {
     .book-card__annotation-container {
       width: 740px;
     }
 
-    @media (min-width: 320px) and (max-width: 460px) {
+    @media (width > 320px) and (width < 465px) {
       .book-card__annotation-container {
         position: static;
         margin-left: 10px;

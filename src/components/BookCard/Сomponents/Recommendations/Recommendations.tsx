@@ -5,7 +5,6 @@ import Slider from 'react-slick';
 import './Style.css';
 
 export const Recommendations = () => {
-  const dispatch = useAppDispatch();
   const recommendBooks = useAppSelector((state) => state.booksInteraction?.recommendBooks);
 
   const settings = {
@@ -13,8 +12,6 @@ export const Recommendations = () => {
     slidesToShow: 5,
     swipeToSlide: true,
   };
-
-
 
   return (
     <>
@@ -30,8 +27,7 @@ export const Recommendations = () => {
                 <Link
                   className="book-card-recommendations-container-link"
                   key={book.id}
-                  to={`/Book/${book.id}`}
-                  >
+                  to={`/Book/${book.id}`}>
                   <div className={`book-card-recommendations-container__card`} key={book?.id}>
                     <div className="book-card-recommendations-container__card-background">
                       <img

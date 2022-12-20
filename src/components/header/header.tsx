@@ -1,16 +1,10 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../store/Store';
-import { setSortBooks } from '../../store/Books/Slice';
 import { Link } from 'react-router-dom';
-import { HighResolution } from './HighResolution/HighResolution';
+import { Resolution } from './Resolution/Resolution';
 import './Style.css';
-import { SmallResolution } from './SmallResolution/SmallResolution';
 
 export const Header = () => {
-  const dispatch = useAppDispatch();
-
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
-
 
   React.useEffect(() => {
     setWindowWidth(window.innerWidth);
@@ -23,10 +17,21 @@ export const Header = () => {
       </Link>
 
       <form action="" method="get">
-        <input name="s" placeholder="Найти книгу..." className="seacrch_input" type="text" />
+        <input className="header-input" placeholder="Найти книгу..." type="text" />
       </form>
 
-      {windowWidth > 768 ? <HighResolution /> : <SmallResolution />}
+      <input id="header__toggle" type="checkbox" hidden />
+      <label className="header__burger" htmlFor="header__toggle">
+        <span></span>
+      </label>
+
+      {windowWidth > 768 ? (
+        <Resolution />
+      ) : (
+        <ul className="header__box">
+          <Resolution />
+        </ul>
+      )}
     </div>
   );
 };

@@ -130,7 +130,7 @@
   background-color: rgb(120, 240, 204);
 }
 
-@media (max-width: 1000px) {
+@media (width < 1025px) {
   .book-card-recommendations-container {
     width: 900px;
     margin-left: 45px;
@@ -185,7 +185,7 @@
     height: 380px;
   }
 
-  @media (max-width: 768px) {
+  @media (width < 775px) {
     .book-card-recommendations-container {
       width: 680px;
       height: 400px;

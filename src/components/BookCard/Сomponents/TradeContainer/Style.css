@@ -1,8 +1,8 @@
 .book-card__trade {
   position: relative;
 
-  width: 18vw;
-  height: 30%;
+  width: 300px;
+  height: 130px;
 
   text-align: center;
 
@@ -13,7 +13,7 @@
 .book-card__trade-price {
   display: flex;
 
-  padding-top: 4vh;
+  padding-top: 2vh;
 
   width: 100%;
 
@@ -31,7 +31,7 @@
 }
 
 .book-card__trade-buy button {
-  margin-top: 1vh;
+  margin-top: .4vh;
 
   width: 80%;
   height: 50px;
@@ -55,10 +55,10 @@
   background-color: rgb(177, 177, 177);
 }
 
-@media (max-width: 1000px) {
+@media (width < 1025px) {
   .book-card__trade {
-    width: 250px;
-    height: 170px;
+    width: 260px;
+    height: 130px;
   }
 
   .book-card__trade-price {
@@ -86,13 +86,13 @@
     font-size: 18px;
   }
 
-  @media (max-width: 768px) {
+  @media (width < 775px) {
     .book-card__trade {
       width: 250px;
       height: 170px;
     }
 
-    @media (min-width: 320px) and (max-width: 460px) {
+    @media (width > 320px) and (width < 465px) {
       .book-card__trade {
         position: static;
         margin-left: 50px;

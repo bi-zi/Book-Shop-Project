@@ -29,11 +29,6 @@ export const BookCard = () => {
   React.useEffect(() => {
     dispatch(fetchSelectedBook(id));
     dispatch(fetchRecommendBooks(book?.category));
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
-    });
   }, [dispatch, id, book?.category]);
 
   return (

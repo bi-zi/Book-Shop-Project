@@ -12,37 +12,33 @@ export const AllBooks = () => {
 
 
   React.useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
-    });
 
     dispatch(fetchBooks());
-  }, []);
+  }, [dispatch]);
 
   return (
-    <div className="all-books-container">
-      <div className="all-books-container-category-name">Все книги</div>
+    <div className="books-container">
+      <div className="books-container-category-name">Все книги</div>
+
       {books.map((book) => {
         return (
           <Link key={book.id} to={`/Book/${book.id}`}>
-            <div className="all-books-container__card" key={book.id}>
-              <div className="all-books-container__card__background">
+            <div className="books-container__card" key={book.id}>
+              <div className="books-container__card__background">
                 <img
-                  className="all-books-container__card__background-img"
+                  className="books-container__card__background-img"
                   height="10px"
                   width="10px"
                   src={book.imageUrl}
                   alt=""
                 />
-                <div className="all-books-container__card__info">
-                  <span className="all-books-container__card__info-rating">★{book.bookRating}★</span>
-                  <span className="all-books-container__card__info-price">{book.price} ₽</span>
+                <div className="books-container__card__info">
+                  <span className="books-container__card__info-rating">★{book.bookRating}★</span>
+                  <span className="books-container__card__info-price">{book.price} ₽</span>
                 </div>
               </div>
-              <div className="all-books-container__card-author">{book.authorName}</div>
-              <div className="all-books-container__card-book-name">{book.bookName}</div>
+              <div className="books-container__card-author">{book.authorName}</div>
+              <div className="books-container__card-book-name">{book.bookName}</div>
             </div>
           </Link>
         );

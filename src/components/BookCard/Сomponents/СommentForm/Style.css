@@ -98,7 +98,6 @@
 }
 
 .book-card-comment-form-container__form__text-textarea {
-
   width: 1020px;
   height: 300px;
 
@@ -151,7 +150,7 @@
   background: -webkit-linear-gradient(top, rgb(131, 130, 130), rgb(71, 71, 71) 90%);
 }
 
-@media (max-width: 1000px) {
+@media (width < 1025px) {
   .book-card-comment-form-container {
     bottom: 500px;
     font-size: 40px;
@@ -249,7 +248,7 @@
     font-size: 14px;
   }
 
-  @media (max-width: 768px) {
+  @media (width < 775px) {
     .book-card-comment-form-container {
       width: 720px;
       margin: 0 15px;
@@ -341,7 +340,7 @@
       font-size: 13px;
     }
 
-    @media (min-width: 320px) and (max-width: 460px) {
+    @media (width > 320px) and (width < 465px) {
       .book-card-comment-form-container {
         position: static;
         text-align: center;
