@@ -57,6 +57,7 @@ export const Comment = ({ book }: MyProps) => {
         <div className="book-card-comment-container" key={comment?.id}>
           <div className="book-card-comment-container__interaction">
             <FontAwesomeIcon className="book-card-comment-container__interaction-drop" icon={faXmark} />
+
             <div className="book-card-comment-container__interaction-drop-down">
               <span
                 onClick={() =>

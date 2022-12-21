@@ -47,17 +47,28 @@
   .book-card-container {
     width: 768px;
   }
+
+  .book-card__upped-container__trade-delivery {
+    width: 180px;
+  }
 }
 
 @media (width > 320px) and (width < 465px) {
   .book-card-container {
-    width: 320px;
+    max-width: 465px;
     text-align: center;
   }
 
+  .book-card__upper-container {
+    display: block;
+  }
+
+  .book-card__upped-container__trade-delivery {
+    margin: 0 auto 4vh auto;
+    width: 60%;
+  }
+
   .book-card-main-image {
-    height: 340px;
-    width: 220px;
-    margin: auto;
+    width: 60%;
   }
 }

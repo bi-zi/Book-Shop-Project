@@ -59,98 +59,55 @@
 }
 
 @media (width < 1025px) {
-  .book-car__delivery-container {
-    height: 200px;
-  }
-
-  .book-car__delivery-container__shipping-methods {
+  .book-car__delivery-container__shipping-methods,
+  .book-card__delivery-container__shops,
+  .book-card__delivery-container__сourier,
+  .book-card__delivery-container__сourier-cost {
     font-size: 12px;
   }
 
-  .book-card__delivery-container__shops {
-    font-size: 12px;
-  }
-
-  .book-card__delivery-container__shops-cost {
-    font-weight: bold;
-  }
-
-  .book-card__delivery-container__shops-cost-date {
-    font-size: 10px;
-  }
-
+  .book-card__delivery-container__shops-cost-date,
   .book-card__delivery-container__place-of-receipt {
     font-size: 10px;
   }
-  .book-card__delivery-container__сourier {
-    font-size: 12px;
-  }
 
   .book-card__delivery-container__сourier-cost {
-    font-size: 12px;
     padding-left: 150px;
   }
 
-  .book-card__delivery-container__сourier-over {
-    font-size: 11px;
-  }
-
+  .book-card__delivery-container__сourier-over,
   .book-card__delivery-container__сourier-orders {
     font-size: 11px;
   }
 }
 
 @media (width < 775px) {
-  .book-car__delivery-container {
-    width: 245px;
-    height: 200px;
+  .book-card__delivery-container__shipping-methods,
+  .book-car__delivery-container__shipping-methods,
+  .book-card__delivery-container__shops,
+  .book-card__delivery-container__сourier,
+  .book-card__delivery-container__сourier-cost,
+  .book-card__delivery-container__shops-place {
+    font-size: 10px;
+  }
+
+  .book-card__delivery-container__shops-cost-date,
+  .book-card__delivery-container__place-of-receipt {
+    font-size: 8px;
+  }
+
+  .book-card__delivery-container__сourier-over,
+  .book-card__delivery-container__сourier-orders {
+    font-size: 11px;
   }
 }
 
 @media (width > 320px) and (width < 465px) {
   .book-car__delivery-container {
-    position: static;
-    margin-top: 20px;
-    width: 260px;
-    height: 150px;
-  }
-
-  .book-car__delivery-container__shipping-methods {
-    font-size: 10px;
-    padding-right: 17px;
+    width: 100%;
   }
 
   .book-card__delivery-container__shops {
-    padding-left: 46px;
-    font-size: 10px;
-  }
-
-  .book-card__delivery-container__shops-cost {
-    font-size: 9px;
-    font-weight: bold;
-  }
-
-  .book-card__delivery-container__shops-cost-date {
-    font-size: 11px;
-  }
-
-  .book-card__delivery-container__place-of-receipt {
-    padding-left: 45px;
-    font-size: 10px;
-  }
-
-  .book-card__delivery-container__сourier {
-    margin-left: 42px;
-    font-size: 11px;
-  }
-
-  .book-card__delivery-container__сourier-cost {
-    padding-left: 125px;
-    font-size: 10px;
-  }
-
-  .book-card__delivery-container__сourier-over {
-    margin-left: -42px;
-    font-size: 11px;
+    text-align: left;
   }
 }

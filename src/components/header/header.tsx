@@ -25,7 +25,7 @@ export const Header = () => {
         <span></span>
       </label>
 
-      {windowWidth > 768 ? (
+      {windowWidth > 775 ? (
         <Resolution />
       ) : (
         <ul className="header__box">

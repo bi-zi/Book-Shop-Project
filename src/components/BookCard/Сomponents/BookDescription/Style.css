@@ -73,64 +73,25 @@
   }
 }
 
-@media (width < 775px) {
-  .book-card__info-container {
-    width: 0px;
-    height: 120px;
-  }
-}
-
 @media (width > 320px) and (width < 465px) {
   .book-card__info-container {
-    position: static;
-    padding: auto;
-    width: 250px;
-    height: 100px;
-  }
-
-  .book-card__info-container_container {
-    display: inline-block;
+    margin: 0 auto;
+    width: 60%;
   }
 
   .book-card__info-container__title {
-    position: static;
-    width: 250px;
-    margin-left: 30px;
     font-size: 16px;
   }
 
   .book-card__info-container__title-author {
-    position: static;
-    width: 250px;
-    font-size: 11px;
-  }
-
-  .book-card__info-container_container {
-    display: inline-block;
-  }
-
-  .book-card__info-container__description-star {
-    position: static;
-    font-size: 20px;
-    margin-top: 10px;
-    margin-left: 50px;
-    float: left;
-  }
-
-  .book-card__info-container__description-rating {
-    position: static;
-    float: left;
-    width: 20px;
-    margin: 20px 0 0 5px;
-
     font-size: 12px;
   }
 
+  .book-card__info-container__description-rating {
+    font-size: 20px;
+  }
+
   .book-card__info-container__description-reviews {
-    float: left;
-    position: static;
-    margin: 24px 0 0 0;
-    font-size: 9px;
-    width: 70px;
+    font-size: 14px;
   }
 }

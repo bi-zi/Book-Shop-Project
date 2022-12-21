@@ -26,10 +26,16 @@ export const BookCard = () => {
 
   const book = booksInteraction.selectedBook;
 
+  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+
+  console.log(windowWidth)
+
   React.useEffect(() => {
     dispatch(fetchSelectedBook(id));
     dispatch(fetchRecommendBooks(book?.category));
-  }, [dispatch, id, book?.category]);
+
+    setWindowWidth(window.innerWidth);
+  }, [dispatch, id, book?.category, window.innerWidth]);
 
   return (
     <div className="book-card-container">
@@ -47,11 +53,8 @@ export const BookCard = () => {
 
       <div className="book-card__lower-container">
         <Annotation book={book} />
-
-        <Recommendations />
-
+        {windowWidth > 465 ? <Recommendations /> : null}
         <CommentForm book={book} />
-
         <Comment book={book} />
       </div>
     </div>

@@ -24,54 +24,23 @@
   opacity: 0.3;
 }
 
-@media (width < 1025px) {
+@media (width < 775px) {
   .book-card__annotation-container {
-    width: 980px;
+    font-size: 12px;
+  }
+}
+
+@media (width > 320px) and (width < 465px) {
+  .book-card__annotation-container {
+    margin: 0 auto 0 auto;
+    width: 80%;
   }
 
-  .book-card__annotation-container-title {
-    font-size: 18px;
-    padding-bottom: 10px;
-    font-weight: bolder;
+  .book-card__annotation-container-text {
+    font-size: 12px;
   }
 
   .book-card__annotation-container-report {
-    font-size: 12px;
-    opacity: 0.3;
-    font-weight: bolder;
-    margin-bottom: 20px;
-  }
-
-  @media (width < 775px) {
-    .book-card__annotation-container {
-      width: 740px;
-    }
-
-    @media (width > 320px) and (width < 465px) {
-      .book-card__annotation-container {
-        position: static;
-        margin-left: 10px;
-        width: 280px;
-        height: 100%;
-        margin-bottom: 0;
-      }
-
-      .book-card__annotation-container-text {
-        font-size: 11px;
-      }
-
-      .book-card__annotation-container-title {
-        font-size: 18px;
-        padding-bottom: 10px;
-        font-weight: bolder;
-      }
-
-      .book-card__annotation-container-report {
-        font-size: 12px;
-        opacity: 0.3;
-        font-weight: bolder;
-        margin-bottom: 20px;
-      }
-    }
+    text-align: left;
   }
 }

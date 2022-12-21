@@ -52,6 +52,8 @@
   height: 250px;
 
   object-fit: cover;
+
+  box-shadow: 0px 2px 2px -2px rgba(2, 2, 2, 0.6);
 }
 
 .book-card-recommendations-container__card-info {
@@ -130,111 +132,46 @@
   background-color: rgb(120, 240, 204);
 }
 
-@media (width < 1025px) {
-  .book-card-recommendations-container {
-    width: 900px;
-    margin-left: 45px;
+@media (width < 775px) {
+  .book-card-recommendations-container__card-background {
+    width: 130px;
+  }
+
+  .book-card-recommendations-container__card-img {
+    width: 130px;
+    height: 200px;
   }
 
   .book-card-recommendations-container__slider-name {
-    font-size: 24px;
-  }
-
-  .book-card-recommendations-container__card {
-    margin: 0 40px;
-    width: 150px !important;
-    height: 420px;
-    padding-top: 45px;
-  }
-
-  .book-card-recommendations-container__card:hover {
-    transform: scale(1.2);
-  }
-
-  .book-card-recommendations-container__card-background {
-    margin-bottom: 5px;
+    font-size: 20px;
   }
 
   .book-card-recommendations-container__card-info {
-    font-size: 13px;
+    font-size: 11px;
   }
 
   .book-card-recommendations-container__card-author {
-    font-size: 12px;
+    width: 130px;
+    font-size: 10px;
   }
 
   .book-card-recommendations-container__card-name {
-    width: 150px;
-    font-size: 15px;
+    width: 130px;
+    font-size: 12px;
+  }
+
+  .slick-list {
+    padding-left: 0.5vw;
+    height: 320px;
   }
 
   .slick-prev,
   .slick-next {
-    height: 380px;
-    z-index: 2;
-    width: 35px;
+    width: 30px;
     border-radius: 10px;
   }
 
-  .slick-arrow:before {
-    font-size: 26px;
-  }
-
-  .slick-prev:hover,
-  .slick-next:hover {
-    height: 380px;
-  }
-
-  @media (width < 775px) {
-    .book-card-recommendations-container {
-      width: 680px;
-      height: 400px;
-      margin-left: 35px;
-    }
-
-    .book-card-recommendations-container__slider-name {
-      font-size: 20px;
-    }
-
-    .book-card-recommendations-container__card {
-      margin: 0 40px;
-      width: 100px !important;
-      height: 340px;
-      padding-top: 45px;
-    }
-
-    .book-card-recommendations-container__card-info {
-      font-size: 11px;
-    }
-
-    .book-card-recommendations-container__card-img {
-      width: 100px;
-      height: 200px;
-    }
-
-    .book-card-recommendations-container__card-author {
-      font-size: 9px;
-    }
-
-    .book-card-recommendations-container__card-name {
-      width: 100px;
-      font-size: 10px;
-    }
-
-    .slick-prev,
-    .slick-next {
-      height: 300px;
-      width: 30px;
-      border-radius: 10px;
-    }
-
-    .slick-arrow:before {
-      font-size: 20px;
-    }
-
-    .slick-prev:hover,
-    .slick-next:hover {
-      height: 300px;
-    }
+  .slick-next {
+    margin-right: 20px;
   }
 }

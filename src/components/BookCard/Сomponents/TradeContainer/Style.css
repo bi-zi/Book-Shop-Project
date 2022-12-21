@@ -18,6 +18,7 @@
   width: 100%;
 
   justify-content: space-around;
+  align-items: baseline;
 
   font-size: 24px;
   font-weight: bolder;
@@ -31,7 +32,7 @@
 }
 
 .book-card__trade-buy button {
-  margin-top: .4vh;
+  margin-top: 0.4vh;
 
   width: 80%;
   height: 50px;
@@ -62,7 +63,6 @@
   }
 
   .book-card__trade-price {
-    position: relative;
     margin: 0;
 
     padding: 20px 0 0 35px;
@@ -72,7 +72,6 @@
   }
 
   .book-card__trade-availability {
-    position: relative;
     margin: 0;
 
     padding: 12px 0 0 0;
@@ -85,19 +84,33 @@
 
     font-size: 18px;
   }
+}
 
-  @media (width < 775px) {
-    .book-card__trade {
-      width: 250px;
-      height: 170px;
-    }
+@media (width < 775px) {
+  .book-card__trade {
+    width: 180px;
+  }
 
-    @media (width > 320px) and (width < 465px) {
-      .book-card__trade {
-        position: static;
-        margin-left: 50px;
-        width: 220px;
-      }
-    }
+  .book-card__trade-price {
+    position: relative;
+    margin: 0;
+
+    padding: 20px 0 0 0;
+
+    font-size: 18px;
+    font-weight: bolder;
+  }
+
+  .book-card__trade-buy button {
+    width: 80%;
+    height: 40px;
+
+    font-size: 16px;
+  }
+}
+
+@media (width > 320px) and (width < 465px) {
+  .book-card__trade {
+    width: 100%;
   }
 }

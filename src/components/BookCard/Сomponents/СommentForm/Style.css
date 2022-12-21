@@ -1,6 +1,8 @@
 .book-card-comment-form-container {
   position: relative;
   margin-bottom: 2vh;
+
+  width: 100%;
   font-size: 40px;
 }
 
@@ -151,307 +153,83 @@
 }
 
 @media (width < 1025px) {
-  .book-card-comment-form-container {
-    bottom: 500px;
-    font-size: 40px;
-    width: 940px;
-    margin: 0 auto;
-  }
-
-  .book-card-comment-form-container__form {
-    height: 570px;
-  }
-
   .book-card-comment-form-container-count {
     font-size: 26px;
   }
 
-  .book-card-comment-form-container-open {
-    width: 920px;
-    height: 50px;
-
-    font-size: 20px;
-  }
-
-  .book-card-comment-form-container-close {
-    position: absolute;
-    left: 900px;
-    top: 40px;
-  }
-
-  .book-card-comment-form-container__form__user-info {
-    bottom: 10px;
-    padding: 20px 0 20px 20px;
-  }
-
-  .book-card-comment-form-container__form__user-info-label {
-    font-size: 20px;
-    padding-right: 31px;
-  }
-
-  .book-card-comment-form-container__form__user-info-input {
-    width: 250px;
-    height: 30px;
-  }
-
-  .book-card-comment-form-container__form__caption {
-    bottom: 10px;
-    padding: 20px 0 20px 20px;
-  }
-
-  .book-card-comment-form-container__form__caption-label {
-    font-size: 20px;
-    padding-right: 122px;
-  }
-
   .book-card-comment-form-container__form__caption-input {
     width: 650px;
-    height: 30px;
-  }
-
-  .book-card-comment-form-container__form__text {
-    bottom: 10px;
-    padding: 20px 0 20px 20px;
-  }
-
-  .book-card-comment-form-container__form__text-label {
-    font-size: 20px;
-    bottom: 165px;
-    padding-right: 91px;
   }
 
   .book-card-comment-form-container__form__text-textarea {
     width: 650px;
     height: 300px;
-    font-size: 16px;
-    padding: 10px;
-    line-height: 1.5;
+  }
+}
+
+@media (width < 775px) {
+  .book-card-comment-form-container-count {
+    font-size: 24px;
   }
 
-  .book-card-comment-form-container__form-total-characters {
-    bottom: 45px;
-    font-size: 15px;
-    padding-right: 25px;
+  .book-card-comment-form-container__form__user-info-label,
+  .book-card-comment-form-container__form__caption-label,
+  .book-card-comment-form-container__form__text-label {
+    font-size: 18px;
+  }
+
+  .book-card-comment-form-container__form__user-info-label {
+    padding-right: 39px;
+  }
+
+  .book-card-comment-form-container__form__text-label {
+    padding-right: 94px;
+  }
+
+  .book-card-comment-form-container__form__caption-input {
+    width: 450px;
+  }
+
+  .book-card-comment-form-container__form__text-textarea {
+    width: 450px;
+    height: 300px;
+  }
+}
+
+@media (width > 320px) and (width < 465px) {
+  .book-card-comment-form-container {
+    margin: 4vh 0 2vh 0;
+    text-align: left;
+  }
+
+  .book-card-comment-form-container__form__user-info-label,
+  .book-card-comment-form-container__form__caption-label,
+  .book-card-comment-form-container__form__text-label {
+    font-size: 12px;
+  }
+
+  .book-card-comment-form-container__form__user-info-input {
+    width: 45%;
+  }
+
+  .book-card-comment-form-container__form__caption-label {
+    padding-right: 94px;
+  }
+
+  .book-card-comment-form-container__form__caption-input {
+    width: 61%;
+  }
+
+  .book-card-comment-form-container__form__text-label {
+    padding-right: 77px;
+  }
+
+  .book-card-comment-form-container__form__text-textarea {
+    width: 61%;
+    height: 250px;
   }
 
   .book-card-comment-form-container__form-validation {
-    font-size: 24px;
-    margin-left: 20px;
-    bottom: 10px;
-  }
-
-  .book-card-comment-form-container__form-submit-button {
-    bottom: 35px;
-    width: 200px;
-    height: 30px;
-    margin: 5px 20px;
-    font-size: 14px;
-  }
-
-  @media (width < 775px) {
-    .book-card-comment-form-container {
-      width: 720px;
-      margin: 0 15px;
-    }
-
-    .book-card-comment-form-container__form {
-      height: 570px;
-    }
-
-    .book-card-comment-form-container-count {
-      font-size: 24px;
-    }
-
-    .book-card-comment-form-container-open {
-      width: 720px;
-    }
-
-    .book-card-comment-form-container-close {
-      left: 675px;
-    }
-
-    .book-card-comment-form-container__form__user-info {
-      bottom: 10px;
-      padding: 20px 0 20px 20px;
-    }
-
-    .book-card-comment-form-container__form__user-info-label {
-      font-size: 18px;
-      padding-right: 31px;
-    }
-
-    .book-card-comment-form-container__form__user-info-input {
-      width: 240px;
-      height: 25px;
-    }
-
-    .book-card-comment-form-container__form__caption {
-      bottom: 10px;
-      padding: 20px 0 20px 20px;
-    }
-
-    .book-card-comment-form-container__form__caption-label {
-      font-size: 18px;
-      padding-right: 113px;
-    }
-
-    .book-card-comment-form-container__form__caption-input {
-      width: 450px;
-      height: 25px;
-    }
-
-    .book-card-comment-form-container__form__text {
-      bottom: 10px;
-      padding: 20px 0 20px 20px;
-    }
-
-    .book-card-comment-form-container__form__text-label {
-      font-size: 18px;
-      bottom: 165px;
-      padding-right: 86px;
-    }
-
-    .book-card-comment-form-container__form__text-textarea {
-      width: 450px;
-      height: 300px;
-      font-size: 16px;
-      padding: 10px;
-      line-height: 1.5;
-    }
-
-    .book-card-comment-form-container__form-total-characters {
-      position: relative;
-      left: 0px;
-      bottom: 35px;
-      font-size: 15px;
-      padding-right: 25px;
-    }
-
-    .book-card-comment-form-container__form-validation {
-      font-size: 22px;
-      margin-left: 20px;
-      bottom: 10px;
-    }
-
-    .book-card-comment-form-container__form-submit-button {
-      bottom: 25px;
-      width: 180px;
-      height: 30px;
-      font-size: 13px;
-    }
-
-    @media (width > 320px) and (width < 465px) {
-      .book-card-comment-form-container {
-        position: static;
-        text-align: center;
-        font-size: 40px;
-        width: 260px;
-
-        margin: 20px auto 20px auto;
-      }
-
-      .book-card-comment-form-container__form {
-        height: 570px;
-      }
-
-      .book-card-comment-form-container-count {
-        font-size: 26px;
-      }
-
-      .book-card-comment-form-container-open {
-        width: 230px;
-        height: 50px;
-
-        font-size: 20px;
-      }
-
-      .book-card-comment-form-container-close {
-        position: relative;
-        left: 0;
-        top: 0;
-        width: 50px;
-        padding-top: 5px;
-        padding-left: 220px;
-        margin-bottom: -50px;
-      }
-
-      .book-card-comment-form-container__form__user-info {
-        width: 260px;
-        padding: 0px 0 0 20px;
-      }
-
-      .book-card-comment-form-container__form__user-info-label {
-        padding-left: 10px;
-
-        font-size: 14px;
-      }
-
-      .book-card-comment-form-container__form__user-info-input {
-        margin-left: -20px;
-        width: 240px;
-        height: 30px;
-      }
-
-      .book-card-comment-form-container__form__caption {
-        width: 260px;
-        padding: 0;
-      }
-
-      .book-card-comment-form-container__form__caption-label {
-        padding-left: 90px;
-        font-size: 14px;
-      }
-
-      .book-card-comment-form-container__form__caption-input {
-        width: 240px;
-        height: 30px;
-      }
-
-      .book-card-comment-form-container__form__text {
-        width: 260px;
-        height: 300px;
-        padding: 0;
-
-        margin-bottom: -80px;
-      }
-
-      .book-card-comment-form-container__form__text-label {
-        position: static;
-        padding-left: 75px;
-        font-size: 14px;
-      }
-
-      .book-card-comment-form-container__form__text-textarea {
-        width: 240px;
-        height: 250px;
-        font-size: 14px;
-        line-height: 1.5;
-      }
-
-      .book-card-comment-form-container__form-total-characters {
-        position: relative;
-        bottom: -110px;
-        left: 0;
-        font-size: 12px;
-        margin-top: -20px;
-        padding-right: 25px;
-      }
-
-      .book-card-comment-form-container__form-validation {
-        position: relative;
-        top: 90px;
-        left: 0;
-        font-size: 20px;
-        margin-left: 20px;
-        bottom: 10px;
-      }
-
-      .book-card-comment-form-container__form-submit-button {
-        position: relative;
-        top: 80px;
-        left: 0;
-        margin: 0;
-      }
-    }
+    font-size: 20px;
   }
 }
