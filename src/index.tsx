@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client';
-import { App } from './App';
+import { App } from './app';
 import { store } from './store/Store';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';

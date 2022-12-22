@@ -31,7 +31,7 @@ https://book-shop-project.netlify.app/ запуск может занять от
 Буду рад ответить на вопросы по проекту и на любую критику https://t.me/the_bi_zi
 
 Старая версия проекта
-https://github.com/bi-zi/Book-Shop-Project/treebd97a30a1d3dbaf7473376c1044fae393997d770
+https://github.com/bi-zi/Book-Shop-Project/tree/bd97a30a1d3dbaf7473376c1044fae393997d770
 
 Date : 2022-12-22 11:08:49 <br/>
 Total : 48 files, 2661 codes, 52 comments, 677 blanks, all 3390 lines
