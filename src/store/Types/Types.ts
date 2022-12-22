@@ -39,6 +39,11 @@ export interface BooksSliceState {
 
   sortNumber: number;
   categorySelect: string;
+
+  findBooks: {
+    name: string
+    category: string
+  };
   status: Status;
 }
 
@@ -47,6 +52,7 @@ export interface BooksInteractionSliceState {
   recommendBooks: Books[];
 
   booksComments: BookComments[];
+
   status: Status;
 }
 

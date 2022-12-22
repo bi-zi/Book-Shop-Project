@@ -43,7 +43,6 @@
   display: flex;
   position: relative;
 
-
   justify-content: space-around;
 
   font-size: 16px;
@@ -64,8 +63,40 @@
 
   word-wrap: break-word;
 
-  font-size: 16px ;
+  font-size: 16px;
   font-weight: bolder;
+}
+
+.books-container-pagination {
+  margin: 0 auto;
+
+  width: 40%;
+  height: 6vh;
+
+  font-size: 2vh;
+  font-weight: bold;
+
+  letter-spacing: 4px;
+
+  border: 2px solid black;
+  border-radius: 10px;
+
+  background-color: #78f0cc;
+  cursor: pointer;
+}
+
+.books-container-pagination:active {
+  color: white;
+  background-color: black;
+}
+
+.books-container-not-found {
+  margin: 0 auto;
+
+  width: 40%;
+  height: 6vh;
+
+  font-size: 2vh;
 }
 
 @media (width > 320px) and (width < 465px) {

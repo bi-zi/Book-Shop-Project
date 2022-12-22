@@ -7,6 +7,13 @@
   min-height: calc(100vh - 70px);
 }
 
+.book-card-container-error {
+  text-align: center;
+
+  font-size: 24px;
+  font-weight: bolder;
+}
+
 .book-card__upper-container {
   display: flex;
   position: relative;
@@ -55,7 +62,9 @@
 
 @media (width > 320px) and (width < 465px) {
   .book-card-container {
-    max-width: 465px;
+    margin-top: 12vh;
+    width: 100%;
+
     text-align: center;
   }
 
@@ -65,7 +74,7 @@
 
   .book-card__upped-container__trade-delivery {
     margin: 0 auto 4vh auto;
-    width: 60%;
+    width: 80%;
   }
 
   .book-card-main-image {

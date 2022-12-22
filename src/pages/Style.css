@@ -1,0 +1,16 @@
+.not-found-page-container {
+  margin: 100px auto 20px auto;
+  padding: 0 10px;
+
+  width: 100%;
+  min-height: calc(100vh - 60px);
+
+  text-align: center;
+  font-size: 4vh;
+  font-weight: bold;
+}
+
+.not-found-page-container-redirect {
+  color: blue;
+  text-decoration: underline;
+}

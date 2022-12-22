@@ -78,6 +78,10 @@
     margin: 0 auto;
     width: 60%;
   }
+  
+  .book-card__info-container__description {
+    justify-content: center;
+  }
 
   .book-card__info-container__title {
     font-size: 16px;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../store/Store';
-import { fetchCategoryBooks } from '../../store/Books/Slice';
+import { fetchCategoryBooks, setClearBooks, setFindBooks } from '../../store/Books/Slice';
 import { Link, useParams } from 'react-router-dom';
 import '../AllBooks/Style.css';
 
@@ -11,13 +11,21 @@ interface MyParams {
 export const BooksCategory = () => {
   const dispatch = useAppDispatch();
   const booksSlice = useAppSelector((state) => state.booksSlice);
-  
+
   const { name } = useParams<keyof MyParams>() as MyParams;
 
   const books = booksSlice.categoryBooks;
+  const findBooks = booksSlice.findBooks;
+
+  const pagination = books.length === 0 ? 20 : books.length + 20;
 
   React.useEffect(() => {
-    dispatch(fetchCategoryBooks(name));
+    dispatch(setClearBooks());
+    dispatch(fetchCategoryBooks({ category: name, count: 20 }));
+
+    window.scrollTo({
+      top: 0,
+    });
   }, [dispatch, name]);
 
   return (
@@ -25,8 +33,11 @@ export const BooksCategory = () => {
       <div className="books-container-category-name">{books?.[0]?.categoryRu}</div>
       {books.map((book) => {
         return (
-          <Link key={book.id} to={`/Book/${book.id}`}>
-            <div className="books-container__card" key={book.id}>
+          <Link
+            key={book.id}
+            to={`/Book/${book.id}`}
+            onClick={() => dispatch(setFindBooks({ name: '', category: '' }))}>
+            <div className="books-container__card">
               <div className="books-container__card__background">
                 <img
                   className="books-container__card__background-img"
@@ -46,6 +57,33 @@ export const BooksCategory = () => {
           </Link>
         );
       })}
+      {books?.length < 39 && booksSlice.findBooks.name.length === 0 && books.length !== 0 ? (
+        <>
+          <br />
+          <button
+            className="books-container-pagination"
+            onClick={() => dispatch(fetchCategoryBooks({ category: name, count: pagination }))}>
+            БОЛЬШЕ КНИГ
+          </button>
+        </>
+      ) : books?.length === 0 && booksSlice.findBooks.name.length > 0 ? (
+        <div className="books-container-not-found">Книги не найдены</div>
+      ) : (
+        ''
+      )}
+
+      {booksSlice.status === 'loading' ? (
+        <div className="books-container-category-name">Подождите идет загрузка</div>
+      ) : booksSlice.status === 'error' ? (
+        <>
+          <div className="books-container-category-name">Ошибка загрузка</div>
+          <a href="https://t.me/the_bi_zi" className="books-container-category-name" style={{color: 'blue', textDecoration: 'underline'}}>
+            Написать разработчику об ошибке
+          </a>
+        </>
+      ) : (
+        ''
+      )}
     </div>
   );
 };

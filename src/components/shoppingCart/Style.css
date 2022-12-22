@@ -8,6 +8,13 @@
   min-height: calc(100vh - 60px);
 }
 
+.shopping-cart-container-error {
+  text-align: center;
+
+  font-size: 24px;
+  font-weight: bolder;
+}
+
 .shopping-cart-container__info {
   display: flex;
 

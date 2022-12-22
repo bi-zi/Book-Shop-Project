@@ -46,64 +46,42 @@
   z-index: 1;
 }
 
-.book-card-comment-form-container__form__user-info {
-  position: relative;
-
-  margin: 20px 0 20px 20px;
-}
-
-.book-card-comment-form-container__form__user-info-label {
-  font-size: 20px;
-
-  padding-right: 31px;
-}
-
-.book-card-comment-form-container__form__user-info-input {
-  width: 250px;
-  height: 30px;
-
-  border-radius: 5px;
-  border: 1px solid;
-
-  color: black;
-}
-
-.book-card-comment-form-container__form__caption {
-  margin: 20px 0 20px 20px;
-}
-
-.book-card-comment-form-container__form__caption-label {
-  padding-right: 122px;
-  font-size: 20px;
-}
-
-.book-card-comment-form-container__form__caption-input {
-  width: 1020px;
-  height: 30px;
-
-  border-radius: 5px;
-  border: 1px solid;
-  color: black;
-}
-
+.book-card-comment-form-container__form__user-info,
+.book-card-comment-form-container__form__caption,
 .book-card-comment-form-container__form__text {
-  bottom: 45px;
-  margin: 20px 0 20px 20px;
-  z-index: 0;
+  position: relative;
+
+  padding: 1vh 1vw;
+  font-size: 20px;
 }
 
-.book-card-comment-form-container__form__text-label {
-  position: relative;
+.book-card-comment-form-container__form__user-info-input,
+.book-card-comment-form-container__form__caption-input {
+  position: absolute;
+
+  padding: 0 10px;
+
+  width: 60%;
+  height: 30px;
+
+  left: calc(160px + 100 * (100vw / 1920));
+
   font-size: 20px;
-  bottom: 165px;
-  padding-right: 91px;
+
+  border-radius: 5px;
+  border: 1px solid;
+
+  color: black;
 }
 
 .book-card-comment-form-container__form__text-textarea {
-  width: 1020px;
+  margin: 1vh 0 4vh 0;
+  padding: 10px;
+
+  width: 100%;
   height: 300px;
 
-  font-size: 16px;
+  font-size: 20px;
 
   border-radius: 5px;
   border: 1px solid;
@@ -112,35 +90,41 @@
 }
 
 .book-card-comment-form-container__form-total-characters {
-  position: relative;
+  position: absolute;
 
-  padding-bottom: 10px;
-  padding-right: 25px;
+  right: 1vw;
+  bottom: 1vh;
 
-  font-size: 15px;
+  font-size: 16px;
 
   text-align: right;
   z-index: 0;
 }
 
 .book-card-comment-form-container__form-validation {
+  position: absolute;
+
+  left: 1vw;
+  bottom: 1vh;
+
   font-size: 24px;
-  margin-left: 20px;
   color: red;
 }
 
 .book-card-comment-form-container__form-submit-button {
-  position: relative;
-
-  margin: 5px 20px;
+  position: absolute;
 
   width: 200px;
   height: 30px;
 
-  font-size: 14px;
+  left: 1vw;
+  bottom: 1vh;
+
   border-radius: 5px;
 
+  color: black;
   background-color: rgb(255, 255, 255);
+
   cursor: pointer;
 }
 
@@ -148,23 +132,7 @@
   border: 3px solid rgb(0, 0, 0);
 
   color: rgb(255, 255, 255);
-  background: linear-gradient(top, rgb(255, 255, 255), rgb(255, 255, 255) 90%);
-  background: -webkit-linear-gradient(top, rgb(131, 130, 130), rgb(71, 71, 71) 90%);
-}
-
-@media (width < 1025px) {
-  .book-card-comment-form-container-count {
-    font-size: 26px;
-  }
-
-  .book-card-comment-form-container__form__caption-input {
-    width: 650px;
-  }
-
-  .book-card-comment-form-container__form__text-textarea {
-    width: 650px;
-    height: 300px;
-  }
+  background-color: black;
 }
 
 @media (width < 775px) {
@@ -178,20 +146,13 @@
     font-size: 18px;
   }
 
-  .book-card-comment-form-container__form__user-info-label {
-    padding-right: 39px;
-  }
-
-  .book-card-comment-form-container__form__text-label {
-    padding-right: 94px;
-  }
-
-  .book-card-comment-form-container__form__caption-input {
-    width: 450px;
+  .book-card-comment-form-container__form__user-info-input,
+  .book-card-comment-form-container__form__caption-input,
+  .book-card-comment-form-container__form__text-textarea {
+    font-size: 16px;
   }
 
   .book-card-comment-form-container__form__text-textarea {
-    width: 450px;
     height: 300px;
   }
 }
@@ -202,34 +163,41 @@
     text-align: left;
   }
 
+  .book-card-comment-form-container-close {
+    right: 10px;
+    top: 5px;
+
+    font-size: 3vh;
+  }
+
   .book-card-comment-form-container__form__user-info-label,
   .book-card-comment-form-container__form__caption-label,
   .book-card-comment-form-container__form__text-label {
     font-size: 12px;
   }
 
-  .book-card-comment-form-container__form__user-info-input {
-    width: 45%;
-  }
-
-  .book-card-comment-form-container__form__caption-label {
-    padding-right: 94px;
-  }
-
+  .book-card-comment-form-container__form__user-info-input,
   .book-card-comment-form-container__form__caption-input {
-    width: 61%;
-  }
+    width: 40%;
 
-  .book-card-comment-form-container__form__text-label {
-    padding-right: 77px;
+    left: 38vw;
+    font-size: 12px;
   }
 
   .book-card-comment-form-container__form__text-textarea {
-    width: 61%;
     height: 250px;
+    font-size: 12px;
   }
 
   .book-card-comment-form-container__form-validation {
-    font-size: 20px;
+    font-size: 16px;
+  }
+
+  .book-card-comment-form-container__form-total-characters {
+    font-size: 12px;
+  }
+
+  .book-card-comment-form-container__form-submit-button {
+    width: 120px;
   }
 }

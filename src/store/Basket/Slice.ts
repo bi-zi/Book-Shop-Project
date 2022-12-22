@@ -26,9 +26,7 @@ const Basket = createSlice({
       state.basketBooksId.push(action.payload);
     },
     setBasketDeleteBook: (state, action) => {
-
       state.basketBooks.splice(action.payload, 1);
-
 
       state.basketBooksId.splice(action.payload, 1);
     },
@@ -37,13 +35,13 @@ const Basket = createSlice({
       state.basketBooksId = [];
     },
     setNumberOfBooksPlus: (state, action) => {
-      const index = state.basketBooks.findIndex(book => book.id === action.payload)
+      const index = state.basketBooks.findIndex((book) => book.id === action.payload);
 
       state.basketBooks[index].numberOfBooks += 1;
     },
     setNumberOfBooksMinus: (state, action) => {
       const index = state.basketBooks.findIndex((book) => book.id === action.payload);
-      
+
       state.basketBooks[index].numberOfBooks -= 1;
     },
   },

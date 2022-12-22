@@ -19,7 +19,6 @@ export const fetchRecommendBooks = createAsyncThunk<Books[], string>(
   },
 );
 
-
 const initialState: BooksInteractionSliceState = {
   selectedBook: {} as Books,
   recommendBooks: [],

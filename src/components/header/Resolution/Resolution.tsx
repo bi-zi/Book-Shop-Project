@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../../store/Store';
-import { setSortBooks, fetchBooks } from '../../../store/Books/Slice';
+import { setSortBooks, fetchBooks, fetchCategoryBooks, setClearBooks } from '../../../store/Books/Slice';
 import { Link } from 'react-router-dom';
 import './Style.css';
 
@@ -10,6 +10,19 @@ export const Resolution = () => {
 
   const sortNumber = booksSlice.sortNumber;
   const category = window.location.pathname.split('/')[2];
+
+  const resetSort = () => {
+    dispatch(setClearBooks());
+
+    const category =
+      window.location.pathname.split('/')[2]?.length === undefined
+        ? 'allBooks'
+        : window.location.pathname.split('/')[2];
+
+    if (category === 'allBooks') {
+      dispatch(fetchBooks(20));
+    } else dispatch(fetchCategoryBooks({ category: category, count: 20 }));
+  };
 
   return (
     <>
@@ -38,8 +51,7 @@ export const Resolution = () => {
           <div
             className="header__drop-down-link"
             onClick={() => {
-              dispatch(fetchBooks());
-              dispatch(setSortBooks(0));
+              resetSort();
             }}>
             Сброс
           </div>

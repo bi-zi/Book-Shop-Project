@@ -26,14 +26,16 @@
 .header-input {
   padding-left: 10px;
 
-  width: 100%;
+  width: 200px;
   height: 35px;
+
+  font-size: 2vh;
 
   border: 2px solid #7ba7ab;
   border-radius: 5px;
   outline: none;
 
-  color: #9e9c9c;
+  color: #000000;
   background: #ffffff;
 }
 
@@ -134,6 +136,4 @@
     margin: 22px 10px 0 0;
     transform: scale(1);
   }
-
-
 }

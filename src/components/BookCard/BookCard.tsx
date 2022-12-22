@@ -11,7 +11,6 @@ import {
   Comment,
 } from './Сomponents/index';
 import { useParams } from 'react-router-dom';
-import uniqid from 'uniqid';
 import './Style.css';
 
 interface MyParams {
@@ -28,35 +27,53 @@ export const BookCard = () => {
 
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
 
-  console.log(windowWidth)
-
   React.useEffect(() => {
     dispatch(fetchSelectedBook(id));
     dispatch(fetchRecommendBooks(book?.category));
 
     setWindowWidth(window.innerWidth);
+
+    window.scrollTo({
+      top: 0,
+    });
   }, [dispatch, id, book?.category, window.innerWidth]);
 
   return (
     <div className="book-card-container">
-      <div className="book-card__upper-container">
-        <img className="book-card-main-image" width="10px" src={book?.imageUrl} alt="" />
+      {booksInteraction.status === 'loading' ? (
+        <div className="book-card-container-error">Подождите идет загрузка</div>
+      ) : booksInteraction.status === 'error' ? (
+        <>
+          <div className="book-card-container-error">Ошибка загрузка</div>
+          <a
+            href="https://t.me/the_bi_zi"
+            className="shopping-cart-container-error"
+            style={{ color: 'blue', textDecoration: 'underline' }}>
+            Написать разработчику об ошибке
+          </a>
+        </>
+      ) : (
+        <>
+          <div className="book-card__upper-container">
+            <img className="book-card-main-image" width="10px" src={book?.imageUrl} alt="" />
 
-        <BookDescription book={book} />
+            <BookDescription book={book} />
 
-        <div className="book-card__upped-container__trade-delivery">
-          <TradeContainer book={book} linkId={id} />
+            <div className="book-card__upped-container__trade-delivery">
+              <TradeContainer book={book} linkId={id} />
 
-          <Delivery />
-        </div>
-      </div>
+              <Delivery />
+            </div>
+          </div>
 
-      <div className="book-card__lower-container">
-        <Annotation book={book} />
-        {windowWidth > 465 ? <Recommendations /> : null}
-        <CommentForm book={book} />
-        <Comment book={book} />
-      </div>
+          <div className="book-card__lower-container">
+            <Annotation book={book} />
+            {windowWidth > 465 ? <Recommendations /> : null}
+            <CommentForm book={book} />
+            <Comment book={book} />
+          </div>
+        </>
+      )}
     </div>
   );
 };
