@@ -1,5 +1,5 @@
-import { Layout } from './Components/Layout';
-import { MainPage, CategoriesPage, BookPage, BasketPage, NotFoundPage } from './Pages/index';
+import { Layout } from './components/layout';
+import { MainPage, CategoriesPage, BookPage, BasketPage, NotFoundPage } from './pages/index';
 import { Routes, Route } from 'react-router-dom';
 
 export const App = () => {

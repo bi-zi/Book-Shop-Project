@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { Books, BooksSliceState, Status } from '../Types/Types';
+import { Books, BooksSliceState, Status } from '../types/types';
 
 export const fetchBooks = createAsyncThunk<Books[], number>('allBooks/fetchBooks', async (count) => {
   const { data } = await axios.get<Books[]>(`http://localhost:4444/allBooks/${count}`);

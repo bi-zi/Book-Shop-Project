@@ -1,16 +1,16 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../store/Store';
+import { useAppDispatch, useAppSelector } from '../../store/store';
 import {
   fetchBooks,
   fetchCategoryBooks,
   fetchFindBooks,
   setClearBooks,
   setFindBooks,
-} from '../../store/Books/Slice';
+} from '../../store/books/slice';
 import { Link } from 'react-router-dom';
-import { Resolution } from './Resolution/Resolution';
+import { Resolution } from './resolution/resolution';
 
-import './Style.css';
+import './style.css';
 
 export const Header = () => {
   const dispatch = useAppDispatch();
@@ -18,7 +18,6 @@ export const Header = () => {
 
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
 
-  const [check, setCheck] = React.useState<string>('Нельзя');
   const [timerId, setTimerId] = React.useState<any>();
 
   const books = booksSlice.findBooks;
@@ -28,14 +27,14 @@ export const Header = () => {
       ? 'allBooks'
       : window.location.pathname.split('/')[2];
 
-  const findBooks = () => {
+  const findBooks = React.useCallback(() => {
     dispatch(
       fetchFindBooks({
         category: books.category,
         bookName: books.name,
       }),
     );
-  };
+  }, [dispatch, books.category, books.name]);
 
   React.useEffect(() => {
     setWindowWidth(window.innerWidth);
@@ -52,7 +51,7 @@ export const Header = () => {
         dispatch(fetchBooks(20));
       } else dispatch(fetchCategoryBooks({ category: books.category, count: 20 }));
     }
-  }, [window.innerWidth, books.name, books.name.length]);
+  }, [dispatch, findBooks, books.category, books.name, books.name.length]);
 
   return (
     <div className="header">

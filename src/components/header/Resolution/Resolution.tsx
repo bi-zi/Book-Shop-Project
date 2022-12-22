@@ -1,8 +1,8 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../../store/Store';
-import { setSortBooks, fetchBooks, fetchCategoryBooks, setClearBooks } from '../../../store/Books/Slice';
+import { useAppDispatch, useAppSelector } from '../../../store/store';
+import { setSortBooks, fetchBooks, fetchCategoryBooks, setClearBooks } from '../../../store/books/slice';
 import { Link } from 'react-router-dom';
-import './Style.css';
+import './style.css';
 
 export const Resolution = () => {
   const dispatch = useAppDispatch();

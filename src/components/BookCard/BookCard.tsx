@@ -1,6 +1,6 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../store/Store';
-import { fetchSelectedBook, fetchRecommendBooks } from '../../store/BooksInteraction/Slice';
+import { useAppDispatch, useAppSelector } from '../../store/store';
+import { fetchSelectedBook, fetchRecommendBooks } from '../../store/booksInteraction/slice';
 import {
   BookDescription,
   TradeContainer,
@@ -9,9 +9,9 @@ import {
   Recommendations,
   CommentForm,
   Comment,
-} from './Сomponents/index';
+} from './components/index';
 import { useParams } from 'react-router-dom';
-import './Style.css';
+import './style.css';
 
 interface MyParams {
   id: string;
@@ -36,7 +36,7 @@ export const BookCard = () => {
     window.scrollTo({
       top: 0,
     });
-  }, [dispatch, id, book?.category, window.innerWidth]);
+  }, [dispatch, id, book?.category]);
 
   return (
     <div className="book-card-container">

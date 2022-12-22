@@ -1,5 +1,5 @@
 import React from 'react';
-import { BooksCategory } from '../Components/BooksCategory/BooksCategory';
+import { BooksCategory } from '../components/booksCategory/booksCategory';
 
 export const CategoriesPage = () => {
   return <BooksCategory />;

@@ -23,8 +23,6 @@
   border: 3px solid rgb(0, 0, 0);
 
   color: white;
-  background: linear-gradient(top, rgb(255, 255, 255), rgb(122, 240, 205) 90%);
-  background: -webkit-linear-gradient(top, rgb(44, 247, 186), rgb(61, 129, 109) 90%);
 }
 
 .book-card-comment-form-container__form {

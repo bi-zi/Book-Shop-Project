@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ShoppingCart } from '../Components/ShoppingCart/ShoppingCart';
+import { ShoppingCart } from '../components/shoppingCart/shoppingCart';
 
 export const BasketPage = () => {
   return <ShoppingCart />;

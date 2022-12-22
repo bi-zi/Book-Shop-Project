@@ -1,10 +1,10 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../store/Store';
-import { fetchBasketBooks, setBasketDeleteAll } from '../../store/Basket/Slice';
+import { useAppDispatch, useAppSelector } from '../../store/store';
+import { fetchBasketBooks, setBasketDeleteAll } from '../../store/basket/slice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
-import { Book } from './Book/Book';
-import './Style.css';
+import { Book } from './Book/book';
+import './style.css';
 
 export const ShoppingCart = () => {
   const dispatch = useAppDispatch();
@@ -18,17 +18,14 @@ export const ShoppingCart = () => {
 
   const totalPrice = books.reduce((total, book) => (total += book.price * book.numberOfBooks), 0);
 
-  console.log(books);
 
   React.useEffect(() => {
-    if(basket.basketBooksId.length > 0) dispatch(fetchBasketBooks(basket.basketBooksId));
+    if (basket.basketBooksId.length > 0) dispatch(fetchBasketBooks(basket.basketBooksId));
 
     window.scrollTo({
       top: 0,
     });
   }, [dispatch, basket.basketBooksId]);
-
-  console.log(basket.status === 'error', basket.basketBooksId.length !== 0, booksCount === 0);
 
   return (
     <div className="shopping-cart-container">

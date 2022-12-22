@@ -1,7 +1,6 @@
-import { Comment } from './../../Components/BookCard/Сomponents/Comment/Comment';
 import axios from 'axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { Books, BasketSliceState, Status } from '../Types/Types';
+import { Books, BasketSliceState, Status } from '../types/types';
 
 export const fetchBasketBooks = createAsyncThunk<Books[], string[]>(
   'basketBooks/fetchBasketBooks',

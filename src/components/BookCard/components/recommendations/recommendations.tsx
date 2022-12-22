@@ -1,8 +1,8 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../../../store/Store';
+import {useAppSelector } from '../../../../store/store';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
-import './Style.css';
+import './style.css';
 
 export const Recommendations = () => {
   const recommendBooks = useAppSelector((state) => state.booksInteraction?.recommendBooks);

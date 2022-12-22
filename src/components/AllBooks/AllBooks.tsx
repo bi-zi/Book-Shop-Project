@@ -1,15 +1,14 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../store/Store';
-import { fetchBooks, setClearBooks, setFindBooks } from '../../store/Books/Slice';
+import { useAppDispatch, useAppSelector } from '../../store/store';
+import { fetchBooks, setClearBooks, setFindBooks } from '../../store/books/slice';
 import { Link } from 'react-router-dom';
-import './Style.css';
+import './style.css';
 
 export const AllBooks = () => {
   const dispatch = useAppDispatch();
   const booksSlice = useAppSelector((state) => state.booksSlice);
 
   const books = booksSlice?.allBooks;
-  const findBooks = booksSlice.findBooks;
 
   const pagination = booksSlice.allBooks.length === 0 ? 20 : booksSlice.allBooks.length + 20;
 
@@ -22,7 +21,6 @@ export const AllBooks = () => {
     });
   }, [dispatch]);
 
-  console.log(findBooks);
   return (
     <div className="books-container">
       <div className="books-container-category-name">Все книги</div>

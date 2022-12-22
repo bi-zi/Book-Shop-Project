@@ -1,8 +1,8 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../store/Store';
-import { fetchCategoryBooks, setClearBooks, setFindBooks } from '../../store/Books/Slice';
+import { useAppDispatch, useAppSelector } from '../../store/store';
+import { fetchCategoryBooks, setClearBooks, setFindBooks } from '../../store/books/slice';
 import { Link, useParams } from 'react-router-dom';
-import '../AllBooks/Style.css';
+import '../allBooks/style.css';
 
 interface MyParams {
   name: string;
@@ -15,7 +15,6 @@ export const BooksCategory = () => {
   const { name } = useParams<keyof MyParams>() as MyParams;
 
   const books = booksSlice.categoryBooks;
-  const findBooks = booksSlice.findBooks;
 
   const pagination = books.length === 0 ? 20 : books.length + 20;
 
@@ -77,7 +76,10 @@ export const BooksCategory = () => {
       ) : booksSlice.status === 'error' ? (
         <>
           <div className="books-container-category-name">Ошибка загрузка</div>
-          <a href="https://t.me/the_bi_zi" className="books-container-category-name" style={{color: 'blue', textDecoration: 'underline'}}>
+          <a
+            href="https://t.me/the_bi_zi"
+            className="books-container-category-name"
+            style={{ color: 'blue', textDecoration: 'underline' }}>
             Написать разработчику об ошибке
           </a>
         </>

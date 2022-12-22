@@ -2,7 +2,7 @@
 
 ---
 
-![alt text](./BookShop.gif)
+![alt text](./bookShop.gif)
 
 ## Live Demo 📺
 

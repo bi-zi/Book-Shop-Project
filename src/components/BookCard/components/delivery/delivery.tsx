@@ -1,5 +1,5 @@
 import React from 'react';
-import './Style.css';
+import './style.css';
 
 export const Delivery = () => {
   return (
@@ -39,4 +39,3 @@ export const Delivery = () => {
     </div>
   );
 };
-                         

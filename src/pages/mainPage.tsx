@@ -1,5 +1,5 @@
 import React from 'react';
-import { AllBooks } from '../Components/AllBooks/AllBooks';
+import { AllBooks } from '../components/allBooks/allBooks';
 
 export const MainPage = () => {
   return <AllBooks />;
