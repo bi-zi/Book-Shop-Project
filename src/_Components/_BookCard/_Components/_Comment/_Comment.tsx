@@ -1,13 +1,13 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../../../store/store';
+import { useAppDispatch, useAppSelector } from '../../../../_Store/_Store';
 import {
   setBooksCommentsDelete,
   setBooksCommentsChange,
-} from '../../../../store/booksInteraction/slice';
-import { Books } from '../../types';
+} from '../../../../_Store/_BooksInteraction/_Slice';
+import { Books } from '../../_Types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import './style.css';
+import './_Style.css';
 
 interface MyProps {
   book: Books;

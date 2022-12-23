@@ -1,8 +1,8 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../store/store';
-import { fetchCategoryBooks, setClearBooks, setFindBooks } from '../../store/books/slice';
+import { useAppDispatch, useAppSelector } from '../../_Store/_Store';
+import { fetchCategoryBooks, setClearBooks, setFindBooks } from '../../_Store/_Books/_Slice';
 import { Link, useParams } from 'react-router-dom';
-import '../allBooks/style.css';
+import '../_AllBooks/_Style.css';
 
 interface MyParams {
   name: string;

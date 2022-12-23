@@ -1,6 +1,6 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../store/store';
-import { fetchSelectedBook, fetchRecommendBooks } from '../../store/booksInteraction/slice';
+import { useAppDispatch, useAppSelector } from '../../_Store/_Store';
+import { fetchSelectedBook, fetchRecommendBooks } from '../../_Store/_BooksInteraction/_Slice';
 import {
   BookDescription,
   TradeContainer,
@@ -9,9 +9,9 @@ import {
   Recommendations,
   CommentForm,
   Comment,
-} from './components/index';
+} from './_Components/_Index';
 import { useParams } from 'react-router-dom';
-import './style.css';
+import './_Style.css';
 
 interface MyParams {
   id: string;

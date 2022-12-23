@@ -1,11 +1,14 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../../../store/store';
-import { setBooksCommentsСreate, setBooksCommentsPush } from '../../../../store/booksInteraction/slice';
+import { useAppDispatch, useAppSelector } from '../../../../_Store/_Store';
+import {
+  setBooksCommentsСreate,
+  setBooksCommentsPush,
+} from '../../../../_Store/_BooksInteraction/_Slice';
 import uniqid from 'uniqid';
-import { Books } from '../../types';
+import { Books } from '../../_Types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import './style.css';
+import './_Style.css';
 
 interface MyProps {
   book: Books;

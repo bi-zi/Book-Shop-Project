@@ -1,9 +1,8 @@
 import ReactDOM from 'react-dom/client';
 import { App } from './app';
-import { store } from './store/store';
+import { store } from './_Store/_Store';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import './style.css';
 
 const el = document.getElementById('root');
 if (el === null) throw new Error('Root container missing in index.html');

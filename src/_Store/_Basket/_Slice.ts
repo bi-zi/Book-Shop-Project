@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { Books, BasketSliceState, Status } from '../types/types';
+import { Books, BasketSliceState, Status } from '../_Types/_Types';
 
 export const fetchBasketBooks = createAsyncThunk<Books[], string[]>(
   'basketBooks/fetchBasketBooks',

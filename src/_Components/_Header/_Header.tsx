@@ -1,16 +1,16 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../store/store';
+import { useAppDispatch, useAppSelector } from '../../_Store/_Store';
 import {
   fetchBooks,
   fetchCategoryBooks,
   fetchFindBooks,
   setClearBooks,
   setFindBooks,
-} from '../../store/books/slice';
+} from '../../_Store/_Books/_Slice';
 import { Link } from 'react-router-dom';
-import { Resolution } from './resolution/resolution';
+import { Resolution } from './_Resolution/_Resolution';
 
-import './style.css';
+import './_Style.css';
 
 export const Header = () => {
   const dispatch = useAppDispatch();

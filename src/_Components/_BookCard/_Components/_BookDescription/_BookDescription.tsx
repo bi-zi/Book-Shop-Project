@@ -1,6 +1,6 @@
 import React from 'react';
-import { Books } from '../../types';
-import './style.css';
+import { Books } from '../../_Types';
+import './_Style.css';
 
 interface MyProps {
   book: Books;

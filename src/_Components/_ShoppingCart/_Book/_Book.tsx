@@ -1,15 +1,15 @@
 import React from 'react';
-import { useAppDispatch } from '../../../store/store';
+import { useAppDispatch } from '../../../_Store/_Store';
 import {
   setBasketDeleteBook,
   setNumberOfBooksPlus,
   setNumberOfBooksMinus,
-} from '../../../store/basket/slice';
+} from '../../../_Store/_Basket/_Slice';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
-import { Books } from './type';
-import './style.css';
+import { Books } from './_Type';
+import './_Style.css';
 
 interface MyProps {
   book: Books;

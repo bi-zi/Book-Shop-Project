@@ -1,10 +1,10 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../store/store';
-import { fetchBasketBooks, setBasketDeleteAll } from '../../store/basket/slice';
+import { useAppDispatch, useAppSelector } from '../../_Store/_Store';
+import { fetchBasketBooks, setBasketDeleteAll } from '../../_Store/_Basket/_Slice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
-import { Book } from './Book/book';
-import './style.css';
+import { Book } from './_Book/_Book';
+import './_Style.css';
 
 export const ShoppingCart = () => {
   const dispatch = useAppDispatch();
@@ -17,7 +17,6 @@ export const ShoppingCart = () => {
   const booksCount = books.length;
 
   const totalPrice = books.reduce((total, book) => (total += book.price * book.numberOfBooks), 0);
-
 
   React.useEffect(() => {
     if (basket.basketBooksId.length > 0) dispatch(fetchBasketBooks(basket.basketBooksId));

@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
-import { booksReducer } from './books/slice';
-import { booksInteractionReducer } from './booksInteraction/slice';
-import { basketReducer } from './basket/slice';
+import { booksReducer } from './_Books/_Slice';
+import { booksInteractionReducer } from './_BooksInteraction/_Slice';
+import { basketReducer } from './_Basket/_Slice';
 
 export const store = configureStore({
   reducer: {

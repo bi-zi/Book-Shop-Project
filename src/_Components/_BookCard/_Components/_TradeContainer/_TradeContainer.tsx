@@ -1,10 +1,10 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../../../store/store';
-import { setBasketBooksId } from '../../../../store/basket/slice';
+import { useAppDispatch, useAppSelector } from '../../../../_Store/_Store';
+import { setBasketBooksId } from '../../../../_Store/_Basket/_Slice';
 
 import { Link } from 'react-router-dom';
-import { Books } from '../../types';
-import './style.css';
+import { Books } from '../../_Types';
+import './_Style.css';
 
 interface MyProps {
   book: Books;
