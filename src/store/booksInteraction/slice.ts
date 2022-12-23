@@ -1,11 +1,11 @@
-import axios from 'axios';
+import axios from '../../axios/axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { Books, BooksInteractionSliceState, Status } from '../types/types';
 
 export const fetchSelectedBook = createAsyncThunk<Books, string>(
   'selectedBook/fetchSelectedBook',
   async (selectedBookId) => {
-    const { data } = await axios.get<Books>(`${process.env.react_app_custom_env_var}/selectedBook/${selectedBookId}`);
+    const { data } = await axios.get<Books>(`/selectedBook/${selectedBookId}`);
     return data;
   },
 );
@@ -13,7 +13,7 @@ export const fetchSelectedBook = createAsyncThunk<Books, string>(
 export const fetchRecommendBooks = createAsyncThunk<Books[], string>(
   'recommendBooks/fetchRecommendBooks',
   async (booksCategory) => {
-    const { data } = await axios.get<Books[]>(`${process.env.react_app_custom_env_var}/recommendBooks/${booksCategory}`);
+    const { data } = await axios.get<Books[]>(`/recommendBooks/${booksCategory}`);
     return data;
   },
 );

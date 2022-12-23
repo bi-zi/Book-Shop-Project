@@ -1,13 +1,11 @@
-import axios from 'axios';
+import axios from '../../axios/axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { Books, BasketSliceState, Status } from '../types/types';
 
 export const fetchBasketBooks = createAsyncThunk<Books[], string[]>(
   'basketBooks/fetchBasketBooks',
   async (id) => {
-    const { data } = await axios.get<Books[]>(
-      `${process.env.REACT_APP_CUSTOM_ENV_VAR}/basketBooks/${id}`,
-    );
+    const { data } = await axios.get<Books[]>(`/basketBooks/${id}`);
     return data;
   },
 );

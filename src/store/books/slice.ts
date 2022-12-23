@@ -1,16 +1,19 @@
-import axios from 'axios';
+import axios from '../../axios/axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { Books, BooksSliceState, Status } from '../types/types';
 
 export const fetchBooks = createAsyncThunk<Books[], number>('allBooks/fetchBooks', async (count) => {
-  const { data } = await axios.get<Books[]>(`${process.env.react_app_custom_env_var}/allBooks/${count}`);
+
+  const { data } = await axios.get<Books[]>(`/allBooks/${count}`);
   return data;
 });
 
 export const fetchCategoryBooks = createAsyncThunk<Books[], { category: string; count: number }>(
   'categoryBooks/fetchCategoryBooks',
   async ({ category, count }: { category: string; count: number }) => {
-    const { data } = await axios.get<Books[]>(`${process.env.react_app_custom_env_var}/${category}/${count}`);
+    const { data } = await axios.get<Books[]>(
+      `/${category}/${count}`,
+    );
     return data;
   },
 );
@@ -18,7 +21,9 @@ export const fetchCategoryBooks = createAsyncThunk<Books[], { category: string; 
 export const fetchFindBooks = createAsyncThunk<Books[], { category: string; bookName: string }>(
   'findBooks/fetchFindBooks',
   async ({ category, bookName }: { category: string; bookName: string }) => {
-    const { data } = await axios.get<Books[]>(`${process.env.react_app_custom_env_var}/findBooks/${category}/${bookName}`);
+    const { data } = await axios.get<Books[]>(
+      `/findBooks/${category}/${bookName}`,
+    );
     return data;
   },
 );

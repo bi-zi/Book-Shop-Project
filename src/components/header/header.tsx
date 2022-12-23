@@ -15,7 +15,9 @@ import './style.css';
 export const Header = () => {
   const dispatch = useAppDispatch();
   const booksSlice = useAppSelector((state) => state.booksSlice);
+  const port = process.env.REACT_APP_CUSTOM_ENV_VAR;
 
+  console.log(`${port}/allBooks/${21}`);
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
 
   const [timerId, setTimerId] = React.useState<any>();
