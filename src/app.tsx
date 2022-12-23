@@ -1,7 +1,7 @@
-import { Layout } from './_Components/_Layout';
-import { MainPage, CategoriesPage, BookPage, BasketPage, NotFoundPage } from './_Pages/_Index';
+import { Layout } from './components/layout';
+import { MainPage, CategoriesPage, BookPage, BasketPage, NotFoundPage } from './pages';
 import { Routes, Route } from 'react-router-dom';
-import './_Style.css';
+import './style.css';
 
 export const App = () => {
   return (
