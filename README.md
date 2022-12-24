@@ -4,7 +4,7 @@
 
 ---
 
-![alt text](./bookShop.gif)
+![alt text](./_bookShop.gif)
 
 ---
 

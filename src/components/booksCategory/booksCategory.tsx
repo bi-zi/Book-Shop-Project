@@ -62,7 +62,7 @@ export const BooksCategory = () => {
           <button
             className="books-container-pagination"
             onClick={() => dispatch(fetchCategoryBooks({ category: name, count: pagination }))}>
-            БОЛЬШЕ КНИГ
+            ЕЩЁ
           </button>
         </>
       ) : books?.length === 0 && booksSlice.findBooks.name.length > 0 ? (
